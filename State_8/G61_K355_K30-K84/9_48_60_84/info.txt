@@ -1,0 +1,60 @@
+State #8
+Q: 0.920800
+G: 0.055347
+Consistent experiment signals: ['G61', 'K355', 'K30-K84']
+Changes in entanglement cluster IDs: [9, 48, 60, 84]
+Trajectory number: 85
+Frame number: 27
+----------------------------------------------------------------
+G61: M: 223.6254
+K355: M: 721.4847
+K30-K84: M: 0.0000 Jwalk: -1.0000 Euclidean: 15.9895 Density: 0.0366
+----------------------------------------------------------------
+9:
+    code: ['L#C#', 'L+C#']
+    GLN: [-0.013023618560637959, -0.6136497996262005]
+    ref_GLN: [-0.010905492444300932, 0.40044301263279714]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [10, 46]
+    ref_native_contact: [10, 46]
+    crossing_resid: [[], [56]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+48:
+    code: ['L+C#', 'L#C#']
+    GLN: [-0.7758534483516699, 0.2615143824055756]
+    ref_GLN: [0.25128605605897436, 0.303536797234036]
+    linking_number: [-1, 0]
+    ref_linking_number: [0, 0]
+    native_contact: [47, 86]
+    ref_native_contact: [47, 86]
+    crossing_resid: [[20], []]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['-', '']
+    ref_crossing_pattern: ['', '']
+60:
+    code: ['L+C#', 'L#C#']
+    GLN: [-0.7945463387998503, 0.6627162415973163]
+    ref_GLN: [0.1914805020924778, 0.6903653259335704]
+    linking_number: [-1, 1]
+    ref_linking_number: [0, 1]
+    native_contact: [53, 100]
+    ref_native_contact: [53, 100]
+    crossing_resid: [[20], [106]]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['-', '+']
+    ref_crossing_pattern: ['', '+']
+84:
+    code: ['L-C#', 'L#C#']
+    GLN: [-0.2282659573750225, -0.02773514657841804]
+    ref_GLN: [0.7858007875131604, -0.023613095771521552]
+    linking_number: [0, 0]
+    ref_linking_number: [1, 0]
+    native_contact: [42, 163]
+    ref_native_contact: [42, 163]
+    crossing_resid: [[], []]
+    ref_crossing_resid: [[16], []]
+    crossing_pattern: ['', '']
+    ref_crossing_pattern: ['+', '']

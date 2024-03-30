@@ -1,0 +1,71 @@
+State #7
+Q: 0.786300
+G: 0.108818
+Consistent experiment signals: ['G104', 'S264']
+Changes in entanglement cluster IDs: [2, 14, 24, 44, 45]
+Trajectory number: 357
+Frame number: 17
+----------------------------------------------------------------
+G104: M: 220.0553
+S264: M: 1223.5736
+----------------------------------------------------------------
+2:
+    code: ['L#C#', 'L#C~']
+    GLN: [0.16266589921791, -0.400522084821645]
+    ref_GLN: [0.17768274022918684, 0.5301359667177498]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 1]
+    native_contact: [48, 103]
+    ref_native_contact: [48, 103]
+    crossing_resid: [[], [158]]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '+']
+14:
+    code: ['L#C#', 'L+C#']
+    GLN: [0.05245989703923852, -0.8049926503789074]
+    ref_GLN: [0.0447843290989239, 0.08294017467658853]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [94, 108]
+    ref_native_contact: [94, 108]
+    crossing_resid: [[], [158]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+24:
+    code: ['L#C#', 'L+C#']
+    GLN: [-0.11497975161035875, -1.7877516309239219]
+    ref_GLN: [-0.09929724985113007, -0.06621681997433496]
+    linking_number: [0, -2]
+    ref_linking_number: [0, 0]
+    native_contact: [16, 132]
+    ref_native_contact: [16, 132]
+    crossing_resid: [[], [155, 158]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '--']
+    ref_crossing_pattern: ['', '']
+44:
+    code: ['L#C#', 'L-C#']
+    GLN: [0.17968232102826806, -0.12119399319655383]
+    ref_GLN: [0.1914805020924778, 0.6903653259335704]
+    linking_number: [0, 0]
+    ref_linking_number: [0, 1]
+    native_contact: [53, 100]
+    ref_native_contact: [53, 100]
+    crossing_resid: [[], [107, 157]]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['', '+-']
+    ref_crossing_pattern: ['', '+']
+45:
+    code: ['L#C#', 'L-C#']
+    GLN: [0.17327906515207286, -0.23206652058149416]
+    ref_GLN: [0.22872527205679866, 0.45501327750451925]
+    linking_number: [0, 0]
+    ref_linking_number: [0, 1]
+    native_contact: [120, 146]
+    ref_native_contact: [120, 146]
+    crossing_resid: [[], []]
+    ref_crossing_resid: [[], [150]]
+    crossing_pattern: ['', '']
+    ref_crossing_pattern: ['', '+']

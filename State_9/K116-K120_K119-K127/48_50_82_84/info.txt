@@ -1,0 +1,59 @@
+State #9
+Q: 0.852200
+G: 0.020638
+Consistent experiment signals: ['K116-K120', 'K119-K127']
+Changes in entanglement cluster IDs: [48, 50, 82, 84]
+Trajectory number: 802
+Frame number: 43
+----------------------------------------------------------------
+K116-K120: M: 0.0095 Jwalk: 7.3472 Euclidean: 7.5634 Density: 0.0303
+K119-K127: M: 0.0000 Jwalk: -1.0000 Euclidean: 17.6502 Density: 0.0519
+----------------------------------------------------------------
+48:
+    code: ['L+C#', 'L#C#']
+    GLN: [-0.5864844098904661, 0.27171146035072435]
+    ref_GLN: [0.25853875786230973, 0.2120209628335866]
+    linking_number: [-1, 0]
+    ref_linking_number: [0, 0]
+    native_contact: [20, 139]
+    ref_native_contact: [20, 139]
+    crossing_resid: [[15], []]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['-', '']
+    ref_crossing_pattern: ['', '']
+50:
+    code: ['L+C#', 'L#C#']
+    GLN: [-0.7963605104022985, 0.19981705985844436]
+    ref_GLN: [0.1882095937873779, 0.3162698330452021]
+    linking_number: [-1, 0]
+    ref_linking_number: [0, 0]
+    native_contact: [120, 147]
+    ref_native_contact: [120, 147]
+    crossing_resid: [[15], []]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['-', '']
+    ref_crossing_pattern: ['', '']
+82:
+    code: ['L+C#', 'L-C#']
+    GLN: [-0.8209404431507558, 0.18437904621105466]
+    ref_GLN: [0.16870250850615595, 0.4755636663670292]
+    linking_number: [-1, 0]
+    ref_linking_number: [0, 1]
+    native_contact: [119, 146]
+    ref_native_contact: [119, 146]
+    crossing_resid: [[15], []]
+    ref_crossing_resid: [[], [150]]
+    crossing_pattern: ['-', '']
+    ref_crossing_pattern: ['', '+']
+84:
+    code: ['L-C#', 'L#C#']
+    GLN: [-0.2153949151262488, -0.01782806305717878]
+    ref_GLN: [0.7858007875131604, -0.023613095771521552]
+    linking_number: [0, 0]
+    ref_linking_number: [1, 0]
+    native_contact: [42, 163]
+    ref_native_contact: [42, 163]
+    crossing_resid: [[], []]
+    ref_crossing_resid: [[16], []]
+    crossing_pattern: ['', '']
+    ref_crossing_pattern: ['+', '']

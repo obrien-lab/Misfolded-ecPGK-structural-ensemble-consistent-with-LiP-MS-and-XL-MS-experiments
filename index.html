@@ -1,0 +1,257 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style type="text/css">
+       .loading{
+            width: 30vmin;
+            height: 30vmin;
+            margin: 0 auto;
+            border-radius: 50%;
+            border-top: 5vmin solid skyblue;
+            border-right: 5vmin solid skyblue;
+            border-bottom: 5vmin solid skyblue;
+            border-left: 5vmin solid rgba(255, 255, 255, 0);
+            animation: load 1s linear infinite;
+            -moz-animation:load 1s linear infinite;
+            -webkit-animation: load 1s linear infinite;
+            -o-animation:load 1s linear infinite;
+        }
+        @-webkit-keyframes load
+        {
+            from{-webkit-transform:rotate(0deg);}
+            to{-webkit-transform:rotate(360deg);}
+        }
+        @-moz-keyframes load
+        {
+            from{-moz-transform:rotate(0deg);}
+            to{-moz-transform:rotate(360deg);}
+        }
+        @-o-keyframes load
+        {
+            from{-o-transform:rotate(0deg);}
+            to{-o-transform:rotate(360deg);}
+        }
+        .cont5 {  
+          background: #fff; 
+          background: linear-gradient(90deg, rgba(240, 255, 255, .5) 50%, transparent 0), linear-gradient(rgba(240, 255, 255, .5) 50%, transparent 0); 
+          background-size: 30px 30px; 
+        }
+        #info table{
+          font-family: Arial;
+          font-size: 1.3vmin;
+        }
+        .main_text{
+          text-align: justify; 
+          font-family: Arial;
+          font-weight: bold;
+          font-size: 1.6vmin;
+        }
+        .main_text p{
+          margin-block-start: 0;
+          margin-block-end: 0.4em;
+          line-height:1.6vmin;
+        }
+        .notes{
+          text-align: justify; 
+          font-family: Arial;
+          font-weight: normal;
+          font-size: 1.5vmin;
+        }
+        .notes p{
+          margin-block-start: 0;
+          margin-block-end: 0.4em;
+          line-height:1.6vmin;
+        }
+        .footnotes{
+          text-align: right; 
+          font-family: Arial;
+          font-weight: normal;
+          font-size: 1.4vmin;
+        }
+        .footnotes p{
+          margin-block-start: 0;
+          margin-block-end: 0.4em;
+          line-height:1.4vmin;
+        }
+        .help_div p{
+          line-height: 1.2;
+          margin-top: 0.5vmin;
+          margin-bottom: 0.5vmin;
+        }
+    </style>
+</head>
+
+<body class="cont5" style="overflow: hidden; touch-action: none;">
+<div id="title_div" style="width:100%; height:8%; background-color: rgba(34,110,147,1); font-size: 2.0vw; font-family: Arial; color: white; display: table;">
+  <div style="vertical-align: middle; display: table-cell; padding-left: 2%;">
+    Misfolded structural ensemble of ecPGK consistent with LiP-MS and XL-MS experiments
+  </div>
+</div>
+
+<div id="loading_div" style="margin: auto; top: 0; left: 0; right: 0; bottom: 0; width:90vmin; height:40vmin; position: absolute; text-align: center;">
+  <div id="loading" class="loading"></div>
+  <div style="font-size: 3vmin; font-family: Arial;"><br>Loading javascripts. Refresh this page if it has no response.</div>
+</div>
+
+<script src="https://nglviewer.org/ngl/js/ngl.js"></script>
+
+<div id="main_div" style="width:80%; height:60%; margin-left: 10%;">
+  <div id="left_panel" style="float: left; width:20%; height:100%; background-color: #F0F8FF">
+    <div id="cntrl_panel" style="height:100%; background-color: #F0F8FF; position: relative;"></div>
+  </div>
+  <div id="right_panel" style="float: right; width:80%; height:100%;">
+    <div id="legend" style="width:100%; height:10%; text-align: center; background-color: #FFFFFF">
+      <svg width="15%" height="50%" viewBox="0 0 200 20">
+        <rect x="20" y="6" width="3" height="8" stroke="black" stroke-width="0" fill="orange" />
+        <rect x="25" y="6" width="3" height="8" stroke="black" stroke-width="0" fill="orange" />
+        <rect x="30" y="6" width="3" height="8" stroke="black" stroke-width="0" fill="orange" />
+        <rect x="35" y="6" width="3" height="8" stroke="black" stroke-width="0" fill="orange" />
+        <rect x="40" y="6" width="3" height="8" stroke="black" stroke-width="0" fill="orange" />
+        <rect x="45" y="6" width="3" height="8" stroke="black" stroke-width="0" fill="orange" />
+        <circle cx="18" cy="10" r="8" stroke="black" stroke-width="2" fill="orange" />
+        <circle cx="50" cy="10" r="8" stroke="black" stroke-width="2" fill="orange" />
+        <text fill="black" font-size="16" font-family="Arial" x="70" y="15">Native contact</text>
+      </svg>
+      <svg width="15%" height="50%" viewBox="0 0 200 20">
+        <circle cx="18" cy="10" r="8" stroke="black" stroke-width="2" fill="white" />
+        <text fill="black" font-size="16" font-family="Arial" x="40" y="15">Crossing residues</text>
+      </svg>
+      <svg width="28%" height="50%" viewBox="0 0 380 20">
+        <rect x="2" y="2" width="60" height="16" stroke="black" stroke-width="2" fill="#FF0000" />
+        <text fill="black" font-size="16" font-family="Arial" x="70" y="15">Closed loop formed by the native contact</text>
+      </svg>
+      <svg width="16%" height="50%" viewBox="0 0 220 20">
+        <rect x="2" y="2" width="60" height="16" stroke="black" stroke-width="2" fill="#0000FF" />
+        <text fill="black" font-size="16" font-family="Arial" x="70" y="15">Threading segment</text>
+      </svg>
+      <br>
+      <svg width="15%" height="50%" viewBox="0 0 200 20">
+        <rect x="2" y="2" width="60" height="16" stroke="black" stroke-width="2" fill="#E6E6FA" />
+        <text fill="black" font-size="16" font-family="Arial" x="70" y="15">Protein chain</text>
+      </svg>
+      <svg width="16%" height="50%" viewBox="0 0 220 20">
+        <rect x="2" y="2" width="60" height="16" stroke="black" stroke-width="2" fill="#00FFFF" />
+        <text fill="black" font-size="16" font-family="Arial" x="70" y="15">LiP-MS cut region</text>
+      </svg>
+      <svg width="16%" height="50%" viewBox="0 0 220 20">
+        <rect x="2" y="2" width="60" height="16" stroke="black" stroke-width="2" fill="#FF00FF" />
+        <text fill="black" font-size="16" font-family="Arial" x="70" y="15">XL-MS crosslinking</text>
+      </svg>
+    </div>
+    <div id="viewport" style="float: right; width:100%; height:90%; overflow: hidden;"></div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  document.getElementById('viewport').onmouseover=function(){
+    document.body.style.overflow='hidden';
+  }
+</script>
+
+<div style="width:80%; height:25%; margin-left: 10%;">
+  <div id="info" style="width:100%; height:100%; text-align: center; font-size: 1.0vw; font-family: Arial; background-color: LavenderBlush; vertical-align: middle; line-height: 3.0vmin"></div>
+</div>
+
+<HR style="margin-top: 1%;" width="80%" color=#987cb9 SIZE=3>
+
+<div id="bottom_div" style="width:80%; height:5%; margin-left: 10%; margin-top: 0;">
+    <div class="footnotes" style="float: right; width:68%; height:90%; margin-top: 0;">
+      <p>More information can be found in our publication: TBA.</p>
+      <p>Created by <a href="https://orcid.org/0000-0003-1100-9177" target="_blank">Yang Jiang</a>.</p>
+    </div>
+</div>
+
+<div id="datasetTableHelp_div" style="width: 15%; height: 15%; background-color: lightyellow; border: 1px solid black; border-radius: 5%; position: absolute; text-align: center; font-size: 1.2vmin; font-family: Arial; display: none;">
+  <div class="help_div" style="text-align: left; overflow: auto; height: 75%; margin: 2%;">
+    <p>&bull; <b>Repr. structures</b> &#10145; Representative structure for each metastable state with the highest number of consistent experimental signals.</p>
+    <p>&bull; <b>Repr. ensemble</b> &#10145; Representative structural ensemble for each metastable state containing structures consistent with experimental signals.</p>
+  </div>
+  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
+</div>
+
+<div id="proteinCheckHelp_div" style="width: 15%; height: 10%; background-color: lightyellow; border: 1px solid black; border-radius: 5%; position: absolute; text-align: center; font-size: 1.2vmin; font-family: Arial; display: none;">
+  <div class="help_div" style="text-align: left; overflow: auto; height: 60%; margin: 2%;">
+    <p>&bull; <b>Native</b> &#10145; Native (crystal) structure</p>
+    <p>&bull; <b>Misfolded</b> &#10145; Misfolded structure</p>
+  </div>
+  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
+</div>
+
+<div id="entCheckHelp_div" style="width: 15%; height: 20%; background-color: lightyellow; border: 1px solid black; border-radius: 5%; position: absolute; text-align: center; font-size: 1.2vmin; font-family: Arial; display: none;">
+  <div class="help_div" style="text-align: left; overflow: auto; height: 80%; margin: 2%;">
+    <p>Each item refers to a unique change of entanglements, identified by its ID number followed by the types of changes on the N- and C-termini in the parentheses.</p>
+    <p>The types of changes are represented by the following codes:</p>
+    <p>&bull; <b>L</b> &#10145; <b>Linking number</b></p>
+    <p>&bull; <b>C</b> &#10145; <b>Chirality</b></p>
+    <p>&bull; <b>+</b> &#10145; <b>Gain</b></p>
+    <p>&bull; <b>-</b> &#10145; <b>Loss</b></p>
+    <p>&bull; <b>~</b> &#10145; <b>Switch</b></p>
+    <p>&bull; <b>#</b> &#10145; <b>No change</b></p>
+    <p>For example, a change with a code "<b>L+C~</b>" refers to a "<b>Gain of entanglement with a switched chirality</b>".</p>
+    <p>The option "<b>N</b>" refers to the changes in entanglements in the native (crystal) structure, while "<b>M</b>" refers to the changes in entanglements in the misfolded structure.</p>
+  </div>
+  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
+</div>
+
+<div id="lipmsCheckHelp_div" style="width: 15%; height: 20%; background-color: lightyellow; border: 1px solid black; border-radius: 5%; position: absolute; text-align: center; font-size: 1.2vmin; font-family: Arial; display: none;">
+  <div class="help_div" style="text-align: left; overflow: auto; height: 80%; margin: 2%;">
+    <p>Each item refers to a significant LiP-MS cut-site, shown as the amino acid name and the residue number. "Significant" indicates that the solvent-accessible surface area of the cut-site region (+/- 5 residues around the cut-site) in this misfolded structure exceeds the 95% confidence interval of that in the native structure ensemble.</p>
+    <p>The option "<b>N</b>" refers to the changes in entanglements in the native (crystal) structure, while "<b>M</b>" refers to the changes in entanglements in the misfolded structure.</p>
+  </div>
+  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
+</div>
+
+<div id="xlmsCheckHelp_div" style="width: 15%; height: 20%; background-color: lightyellow; border: 1px solid black; border-radius: 5%; position: absolute; text-align: center; font-size: 1.2vmin; font-family: Arial; display: none;">
+  <div class="help_div" style="text-align: left; overflow: auto; height: 80%; margin: 2%;">
+    <p>Each item refers to a significant XL-MS residue pair, shown as the amino acid name and the residue number of each residue saperated by a dash. "Significant" indicates that the crosslink propensity of the residue pair in this misfolded structure exceeds the 95% confidence interval of that in the native structure ensemble.</p>
+    <p>The option "<b>N</b>" refers to the changes in entanglements in the native (crystal) structure, while "<b>M</b>" refers to the changes in entanglements in the misfolded structure.</p>
+  </div>
+  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
+</div>
+
+<div id="entInfoTableHelp_div" style="width: 15%; height: 20%; background-color: lightyellow; border: 1px solid black; border-radius: 5%; position: absolute; text-align: center; font-size: 1.2vmin; font-family: Arial; display: none;">
+  <div class="help_div" style="text-align: left; overflow: auto; height: 80%; margin: 2%;">
+    <p>This is a summary table of all changes in entanglements in this misfolded structure compared with the native (crystal) structure. The rows corresponding to the entanglements currently presented in the 3D viewer are marked gray.</p>
+    <p>Explanation of each column header:</p>
+    <p>&bull; <b>ID</b> &#10145; ID of the unique change in entanglements.</p>
+    <p>&bull; <b>code</b> &#10145; Types of changes on the N- and C-termini in parentheses, separated by a comma.</p>
+    <p>&bull; <b>protein</b> &#10145; Protein chains. "N" refers to the native (crystal) structure, and "M" refers to the misfolded structure.</p>
+    <p>&bull; <b>linking number</b> &#10145; Linking numbers of the N- and C-termini against the closed loop, respectively, with the chirality sign (+ or -). A linking number of 0 has no defined chirality.</p>
+    <p>&bull; <b>native contact</b> &#10145; Native contact residues forming the closed loop.</p>
+    <p>&bull; <b>crossings</b> &#10145; Crossing residues on N- and C-termini, with the chirality sign (+ or -). A non-entangled terminus has no crossing residues and is represented by an empty list.</p>
+  </div>
+  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
+</div>
+
+<div id="lipmsInfoTableHelp_div" style="width: 15%; height: 20%; background-color: lightyellow; border: 1px solid black; border-radius: 5%; position: absolute; text-align: center; font-size: 1.2vmin; font-family: Arial; display: none;">
+  <div class="help_div" style="text-align: left; overflow: auto; height: 80%; margin: 2%;">
+    <p>This is a summary table of all significant LiP-MS cut-sites. "Significant" indicates that the solvent-accessible surface area of the cut-site region (+/- 5 residues around the cut-site) in this misfolded structure exceeds the 95% confidence interval of that in the native structure ensemble. The rows corresponding to the cut-sites currently presented in the 3D viewer are marked gray.</p>
+    <p>Explanation of each column header:</p>
+    <p>&bull; <b>site</b> &#10145; LiP-MS proteinase K cut-sites, shown as the amino acid name and the residue number.</p>
+    <p>&bull; <b>native SASA (&#8491;<sup>2</sup>)</b> &#10145; The solvent-accessible surface area (SASA) in &#8491;<sup>2</sup> of the cut-site region (+/- 5 residues around the cut-site) in the native (crystal) structure.</p>
+    <p>&bull; <b>SASA (&#8491;<sup>2</sup>)</b> &#10145; The solvent-accessible surface area (SASA) in &#8491;<sup>2</sup> of the cut-site region (+/- 5 residues around the cut-site) in the misfolded structure.</p>
+    <p>&bull; <b>native ensemble SASA (95% CI) (&#8491;<sup>2</sup>)</b> &#10145; The average solvent-accessible surface area with its 95% confidence interval in &#8491;<sup>2</sup> of the cut-site region (+/- 5 residues around the cut-site) in the simulated native structure ensemble.</p>
+  </div>
+  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
+</div>
+
+<div id="xlmsInfoTableHelp_div" style="width: 15%; height: 20%; background-color: lightyellow; border: 1px solid black; border-radius: 5%; position: absolute; text-align: center; font-size: 1.2vmin; font-family: Arial; display: none;">
+  <div class="help_div" style="text-align: left; overflow: auto; height: 80%; margin: 2%;">
+    <p>This is a summary table of all significant XL-MS residue pairs. "Significant" indicates that the crosslink propensity of the residue pair in this misfolded structure exceeds the 95% confidence interval of that in the native structure ensemble. The rows corresponding to the residue pairs currently presented in the 3D viewer are marked gray.</p>
+    <p>Explanation of each column header:</p>
+    <p>&bull; <b>site</b> &#10145; XL-MS crosslinking residue pairs, shown as the amino acid name and the residue number of each residue saperated by a dash.</p>
+    <p>&bull; <b>native XL propensity</b> &#10145; The crosslink propensity of the residue pair in the native (crystal) structure.</p>
+    <p>&bull; <b>native jwalk (&#8491;)</b> &#10145; The Jwalk distance in &#8491; (solvant accessible surface distance) between the residue pair in the native (crystal) structure. A Jwalk distance of -1 indicates at least one of the residues is buried.</p>
+    <p>&bull; <b>XL propensity</b> &#10145; The crosslink propensity of the residue pair in the misfolded structure.</p>
+    <p>&bull; <b>jwalk (&#8491;)</b> &#10145; The Jwalk distance in &#8491; (solvant accessible surface distance) between the residue pair in the misfolded structure. A Jwalk distance of -1 indicates at least one of the residues is buried.</p>
+    <p>&bull; <b>native ensemble XL propensity (95% CI)</b> &#10145; The average crosslink propensity with its 95% confidence interval between the residue pair in the simulated native structure ensemble.</p>
+  </div>
+  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
+</div>
+
+<!-- Run the javascript to construct the page and setup NGL application -->
+<script src="./index.js?v=2.5"></script>
+
+</body>
+</html>

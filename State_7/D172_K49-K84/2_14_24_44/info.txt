@@ -1,0 +1,59 @@
+State #7
+Q: 0.767800
+G: 0.097561
+Consistent experiment signals: ['D172', 'K49-K84']
+Changes in entanglement cluster IDs: [2, 14, 24, 44]
+Trajectory number: 396
+Frame number: 46
+----------------------------------------------------------------
+D172: M: 660.4553
+K49-K84: M: 0.0627 Jwalk: 19.8161 Euclidean: 14.9143 Density: 0.0248
+----------------------------------------------------------------
+2:
+    code: ['L#C#', 'L#C~']
+    GLN: [0.10594320220137664, -0.5295317666820083]
+    ref_GLN: [0.11082193503550165, 0.5508270424000505]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 1]
+    native_contact: [50, 103]
+    ref_native_contact: [50, 103]
+    crossing_resid: [[], [146]]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '+']
+14:
+    code: ['L#C#', 'L+C#']
+    GLN: [0.07355984532738605, -0.7250374246770561]
+    ref_GLN: [0.0447843290989239, 0.08294017467658853]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [94, 108]
+    ref_native_contact: [94, 108]
+    crossing_resid: [[], [146]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+24:
+    code: ['L#C#', 'L+C#']
+    GLN: [-0.09865099510689067, -1.8109391989173802]
+    ref_GLN: [-0.09929724985113007, -0.06621681997433496]
+    linking_number: [0, -2]
+    ref_linking_number: [0, 0]
+    native_contact: [16, 132]
+    ref_native_contact: [16, 132]
+    crossing_resid: [[], [143, 146]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '--']
+    ref_crossing_pattern: ['', '']
+44:
+    code: ['L#C#', 'L-C#']
+    GLN: [0.19553251175249284, -0.23325010446835331]
+    ref_GLN: [0.1914805020924778, 0.6903653259335704]
+    linking_number: [0, 0]
+    ref_linking_number: [0, 1]
+    native_contact: [53, 100]
+    ref_native_contact: [53, 100]
+    crossing_resid: [[], [107, 146]]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['', '+-']
+    ref_crossing_pattern: ['', '+']

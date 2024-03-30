@@ -1,0 +1,60 @@
+State #8
+Q: 0.878600
+G: 0.104128
+Consistent experiment signals: ['G29', 'G61', 'K30-K84']
+Changes in entanglement cluster IDs: [35, 63, 74, 75]
+Trajectory number: 287
+Frame number: 67
+----------------------------------------------------------------
+G29: M: 657.5279
+G61: M: 226.9126
+K30-K84: M: 0.0000 Jwalk: 34.3322 Euclidean: 23.8377 Density: 0.0534
+----------------------------------------------------------------
+35:
+    code: ['L#C#', 'L+C#']
+    GLN: [-0.028923306293661057, 0.8179392745046984]
+    ref_GLN: [-0.010807667257300793, -0.0017899730123021368]
+    linking_number: [0, 1]
+    ref_linking_number: [0, 0]
+    native_contact: [25, 30]
+    ref_native_contact: [25, 30]
+    crossing_resid: [[], [64]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '+']
+    ref_crossing_pattern: ['', '']
+63:
+    code: ['L+C#', 'L#C#']
+    GLN: [1.0024539588105825, 0.09838323006224425]
+    ref_GLN: [-0.0829227165320286, 0.012503774645635898]
+    linking_number: [1, 0]
+    ref_linking_number: [0, 0]
+    native_contact: [62, 71]
+    ref_native_contact: [62, 71]
+    crossing_resid: [[29], []]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['+', '']
+    ref_crossing_pattern: ['', '']
+74:
+    code: ['L+C#', 'L#C#']
+    GLN: [1.2761213785910168, 0.6475404599352386]
+    ref_GLN: [0.1914805020924778, 0.6903653259335704]
+    linking_number: [1, 1]
+    ref_linking_number: [0, 1]
+    native_contact: [53, 100]
+    ref_native_contact: [53, 100]
+    crossing_resid: [[29], [107]]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['+', '+']
+    ref_crossing_pattern: ['', '+']
+75:
+    code: ['L+C#', 'L#C#']
+    GLN: [1.8085744212026065, 0.27790504522947157]
+    ref_GLN: [0.7806171120062056, 0.3053511402089999]
+    linking_number: [2, 0]
+    ref_linking_number: [1, 0]
+    native_contact: [39, 138]
+    ref_native_contact: [39, 138]
+    crossing_resid: [[16, 29], []]
+    ref_crossing_resid: [[17], []]
+    crossing_pattern: ['++', '']
+    ref_crossing_pattern: ['+', '']

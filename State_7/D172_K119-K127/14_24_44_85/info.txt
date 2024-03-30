@@ -1,0 +1,59 @@
+State #7
+Q: 0.796800
+G: 0.112570
+Consistent experiment signals: ['D172', 'K119-K127']
+Changes in entanglement cluster IDs: [14, 24, 44, 85]
+Trajectory number: 323
+Frame number: 4
+----------------------------------------------------------------
+D172: M: 631.4451
+K119-K127: M: 0.0506 Jwalk: 23.8571 Euclidean: 14.6699 Density: 0.0538
+----------------------------------------------------------------
+14:
+    code: ['L#C#', 'L+C#']
+    GLN: [0.061924285266390475, -0.5958005807449063]
+    ref_GLN: [0.0447843290989239, 0.08294017467658853]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [94, 108]
+    ref_native_contact: [94, 108]
+    crossing_resid: [[], [159]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+24:
+    code: ['L#C#', 'L+C#']
+    GLN: [-0.020155268212693665, -1.9503147425918095]
+    ref_GLN: [-0.04652774309797982, -0.049663747821309695]
+    linking_number: [0, -2]
+    ref_linking_number: [0, 0]
+    native_contact: [18, 135]
+    ref_native_contact: [18, 135]
+    crossing_resid: [[], [156, 159]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '--']
+    ref_crossing_pattern: ['', '']
+44:
+    code: ['L#C#', 'L-C#']
+    GLN: [0.1925126679777141, -0.1890662173236976]
+    ref_GLN: [0.18330885658976015, 0.7886806431698924]
+    linking_number: [0, 0]
+    ref_linking_number: [0, 1]
+    native_contact: [52, 100]
+    ref_native_contact: [52, 100]
+    crossing_resid: [[], [107, 159]]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['', '+-']
+    ref_crossing_pattern: ['', '+']
+85:
+    code: ['L-C#', 'L#C#']
+    GLN: [-0.170843003230852, 0.42550106017955186]
+    ref_GLN: [-0.9262329806256323, 0.3797569647105297]
+    linking_number: [0, 0]
+    ref_linking_number: [-1, 0]
+    native_contact: [264, 316]
+    ref_native_contact: [264, 316]
+    crossing_resid: [[], []]
+    ref_crossing_resid: [[256], []]
+    crossing_pattern: ['', '']
+    ref_crossing_pattern: ['-', '']

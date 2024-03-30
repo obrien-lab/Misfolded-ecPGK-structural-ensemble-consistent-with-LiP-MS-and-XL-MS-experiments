@@ -1,0 +1,59 @@
+State #9
+Q: 0.862800
+G: 0.022514
+Consistent experiment signals: ['G61', 'K119-K127']
+Changes in entanglement cluster IDs: [3, 19, 20, 23]
+Trajectory number: 857
+Frame number: 35
+----------------------------------------------------------------
+G61: M: 644.2201
+K119-K127: M: 0.0000 Jwalk: 35.4224 Euclidean: 15.2652 Density: 0.0609
+----------------------------------------------------------------
+3:
+    code: ['L#C#', 'L#C~']
+    GLN: [0.08312618089419903, -0.7943120635320049]
+    ref_GLN: [0.1914805020924778, 0.6903653259335704]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 1]
+    native_contact: [53, 100]
+    ref_native_contact: [53, 100]
+    crossing_resid: [[], [109]]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '+']
+19:
+    code: ['L#C#', 'L+C#']
+    GLN: [0.09291824157786426, -0.7819117993800241]
+    ref_GLN: [0.14031869862477409, 0.28118031456951303]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [30, 75]
+    ref_native_contact: [30, 75]
+    crossing_resid: [[], [110]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+20:
+    code: ['L#C#', 'L+C#']
+    GLN: [0.06448559586134628, -0.7814679350166003]
+    ref_GLN: [0.038029892739572385, 0.19006263950240734]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [55, 105]
+    ref_native_contact: [55, 105]
+    crossing_resid: [[], [109]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+23:
+    code: ['L#C#', 'L+C#']
+    GLN: [0.12114047750950946, -1.048628015682396]
+    ref_GLN: [0.11285461862973542, 0.2520285141227274]
+    linking_number: [0, -2]
+    ref_linking_number: [0, 0]
+    native_contact: [21, 76]
+    ref_native_contact: [21, 76]
+    crossing_resid: [[], [94, 110]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '--']
+    ref_crossing_pattern: ['', '']

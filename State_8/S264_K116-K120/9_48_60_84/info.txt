@@ -1,0 +1,59 @@
+State #8
+Q: 0.902400
+G: 0.051595
+Consistent experiment signals: ['S264', 'K116-K120']
+Changes in entanglement cluster IDs: [9, 48, 60, 84]
+Trajectory number: 458
+Frame number: 24
+----------------------------------------------------------------
+S264: M: 471.5828
+K116-K120: M: 0.0144 Jwalk: 8.7903 Euclidean: 8.5236 Density: 0.0254
+----------------------------------------------------------------
+9:
+    code: ['L#C#', 'L+C#']
+    GLN: [-0.006166173418468164, -0.7960068211789428]
+    ref_GLN: [-0.009831948799699296, 0.15954273493601612]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [15, 51]
+    ref_native_contact: [15, 51]
+    crossing_resid: [[], [58]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+48:
+    code: ['L+C#', 'L#C#']
+    GLN: [-0.8302599869632054, 0.21837047203452706]
+    ref_GLN: [0.17501930492105575, 0.27905506171609884]
+    linking_number: [-1, 0]
+    ref_linking_number: [0, 0]
+    native_contact: [36, 76]
+    ref_native_contact: [36, 76]
+    crossing_resid: [[21], []]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['-', '']
+    ref_crossing_pattern: ['', '']
+60:
+    code: ['L+C#', 'L#C#']
+    GLN: [-0.9053221623987469, 0.6248026256697964]
+    ref_GLN: [0.11491391949616735, 0.6414889745565661]
+    linking_number: [-1, 1]
+    ref_linking_number: [0, 1]
+    native_contact: [54, 100]
+    ref_native_contact: [54, 100]
+    crossing_resid: [[21], [107]]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['-', '+']
+    ref_crossing_pattern: ['', '+']
+84:
+    code: ['L-C#', 'L#C#']
+    GLN: [-0.2011077435733737, -0.018063699524905722]
+    ref_GLN: [0.7858007875131604, -0.023613095771521552]
+    linking_number: [0, 0]
+    ref_linking_number: [1, 0]
+    native_contact: [42, 163]
+    ref_native_contact: [42, 163]
+    crossing_resid: [[], []]
+    ref_crossing_resid: [[16], []]
+    crossing_pattern: ['', '']
+    ref_crossing_pattern: ['+', '']

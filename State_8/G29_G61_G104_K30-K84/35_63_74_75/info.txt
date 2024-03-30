@@ -1,0 +1,61 @@
+State #8
+Q: 0.860200
+G: 0.094747
+Consistent experiment signals: ['G29', 'G61', 'G104', 'K30-K84']
+Changes in entanglement cluster IDs: [35, 63, 74, 75]
+Trajectory number: 287
+Frame number: 57
+----------------------------------------------------------------
+G29: M: 576.7776
+G61: M: 284.7722
+G104: M: 504.0623
+K30-K84: M: 0.0000 Jwalk: 40.2761 Euclidean: 21.6838 Density: 0.0505
+----------------------------------------------------------------
+35:
+    code: ['L#C#', 'L+C#']
+    GLN: [-0.021983244883582127, 1.0803277299668494]
+    ref_GLN: [-0.010807667257300793, -0.0017899730123021368]
+    linking_number: [0, 1]
+    ref_linking_number: [0, 0]
+    native_contact: [25, 30]
+    ref_native_contact: [25, 30]
+    crossing_resid: [[], [63]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '+']
+    ref_crossing_pattern: ['', '']
+63:
+    code: ['L+C#', 'L#C#']
+    GLN: [1.0975065280446252, 0.08393947899955422]
+    ref_GLN: [-0.07577020647010141, 0.040420719217806135]
+    linking_number: [1, 0]
+    ref_linking_number: [0, 0]
+    native_contact: [61, 71]
+    ref_native_contact: [61, 71]
+    crossing_resid: [[28], []]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['+', '']
+    ref_crossing_pattern: ['', '']
+74:
+    code: ['L+C#', 'L#C#']
+    GLN: [1.3488790438474132, 0.7580520730627328]
+    ref_GLN: [0.18330885658976015, 0.7886806431698924]
+    linking_number: [1, 1]
+    ref_linking_number: [0, 1]
+    native_contact: [52, 100]
+    ref_native_contact: [52, 100]
+    crossing_resid: [[29], [107]]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['+', '+']
+    ref_crossing_pattern: ['', '+']
+75:
+    code: ['L+C#', 'L#C#']
+    GLN: [1.9766145249094615, -0.0023676696598277248]
+    ref_GLN: [0.7858007875131604, -0.023613095771521552]
+    linking_number: [2, 0]
+    ref_linking_number: [1, 0]
+    native_contact: [42, 163]
+    ref_native_contact: [42, 163]
+    crossing_resid: [[17, 29], []]
+    ref_crossing_resid: [[16], []]
+    crossing_pattern: ['++', '']
+    ref_crossing_pattern: ['+', '']

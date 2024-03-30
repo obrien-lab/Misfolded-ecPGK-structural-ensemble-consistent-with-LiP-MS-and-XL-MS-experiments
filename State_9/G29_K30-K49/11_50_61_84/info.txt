@@ -1,0 +1,59 @@
+State #9
+Q: 0.878600
+G: 0.045028
+Consistent experiment signals: ['G29', 'K30-K49']
+Changes in entanglement cluster IDs: [11, 50, 61, 84]
+Trajectory number: 866
+Frame number: 31
+----------------------------------------------------------------
+G29: M: 1042.6493
+K30-K49: M: 0.0465 Jwalk: 24.6188 Euclidean: 22.3119 Density: 0.0360
+----------------------------------------------------------------
+11:
+    code: ['L#C#', 'L+C#']
+    GLN: [-0.019339974843591956, -0.64077425606766]
+    ref_GLN: [-0.010905492444300932, 0.40044301263279714]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [10, 46]
+    ref_native_contact: [10, 46]
+    crossing_resid: [[], [133]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+50:
+    code: ['L+C#', 'L#C#']
+    GLN: [-0.8432672665742192, 0.24230926222788945]
+    ref_GLN: [0.19960277304026172, 0.25606915735799995]
+    linking_number: [-1, 0]
+    ref_linking_number: [0, 0]
+    native_contact: [128, 149]
+    ref_native_contact: [128, 149]
+    crossing_resid: [[15], []]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['-', '']
+    ref_crossing_pattern: ['', '']
+61:
+    code: ['L+C#', 'L#C#']
+    GLN: [-0.8523933692285132, 0.45228154557400735]
+    ref_GLN: [0.22872527205679866, 0.45501327750451925]
+    linking_number: [-1, 1]
+    ref_linking_number: [0, 1]
+    native_contact: [120, 146]
+    ref_native_contact: [120, 146]
+    crossing_resid: [[15], [150]]
+    ref_crossing_resid: [[], [150]]
+    crossing_pattern: ['-', '+']
+    ref_crossing_pattern: ['', '+']
+84:
+    code: ['L-C#', 'L#C#']
+    GLN: [-0.24106419246356967, -0.028380566336344504]
+    ref_GLN: [0.7858007875131604, -0.023613095771521552]
+    linking_number: [0, 0]
+    ref_linking_number: [1, 0]
+    native_contact: [42, 163]
+    ref_native_contact: [42, 163]
+    crossing_resid: [[], []]
+    ref_crossing_resid: [[16], []]
+    crossing_pattern: ['', '']
+    ref_crossing_pattern: ['+', '']

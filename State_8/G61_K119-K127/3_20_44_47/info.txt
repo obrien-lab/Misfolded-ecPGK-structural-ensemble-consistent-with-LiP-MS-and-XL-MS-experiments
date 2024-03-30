@@ -1,0 +1,59 @@
+State #8
+Q: 0.881300
+G: 0.071295
+Consistent experiment signals: ['G61', 'K119-K127']
+Changes in entanglement cluster IDs: [3, 20, 44, 47]
+Trajectory number: 510
+Frame number: 18
+----------------------------------------------------------------
+G61: M: 673.5701
+K119-K127: M: 0.0000 Jwalk: -1.0000 Euclidean: 7.9704 Density: 0.0783
+----------------------------------------------------------------
+3:
+    code: ['L#C#', 'L#C~']
+    GLN: [0.10953771568755241, -0.6132507522018517]
+    ref_GLN: [0.11082193503550165, 0.5508270424000505]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 1]
+    native_contact: [50, 103]
+    ref_native_contact: [50, 103]
+    crossing_resid: [[], [117]]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '+']
+20:
+    code: ['L#C#', 'L+C#']
+    GLN: [-0.10169092980752521, -1.0744850234944245]
+    ref_GLN: [-0.08682700567986204, 0.05339902575130137]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [91, 106]
+    ref_native_contact: [91, 106]
+    crossing_resid: [[], [117]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+44:
+    code: ['L#C#', 'L-C#']
+    GLN: [0.16514905951925304, -0.3884351775818159]
+    ref_GLN: [0.18330885658976015, 0.7886806431698924]
+    linking_number: [0, 0]
+    ref_linking_number: [0, 1]
+    native_contact: [52, 100]
+    ref_native_contact: [52, 100]
+    crossing_resid: [[], [107, 117]]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['', '+-']
+    ref_crossing_pattern: ['', '+']
+47:
+    code: ['L#C~', 'L#C#']
+    GLN: [0.39694281234868306, 0.014633859724511108]
+    ref_GLN: [-0.6393654319639018, 0.07389938416354408]
+    linking_number: [1, 0]
+    ref_linking_number: [-1, 0]
+    native_contact: [272, 286]
+    ref_native_contact: [272, 286]
+    crossing_resid: [[255], []]
+    ref_crossing_resid: [[255], []]
+    crossing_pattern: ['+', '']
+    ref_crossing_pattern: ['-', '']

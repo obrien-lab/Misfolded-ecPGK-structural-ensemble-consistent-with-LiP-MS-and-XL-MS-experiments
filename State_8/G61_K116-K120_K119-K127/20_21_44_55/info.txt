@@ -1,0 +1,60 @@
+State #8
+Q: 0.881300
+G: 0.068480
+Consistent experiment signals: ['G61', 'K116-K120', 'K119-K127']
+Changes in entanglement cluster IDs: [20, 21, 44, 55]
+Trajectory number: 406
+Frame number: 55
+----------------------------------------------------------------
+G61: M: 713.6629
+K116-K120: M: 0.0621 Jwalk: 18.8161 Euclidean: 10.0633 Density: 0.0455
+K119-K127: M: 0.0000 Jwalk: -1.0000 Euclidean: 14.4517 Density: 0.0652
+----------------------------------------------------------------
+20:
+    code: ['L#C#', 'L+C#']
+    GLN: [0.02573536580256778, -0.9654462803496577]
+    ref_GLN: [0.056532205015890125, 0.09702997573946072]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [91, 98]
+    ref_native_contact: [91, 98]
+    crossing_resid: [[], [117]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+21:
+    code: ['L#C#', 'L+C#']
+    GLN: [0.11253640347762257, -0.7016273459154491]
+    ref_GLN: [0.1813980949812109, 0.06470732437611454]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [67, 113]
+    ref_native_contact: [67, 113]
+    crossing_resid: [[], [117]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+44:
+    code: ['L#C#', 'L-C#']
+    GLN: [0.18525511514608073, -0.44072726056978084]
+    ref_GLN: [0.1914805020924778, 0.6903653259335704]
+    linking_number: [0, 0]
+    ref_linking_number: [0, 1]
+    native_contact: [53, 100]
+    ref_native_contact: [53, 100]
+    crossing_resid: [[], [107, 117]]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['', '+-']
+    ref_crossing_pattern: ['', '+']
+55:
+    code: ['L+C#', 'L#C#']
+    GLN: [-0.6857804067727887, -0.05415474736038545]
+    ref_GLN: [0.028859151247449037, -0.043493965222007464]
+    linking_number: [-1, 0]
+    ref_linking_number: [0, 0]
+    native_contact: [117, 121]
+    ref_native_contact: [117, 121]
+    crossing_resid: [[93], []]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['-', '']
+    ref_crossing_pattern: ['', '']
