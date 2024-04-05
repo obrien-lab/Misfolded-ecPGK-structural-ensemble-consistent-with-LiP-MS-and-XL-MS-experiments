@@ -968,7 +968,7 @@ function addFunToCheckbox(struct_info_dict) {
       var name_prefix = e.target.id.split('Check')[0]
       stage.getRepresentationsByName(name_prefix+" protein")
         .setVisibility(e.target.checked)
-      reset_view()
+      // reset_view()
     })
   }
 
@@ -995,7 +995,7 @@ function addFunToCheckbox(struct_info_dict) {
           .setVisibility(e.target.checked)
         stage.getRepresentationsByName(prefix+" native contact #"+elid)
           .setVisibility(e.target.checked)
-        reset_view()
+        // reset_view()
 
         update_info_panel(native_M)
       })
@@ -1141,7 +1141,7 @@ function expCheckBox_change_function(e) {
       })
       r.setVisibility(true)
     }
-    reset_view()
+    // reset_view()
   }
 }
 
@@ -1710,7 +1710,7 @@ function gen_major_contents(selectbox_json) {
       for (var i = 1; i < struct.length; i++) {
         _align_structures(struct[0], struct[i], sele_list[0], sele_list[i])
       }
-      reset_view()
+      // reset_view()
     },
   }, { "vertical-align": "middle",
        "font-family": "Arial", 
