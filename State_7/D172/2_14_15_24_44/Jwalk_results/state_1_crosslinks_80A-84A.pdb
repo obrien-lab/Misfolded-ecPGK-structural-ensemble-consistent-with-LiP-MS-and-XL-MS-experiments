@@ -1,9 +1,11 @@
 # MODEL 9 TYR80A-LYS84A
-ATOM      1  IX  AIX A   1      12.483  17.634   3.424  1.00  0.00           X  
-ATOM      2  IX  AIX A   2      10.483  19.634   1.424  1.00  0.00           X  
-ATOM      3  IX  AIX A   3       9.483  19.634   0.424  1.00  0.00           X  
-ATOM      4  IX  AIX A   4       7.483  16.634  -0.576  1.00  0.00           X  
+ATOM      1  IX  AIX A   1       5.486 -16.763 -22.295  1.00  0.00           X  
+ATOM      2  IX  AIX A   2       3.486 -19.763 -22.295  1.00  0.00           X  
+ATOM      3  IX  AIX A   3       4.486 -20.763 -21.295  1.00  0.00           X  
+ATOM      4  IX  AIX A   4       5.486 -21.763 -20.295  1.00  0.00           X  
+ATOM      5  IX  AIX A   5       5.486 -21.763 -16.295  1.00  0.00           X  
 CONECT    1    2
 CONECT    2    3
 CONECT    3    4
+CONECT    4    5
 END

@@ -1,14 +1,16 @@
-# MODEL 8 LYS49A-LYS84A
-ATOM      1  HX  AHX A   1     -17.670  15.207  15.977  1.00  0.00           X  
-ATOM      2  HX  AHX A   2     -13.670  15.207  15.977  1.00  0.00           X  
-ATOM      3  HX  AHX A   3     -12.670  15.207  16.977  1.00  0.00           X  
-ATOM      4  HX  AHX A   4     -11.670  15.207  17.977  1.00  0.00           X  
-ATOM      5  HX  AHX A   5     -10.670  14.207  18.977  1.00  0.00           X  
-ATOM      6  HX  AHX A   6      -9.670  13.207  18.977  1.00  0.00           X  
-ATOM      7  HX  AHX A   7      -8.670  12.207  19.977  1.00  0.00           X  
-ATOM      8  HX  AHX A   8      -7.670  11.207  20.977  1.00  0.00           X  
-ATOM      9  HX  AHX A   9      -6.670  10.207  19.977  1.00  0.00           X  
-ATOM     10  HX  AHX A  10      -7.670   7.207  21.977  1.00  0.00           X  
+# MODEL 7 LYS49A-LYS84A
+ATOM      1  GX  AGX A   1      -5.677  -2.948  29.383  1.00  0.00           X  
+ATOM      2  GX  AGX A   2      -1.677  -2.948  29.383  1.00  0.00           X  
+ATOM      3  GX  AGX A   3      -0.677  -2.948  29.383  1.00  0.00           X  
+ATOM      4  GX  AGX A   4       0.323  -2.948  29.383  1.00  0.00           X  
+ATOM      5  GX  AGX A   5       1.323  -2.948  29.383  1.00  0.00           X  
+ATOM      6  GX  AGX A   6       2.323  -1.948  29.383  1.00  0.00           X  
+ATOM      7  GX  AGX A   7       3.323  -1.948  28.383  1.00  0.00           X  
+ATOM      8  GX  AGX A   8       4.323  -0.948  27.383  1.00  0.00           X  
+ATOM      9  GX  AGX A   9       5.323  -0.948  26.383  1.00  0.00           X  
+ATOM     10  GX  AGX A  10       6.323  -0.948  25.383  1.00  0.00           X  
+ATOM     11  GX  AGX A  11       7.323  -1.948  24.383  1.00  0.00           X  
+ATOM     12  GX  AGX A  12       8.323  -4.948  26.383  1.00  0.00           X  
 CONECT    1    2
 CONECT    2    3
 CONECT    3    4
@@ -18,4 +20,6 @@ CONECT    6    7
 CONECT    7    8
 CONECT    8    9
 CONECT    9   10
+CONECT   10   11
+CONECT   11   12
 END

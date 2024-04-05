@@ -1,50 +1,34 @@
 # MODEL 1 LYS27A-THR32A
-ATOM      1  AX  AAX A   1       2.855  24.620   8.288  1.00  0.00           X  
-ATOM      2  AX  AAX A   2       1.855  21.620   6.288  1.00  0.00           X  
-ATOM      3  AX  AAX A   3       3.855  19.620   4.288  1.00  0.00           X  
-CONECT    1    2
-CONECT    2    3
-END
-# MODEL 2 LYS27A-LYS82A
-ATOM      1  BX  ABX A   1       2.855  24.620   8.288  1.00  0.00           X  
-ATOM      2  BX  ABX A   2       3.855  27.620   6.288  1.00  0.00           X  
-ATOM      3  BX  ABX A   3       4.855  28.620   5.288  1.00  0.00           X  
-ATOM      4  BX  ABX A   4       5.855  29.620   4.288  1.00  0.00           X  
-ATOM      5  BX  ABX A   5       6.855  30.620   3.288  1.00  0.00           X  
-ATOM      6  BX  ABX A   6       7.855  30.620   2.288  1.00  0.00           X  
-ATOM      7  BX  ABX A   7       8.855  30.620   1.288  1.00  0.00           X  
-ATOM      8  BX  ABX A   8       9.855  30.620   0.288  1.00  0.00           X  
-ATOM      9  BX  ABX A   9      10.855  30.620  -0.712  1.00  0.00           X  
-ATOM     10  BX  ABX A  10      11.855  29.620  -1.712  1.00  0.00           X  
-ATOM     11  BX  ABX A  11      11.855  26.620  -3.712  1.00  0.00           X  
+ATOM      1  AX  AAX A   1       4.474  19.997   3.266  1.00  0.00           X  
+ATOM      2  AX  AAX A   2       2.474  19.997   0.266  1.00  0.00           X  
+ATOM      3  AX  AAX A   3       3.474  19.997  -0.734  1.00  0.00           X  
+ATOM      4  AX  AAX A   4       2.474  19.997  -1.734  1.00  0.00           X  
+ATOM      5  AX  AAX A   5       3.474  17.997  -4.734  1.00  0.00           X  
 CONECT    1    2
 CONECT    2    3
 CONECT    3    4
 CONECT    4    5
-CONECT    5    6
-CONECT    6    7
-CONECT    7    8
-CONECT    8    9
-CONECT    9   10
-CONECT   10   11
 END
-# MODEL 3 LYS27A-LYS84A
-ATOM      1  CX  ACX A   1       2.855  24.620   8.288  1.00  0.00           X  
-ATOM      2  CX  ACX A   2       3.855  27.620   6.288  1.00  0.00           X  
-ATOM      3  CX  ACX A   3       4.855  28.620   5.288  1.00  0.00           X  
-ATOM      4  CX  ACX A   4       5.855  29.620   5.288  1.00  0.00           X  
-ATOM      5  CX  ACX A   5       6.855  29.620   5.288  1.00  0.00           X  
-ATOM      6  CX  ACX A   6       7.855  29.620   5.288  1.00  0.00           X  
-ATOM      7  CX  ACX A   7       8.855  29.620   5.288  1.00  0.00           X  
-ATOM      8  CX  ACX A   8       9.855  28.620   4.288  1.00  0.00           X  
-ATOM      9  CX  ACX A   9      10.855  27.620   4.288  1.00  0.00           X  
-ATOM     10  CX  ACX A  10      10.855  26.620   4.288  1.00  0.00           X  
-ATOM     11  CX  ACX A  11      11.855  25.620   4.288  1.00  0.00           X  
-ATOM     12  CX  ACX A  12      12.855  24.620   4.288  1.00  0.00           X  
-ATOM     13  CX  ACX A  13      13.855  23.620   3.288  1.00  0.00           X  
-ATOM     14  CX  ACX A  14      14.855  22.620   2.288  1.00  0.00           X  
-ATOM     15  CX  ACX A  15      15.855  22.620   1.288  1.00  0.00           X  
-ATOM     16  CX  ACX A  16      15.855  22.620  -2.712  1.00  0.00           X  
+# MODEL 2 LYS27A-SER33A
+ATOM      1  BX  ABX A   1       4.474  19.997   3.266  1.00  0.00           X  
+ATOM      2  BX  ABX A   2       3.474  19.997   0.266  1.00  0.00           X  
+ATOM      3  BX  ABX A   3       2.474  16.997  -0.734  1.00  0.00           X  
+CONECT    1    2
+CONECT    2    3
+END
+# MODEL 3 LYS27A-LYS82A
+ATOM      1  CX  ACX A   1       4.474  19.997   3.266  1.00  0.00           X  
+ATOM      2  CX  ACX A   2       2.474  22.997   2.266  1.00  0.00           X  
+ATOM      3  CX  ACX A   3       2.474  23.997   2.266  1.00  0.00           X  
+ATOM      4  CX  ACX A   4       2.474  24.997   2.266  1.00  0.00           X  
+ATOM      5  CX  ACX A   5       1.474  25.997   2.266  1.00  0.00           X  
+ATOM      6  CX  ACX A   6       0.474  26.997   2.266  1.00  0.00           X  
+ATOM      7  CX  ACX A   7      -0.526  27.997   1.266  1.00  0.00           X  
+ATOM      8  CX  ACX A   8      -1.526  28.997   0.266  1.00  0.00           X  
+ATOM      9  CX  ACX A   9      -2.526  28.997  -0.734  1.00  0.00           X  
+ATOM     10  CX  ACX A  10      -3.526  28.997  -1.734  1.00  0.00           X  
+ATOM     11  CX  ACX A  11      -4.526  28.997  -2.734  1.00  0.00           X  
+ATOM     12  CX  ACX A  12      -6.526  26.997  -4.734  1.00  0.00           X  
 CONECT    1    2
 CONECT    2    3
 CONECT    3    4
@@ -56,32 +40,76 @@ CONECT    8    9
 CONECT    9   10
 CONECT   10   11
 CONECT   11   12
-CONECT   12   13
-CONECT   13   14
-CONECT   14   15
-CONECT   15   16
 END
-# MODEL 4 LYS30A-LYS49A
-ATOM      1  DX  ADX A   1       8.855  22.620   5.288  1.00  0.00           X  
-ATOM      2  DX  ADX A   2      10.855  20.620   3.288  1.00  0.00           X  
-ATOM      3  DX  ADX A   3      11.855  19.620   2.288  1.00  0.00           X  
-ATOM      4  DX  ADX A   4      11.855  19.620   1.288  1.00  0.00           X  
-ATOM      5  DX  ADX A   5      12.855  19.620   0.288  1.00  0.00           X  
-ATOM      6  DX  ADX A   6      13.855  19.620  -0.712  1.00  0.00           X  
-ATOM      7  DX  ADX A   7      14.855  18.620  -1.712  1.00  0.00           X  
-ATOM      8  DX  ADX A   8      15.855  18.620  -2.712  1.00  0.00           X  
-ATOM      9  DX  ADX A   9      16.855  18.620  -3.712  1.00  0.00           X  
-ATOM     10  DX  ADX A  10      16.855  18.620  -4.712  1.00  0.00           X  
-ATOM     11  DX  ADX A  11      16.855  18.620  -5.712  1.00  0.00           X  
-ATOM     12  DX  ADX A  12      17.855  18.620  -6.712  1.00  0.00           X  
-ATOM     13  DX  ADX A  13      18.855  18.620  -7.712  1.00  0.00           X  
-ATOM     14  DX  ADX A  14      18.855  18.620  -8.712  1.00  0.00           X  
-ATOM     15  DX  ADX A  15      18.855  18.620  -9.712  1.00  0.00           X  
-ATOM     16  DX  ADX A  16      18.855  18.620 -10.712  1.00  0.00           X  
-ATOM     17  DX  ADX A  17      18.855  18.620 -11.712  1.00  0.00           X  
-ATOM     18  DX  ADX A  18      17.855  18.620 -12.712  1.00  0.00           X  
-ATOM     19  DX  ADX A  19      16.855  18.620 -13.712  1.00  0.00           X  
-ATOM     20  DX  ADX A  20      15.855  18.620 -16.712  1.00  0.00           X  
+# MODEL 4 LYS27A-LYS84A
+ATOM      1  DX  ADX A   1       4.474  19.997   3.266  1.00  0.00           X  
+ATOM      2  DX  ADX A   2       2.474  19.997   0.266  1.00  0.00           X  
+ATOM      3  DX  ADX A   3       3.474  19.997  -0.734  1.00  0.00           X  
+ATOM      4  DX  ADX A   4       2.474  19.997  -1.734  1.00  0.00           X  
+ATOM      5  DX  ADX A   5       1.474  19.997  -2.734  1.00  0.00           X  
+ATOM      6  DX  ADX A   6       0.474  19.997  -3.734  1.00  0.00           X  
+ATOM      7  DX  ADX A   7       0.474  19.997  -4.734  1.00  0.00           X  
+ATOM      8  DX  ADX A   8       0.474  20.997  -5.734  1.00  0.00           X  
+ATOM      9  DX  ADX A   9      -0.526  21.997  -6.734  1.00  0.00           X  
+ATOM     10  DX  ADX A  10      -2.526  23.997  -8.734  1.00  0.00           X  
+CONECT    1    2
+CONECT    2    3
+CONECT    3    4
+CONECT    4    5
+CONECT    5    6
+CONECT    6    7
+CONECT    7    8
+CONECT    8    9
+CONECT    9   10
+END
+# MODEL 5 LYS27A-LYS243A
+ATOM      1  EX  AEX A   1       4.474  19.997   3.266  1.00  0.00           X  
+ATOM      2  EX  AEX A   2       4.474  15.997   3.266  1.00  0.00           X  
+ATOM      3  EX  AEX A   3       4.474  14.997   3.266  1.00  0.00           X  
+ATOM      4  EX  AEX A   4       4.474  13.997   3.266  1.00  0.00           X  
+ATOM      5  EX  AEX A   5       4.474  12.997   3.266  1.00  0.00           X  
+ATOM      6  EX  AEX A   6       4.474  11.997   3.266  1.00  0.00           X  
+ATOM      7  EX  AEX A   7       4.474  10.997   3.266  1.00  0.00           X  
+ATOM      8  EX  AEX A   8       4.474   9.997   3.266  1.00  0.00           X  
+ATOM      9  EX  AEX A   9       4.474   8.997   3.266  1.00  0.00           X  
+ATOM     10  EX  AEX A  10       4.474   7.997   3.266  1.00  0.00           X  
+ATOM     11  EX  AEX A  11       4.474   6.997   3.266  1.00  0.00           X  
+ATOM     12  EX  AEX A  12       4.474   5.997   3.266  1.00  0.00           X  
+ATOM     13  EX  AEX A  13       4.474   4.997   3.266  1.00  0.00           X  
+ATOM     14  EX  AEX A  14       4.474   3.997   3.266  1.00  0.00           X  
+ATOM     15  EX  AEX A  15       4.474   2.997   4.266  1.00  0.00           X  
+ATOM     16  EX  AEX A  16       4.474   1.997   5.266  1.00  0.00           X  
+ATOM     17  EX  AEX A  17       4.474   0.997   6.266  1.00  0.00           X  
+ATOM     18  EX  AEX A  18       4.474  -0.003   7.266  1.00  0.00           X  
+ATOM     19  EX  AEX A  19       4.474  -1.003   8.266  1.00  0.00           X  
+ATOM     20  EX  AEX A  20       4.474  -2.003   9.266  1.00  0.00           X  
+ATOM     21  EX  AEX A  21       4.474  -3.003  10.266  1.00  0.00           X  
+ATOM     22  EX  AEX A  22       3.474  -4.003  11.266  1.00  0.00           X  
+ATOM     23  EX  AEX A  23       2.474  -5.003  12.266  1.00  0.00           X  
+ATOM     24  EX  AEX A  24       2.474  -6.003  13.266  1.00  0.00           X  
+ATOM     25  EX  AEX A  25       2.474  -7.003  14.266  1.00  0.00           X  
+ATOM     26  EX  AEX A  26       2.474  -8.003  15.266  1.00  0.00           X  
+ATOM     27  EX  AEX A  27       2.474  -9.003  16.266  1.00  0.00           X  
+ATOM     28  EX  AEX A  28       2.474 -10.003  17.266  1.00  0.00           X  
+ATOM     29  EX  AEX A  29       2.474 -11.003  18.266  1.00  0.00           X  
+ATOM     30  EX  AEX A  30       3.474 -12.003  19.266  1.00  0.00           X  
+ATOM     31  EX  AEX A  31       4.474 -13.003  20.266  1.00  0.00           X  
+ATOM     32  EX  AEX A  32       5.474 -14.003  21.266  1.00  0.00           X  
+ATOM     33  EX  AEX A  33       6.474 -15.003  22.266  1.00  0.00           X  
+ATOM     34  EX  AEX A  34       7.474 -16.003  22.266  1.00  0.00           X  
+ATOM     35  EX  AEX A  35       8.474 -17.003  22.266  1.00  0.00           X  
+ATOM     36  EX  AEX A  36       9.474 -18.003  22.266  1.00  0.00           X  
+ATOM     37  EX  AEX A  37      10.474 -19.003  22.266  1.00  0.00           X  
+ATOM     38  EX  AEX A  38      11.474 -20.003  22.266  1.00  0.00           X  
+ATOM     39  EX  AEX A  39      12.474 -21.003  21.266  1.00  0.00           X  
+ATOM     40  EX  AEX A  40      13.474 -22.003  20.266  1.00  0.00           X  
+ATOM     41  EX  AEX A  41      13.474 -23.003  19.266  1.00  0.00           X  
+ATOM     42  EX  AEX A  42      13.474 -24.003  18.266  1.00  0.00           X  
+ATOM     43  EX  AEX A  43      13.474 -24.003  17.266  1.00  0.00           X  
+ATOM     44  EX  AEX A  44      13.474 -24.003  16.266  1.00  0.00           X  
+ATOM     45  EX  AEX A  45      13.474 -24.003  15.266  1.00  0.00           X  
+ATOM     46  EX  AEX A  46      13.474 -24.003  14.266  1.00  0.00           X  
+ATOM     47  EX  AEX A  47      12.474 -24.003  11.266  1.00  0.00           X  
 CONECT    1    2
 CONECT    2    3
 CONECT    3    4
@@ -101,82 +129,53 @@ CONECT   16   17
 CONECT   17   18
 CONECT   18   19
 CONECT   19   20
+CONECT   20   21
+CONECT   21   22
+CONECT   22   23
+CONECT   23   24
+CONECT   24   25
+CONECT   25   26
+CONECT   26   27
+CONECT   27   28
+CONECT   28   29
+CONECT   29   30
+CONECT   30   31
+CONECT   31   32
+CONECT   32   33
+CONECT   33   34
+CONECT   34   35
+CONECT   35   36
+CONECT   36   37
+CONECT   37   38
+CONECT   38   39
+CONECT   39   40
+CONECT   40   41
+CONECT   41   42
+CONECT   42   43
+CONECT   43   44
+CONECT   44   45
+CONECT   45   46
+CONECT   46   47
 END
-# MODEL 5 LYS30A-LYS84A
-ATOM      1  EX  AEX A   1       8.855  22.620   5.288  1.00  0.00           X  
-ATOM      2  EX  AEX A   2      11.855  21.620   3.288  1.00  0.00           X  
-ATOM      3  EX  AEX A   3      12.855  20.620   2.288  1.00  0.00           X  
-ATOM      4  EX  AEX A   4      13.855  20.620   1.288  1.00  0.00           X  
-ATOM      5  EX  AEX A   5      14.855  21.620   0.288  1.00  0.00           X  
-ATOM      6  EX  AEX A   6      15.855  22.620  -2.712  1.00  0.00           X  
-CONECT    1    2
-CONECT    2    3
-CONECT    3    4
-CONECT    4    5
-CONECT    5    6
-END
-# MODEL 6 LYS49A-LYS84A
-ATOM      1  FX  AFX A   1      15.855  18.620 -16.712  1.00  0.00           X  
-ATOM      2  FX  AFX A   2      15.855  18.620 -12.712  1.00  0.00           X  
-ATOM      3  FX  AFX A   3      15.855  18.620 -11.712  1.00  0.00           X  
-ATOM      4  FX  AFX A   4      16.855  19.620 -10.712  1.00  0.00           X  
-ATOM      5  FX  AFX A   5      17.855  19.620  -9.712  1.00  0.00           X  
-ATOM      6  FX  AFX A   6      17.855  19.620  -8.712  1.00  0.00           X  
-ATOM      7  FX  AFX A   7      17.855  19.620  -7.712  1.00  0.00           X  
-ATOM      8  FX  AFX A   8      17.855  19.620  -6.712  1.00  0.00           X  
-ATOM      9  FX  AFX A   9      18.855  20.620  -5.712  1.00  0.00           X  
-ATOM     10  FX  AFX A  10      18.855  21.620  -4.712  1.00  0.00           X  
-ATOM     11  FX  AFX A  11      15.855  22.620  -2.712  1.00  0.00           X  
-CONECT    1    2
-CONECT    2    3
-CONECT    3    4
-CONECT    4    5
-CONECT    5    6
-CONECT    6    7
-CONECT    7    8
-CONECT    8    9
-CONECT    9   10
-CONECT   10   11
-END
-# MODEL 7 TYR80A-LYS84A
-ATOM      1  GX  AGX A   1      10.855  22.620   0.288  1.00  0.00           X  
-ATOM      2  GX  AGX A   2      13.855  21.620   0.288  1.00  0.00           X  
-ATOM      3  GX  AGX A   3      15.855  22.620  -2.712  1.00  0.00           X  
-CONECT    1    2
-CONECT    2    3
-END
-# MODEL 8 LYS116A-LYS120A
-ATOM      1  HX  AHX A   1     -16.145  19.620  -7.712  1.00  0.00           X  
-ATOM      2  HX  AHX A   2     -19.145  17.620  -8.712  1.00  0.00           X  
-ATOM      3  HX  AHX A   3     -19.145  16.620  -8.712  1.00  0.00           X  
-ATOM      4  HX  AHX A   4     -19.145  15.620  -8.712  1.00  0.00           X  
-ATOM      5  HX  AHX A   5     -19.145  14.620  -8.712  1.00  0.00           X  
-ATOM      6  HX  AHX A   6     -18.145  13.620  -8.712  1.00  0.00           X  
-ATOM      7  HX  AHX A   7     -16.145  10.620  -8.712  1.00  0.00           X  
-CONECT    1    2
-CONECT    2    3
-CONECT    3    4
-CONECT    4    5
-CONECT    5    6
-CONECT    6    7
-END
-# MODEL 9 LYS119A-LYS127A
-ATOM      1  IX  AIX A   1     -14.145  11.620  -5.712  1.00  0.00           X  
-ATOM      2  IX  AIX A   2     -17.145  13.620  -6.712  1.00  0.00           X  
-ATOM      3  IX  AIX A   3     -18.145  13.620  -7.712  1.00  0.00           X  
-ATOM      4  IX  AIX A   4     -18.145  13.620  -8.712  1.00  0.00           X  
-ATOM      5  IX  AIX A   5     -19.145  12.620  -9.712  1.00  0.00           X  
-ATOM      6  IX  AIX A   6     -19.145  11.620 -10.712  1.00  0.00           X  
-ATOM      7  IX  AIX A   7     -19.145  10.620 -11.712  1.00  0.00           X  
-ATOM      8  IX  AIX A   8     -18.145   9.620 -12.712  1.00  0.00           X  
-ATOM      9  IX  AIX A   9     -17.145   8.620 -13.712  1.00  0.00           X  
-ATOM     10  IX  AIX A  10     -16.145   8.620 -14.712  1.00  0.00           X  
-ATOM     11  IX  AIX A  11     -15.145   8.620 -15.712  1.00  0.00           X  
-ATOM     12  IX  AIX A  12     -14.145   9.620 -16.712  1.00  0.00           X  
-ATOM     13  IX  AIX A  13     -13.145  10.620 -17.712  1.00  0.00           X  
-ATOM     14  IX  AIX A  14     -13.145  11.620 -18.712  1.00  0.00           X  
-ATOM     15  IX  AIX A  15     -12.145  12.620 -18.712  1.00  0.00           X  
-ATOM     16  IX  AIX A  16     -10.145  15.620 -19.712  1.00  0.00           X  
+# MODEL 6 LYS30A-LYS49A
+ATOM      1  FX  AFX A   1       6.474  23.997  -0.734  1.00  0.00           X  
+ATOM      2  FX  AFX A   2       3.474  24.997  -2.734  1.00  0.00           X  
+ATOM      3  FX  AFX A   3       2.474  25.997  -3.734  1.00  0.00           X  
+ATOM      4  FX  AFX A   4       1.474  24.997  -4.734  1.00  0.00           X  
+ATOM      5  FX  AFX A   5       0.474  23.997  -5.734  1.00  0.00           X  
+ATOM      6  FX  AFX A   6       0.474  22.997  -6.734  1.00  0.00           X  
+ATOM      7  FX  AFX A   7       0.474  21.997  -7.734  1.00  0.00           X  
+ATOM      8  FX  AFX A   8      -0.526  20.997  -8.734  1.00  0.00           X  
+ATOM      9  FX  AFX A   9      -1.526  20.997  -9.734  1.00  0.00           X  
+ATOM     10  FX  AFX A  10      -2.526  20.997 -10.734  1.00  0.00           X  
+ATOM     11  FX  AFX A  11      -3.526  20.997 -11.734  1.00  0.00           X  
+ATOM     12  FX  AFX A  12      -4.526  20.997 -12.734  1.00  0.00           X  
+ATOM     13  FX  AFX A  13      -5.526  20.997 -12.734  1.00  0.00           X  
+ATOM     14  FX  AFX A  14      -6.526  19.997 -12.734  1.00  0.00           X  
+ATOM     15  FX  AFX A  15      -7.526  19.997 -13.734  1.00  0.00           X  
+ATOM     16  FX  AFX A  16      -8.526  19.997 -14.734  1.00  0.00           X  
+ATOM     17  FX  AFX A  17      -9.526  19.997 -15.734  1.00  0.00           X  
+ATOM     18  FX  AFX A  18     -12.526  18.997 -16.734  1.00  0.00           X  
 CONECT    1    2
 CONECT    2    3
 CONECT    3    4
@@ -192,4 +191,109 @@ CONECT   12   13
 CONECT   13   14
 CONECT   14   15
 CONECT   15   16
+CONECT   16   17
+CONECT   17   18
+END
+# MODEL 7 LYS30A-LYS84A
+ATOM      1  GX  AGX A   1       6.474  23.997  -0.734  1.00  0.00           X  
+ATOM      2  GX  AGX A   2       3.474  24.997  -2.734  1.00  0.00           X  
+ATOM      3  GX  AGX A   3       2.474  25.997  -3.734  1.00  0.00           X  
+ATOM      4  GX  AGX A   4       1.474  25.997  -4.734  1.00  0.00           X  
+ATOM      5  GX  AGX A   5       1.474  25.997  -5.734  1.00  0.00           X  
+ATOM      6  GX  AGX A   6       0.474  24.997  -6.734  1.00  0.00           X  
+ATOM      7  GX  AGX A   7      -2.526  23.997  -8.734  1.00  0.00           X  
+CONECT    1    2
+CONECT    2    3
+CONECT    3    4
+CONECT    4    5
+CONECT    5    6
+CONECT    6    7
+END
+# MODEL 8 LYS49A-LYS84A
+ATOM      1  HX  AHX A   1     -12.526  18.997 -16.734  1.00  0.00           X  
+ATOM      2  HX  AHX A   2      -9.526  18.997 -17.734  1.00  0.00           X  
+ATOM      3  HX  AHX A   3      -8.526  19.997 -16.734  1.00  0.00           X  
+ATOM      4  HX  AHX A   4      -7.526  19.997 -15.734  1.00  0.00           X  
+ATOM      5  HX  AHX A   5      -6.526  19.997 -14.734  1.00  0.00           X  
+ATOM      6  HX  AHX A   6      -5.526  19.997 -13.734  1.00  0.00           X  
+ATOM      7  HX  AHX A   7      -4.526  20.997 -12.734  1.00  0.00           X  
+ATOM      8  HX  AHX A   8      -3.526  20.997 -11.734  1.00  0.00           X  
+ATOM      9  HX  AHX A   9      -3.526  20.997 -10.734  1.00  0.00           X  
+ATOM     10  HX  AHX A  10      -2.526  23.997  -8.734  1.00  0.00           X  
+CONECT    1    2
+CONECT    2    3
+CONECT    3    4
+CONECT    4    5
+CONECT    5    6
+CONECT    6    7
+CONECT    7    8
+CONECT    8    9
+CONECT    9   10
+END
+# MODEL 9 TYR80A-LYS84A
+ATOM      1  IX  AIX A   1      -2.526  23.997  -1.734  1.00  0.00           X  
+ATOM      2  IX  AIX A   2      -1.526  20.997  -3.734  1.00  0.00           X  
+ATOM      3  IX  AIX A   3      -1.526  20.997  -4.734  1.00  0.00           X  
+ATOM      4  IX  AIX A   4      -1.526  20.997  -5.734  1.00  0.00           X  
+ATOM      5  IX  AIX A   5      -1.526  20.997  -6.734  1.00  0.00           X  
+ATOM      6  IX  AIX A   6      -2.526  23.997  -8.734  1.00  0.00           X  
+CONECT    1    2
+CONECT    2    3
+CONECT    3    4
+CONECT    4    5
+CONECT    5    6
+END
+# MODEL 10 LYS116A-LYS120A
+ATOM      1  JX  AJX A   1     -18.526   8.997  17.266  1.00  0.00           X  
+ATOM      2  JX  AJX A   2     -15.526   6.997  16.266  1.00  0.00           X  
+ATOM      3  JX  AJX A   3     -15.526   5.997  16.266  1.00  0.00           X  
+ATOM      4  JX  AJX A   4     -15.526   4.997  16.266  1.00  0.00           X  
+ATOM      5  JX  AJX A   5     -15.526   3.997  16.266  1.00  0.00           X  
+ATOM      6  JX  AJX A   6     -17.526   1.997  14.266  1.00  0.00           X  
+CONECT    1    2
+CONECT    2    3
+CONECT    3    4
+CONECT    4    5
+CONECT    5    6
+END
+# MODEL 11 LYS119A-LYS127A
+ATOM      1  KX  AKX A   1     -14.526   2.997  13.266  1.00  0.00           X  
+ATOM      2  KX  AKX A   2     -15.526   3.997  16.266  1.00  0.00           X  
+ATOM      3  KX  AKX A   3     -16.526   3.997  17.266  1.00  0.00           X  
+ATOM      4  KX  AKX A   4     -17.526   3.997  17.266  1.00  0.00           X  
+ATOM      5  KX  AKX A   5     -18.526   3.997  17.266  1.00  0.00           X  
+ATOM      6  KX  AKX A   6     -19.526   3.997  17.266  1.00  0.00           X  
+ATOM      7  KX  AKX A   7     -20.526   3.997  17.266  1.00  0.00           X  
+ATOM      8  KX  AKX A   8     -21.526   3.997  17.266  1.00  0.00           X  
+ATOM      9  KX  AKX A   9     -22.526   3.997  17.266  1.00  0.00           X  
+ATOM     10  KX  AKX A  10     -23.526   3.997  17.266  1.00  0.00           X  
+ATOM     11  KX  AKX A  11     -24.526   3.997  16.266  1.00  0.00           X  
+ATOM     12  KX  AKX A  12     -25.526   3.997  15.266  1.00  0.00           X  
+ATOM     13  KX  AKX A  13     -26.526   3.997  14.266  1.00  0.00           X  
+ATOM     14  KX  AKX A  14     -27.526   4.997  13.266  1.00  0.00           X  
+ATOM     15  KX  AKX A  15     -28.526   5.997  12.266  1.00  0.00           X  
+ATOM     16  KX  AKX A  16     -28.526   6.997  11.266  1.00  0.00           X  
+ATOM     17  KX  AKX A  17     -28.526   7.997  10.266  1.00  0.00           X  
+ATOM     18  KX  AKX A  18     -28.526   8.997   9.266  1.00  0.00           X  
+ATOM     19  KX  AKX A  19     -27.526   9.997   8.266  1.00  0.00           X  
+ATOM     20  KX  AKX A  20     -25.526   8.997   5.266  1.00  0.00           X  
+CONECT    1    2
+CONECT    2    3
+CONECT    3    4
+CONECT    4    5
+CONECT    5    6
+CONECT    6    7
+CONECT    7    8
+CONECT    8    9
+CONECT    9   10
+CONECT   10   11
+CONECT   11   12
+CONECT   12   13
+CONECT   13   14
+CONECT   14   15
+CONECT   15   16
+CONECT   16   17
+CONECT   17   18
+CONECT   18   19
+CONECT   19   20
 END

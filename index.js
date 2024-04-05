@@ -105,7 +105,13 @@ function createTable (id_prefix, num_row, num_column, if_head) {
   return table
 }
 
-function creatHelpIcon(width, backgroundColor, fontColor) {
+function creatHelpIcon(width) {
+  const backgroundColor_0 = 'RoyalBlue'
+  const backgroundColor_1 = 'white'
+  const stroke_color_0 = 'RoyalBlue'
+  const stroke_color_1 = 'black'
+  const fontColor_0 = 'white'
+  const fontColor_1 = 'black'
   var svgns = "http://www.w3.org/2000/svg";
   var icon = document.createElementNS(svgns, "svg")
   icon.setAttribute('width', width)
@@ -115,18 +121,277 @@ function creatHelpIcon(width, backgroundColor, fontColor) {
   circle.setAttribute('cx', 25)
   circle.setAttribute('cy', 25)
   circle.setAttribute('r', 23)
-  circle.setAttribute('fill', backgroundColor)
+  Object.assign(circle.style, {
+    'fill': backgroundColor_0,
+    'stroke': stroke_color_0,
+    'stroke-width': 2,
+  })
   icon.appendChild(circle)
   var text = document.createElementNS(svgns, "text")
   text.setAttribute('x', "50%")
   text.setAttribute('y', "50%")
-  text.setAttribute('fill', fontColor)
-  text.setAttribute('font-size', 45)
-  text.setAttribute('font-family', 'Arial')
-  text.setAttribute('text-anchor', 'middle')
-  text.setAttribute('dominant-baseline', 'central')
+  Object.assign(text.style, {
+    'fill': fontColor_0,
+    'font-size': 45,
+    'font-family': 'Arial',
+    'text-anchor': 'middle',
+    'dominant-baseline': 'central',
+  })
   text.innerHTML = "?"
   icon.appendChild(text)
+
+  icon.addEventListener('mouseover', (e) => {
+    e.target.style.cursor = 'pointer'
+    e.target.parentElement.getElementsByTagName('circle')[0].style.fill = backgroundColor_1
+    e.target.parentElement.getElementsByTagName('circle')[0].style.stroke = stroke_color_1
+    e.target.parentElement.getElementsByTagName('text')[0].style.fill = fontColor_1
+  })
+  icon.addEventListener('mouseout', (e) => {
+    e.target.style.cursor = 'pointer'
+    e.target.parentElement.getElementsByTagName('circle')[0].style.fill = backgroundColor_0
+    e.target.parentElement.getElementsByTagName('circle')[0].style.stroke = stroke_color_0
+    e.target.parentElement.getElementsByTagName('text')[0].style.fill = fontColor_0
+  })
+  return icon
+}
+
+function creatCenterIcon(width) {
+  const svgns = "http://www.w3.org/2000/svg";
+  const path_fill_color_0 = 'RoyalBlue'
+  const path_fill_color_1 = 'DarkBlue'
+  const path_stroke_color_0 = 'RoyalBlue'
+  const path_stroke_color_1 = 'DarkBlue'
+
+  var icon = document.createElementNS(svgns, "svg")
+  icon.setAttribute('height', width)
+  icon.setAttribute('viewBox', "0 0 640 512")
+  var title = document.createElementNS(svgns, "title")
+  title.innerHTML = "Center this molecule in the scene"
+  icon.appendChild(title)
+
+  var path = document.createElementNS(svgns, "path")
+  path.setAttribute("d", "M15 15 "+
+                         "C 24.4 5.7 39.6 5.7 49 15 "+
+                         "l 63 63 "+
+                         "V 40 "+
+                         "c 0 -13.3 10.7 -24 24 -24 "+
+                         "s 24 10.7 24 24 "+
+                         " v 96 "+
+                         "c 0 13.3 -10.7 24 -24 24 "+
+                         "H 40 "+
+                         "c -13.3 0 -24 -10.7 -24 -24 "+
+                         "s 10.7 -24 24 -24 "+
+                         "H 78.1 "+
+                         "L 15 49 "+
+                         "C 5.7 39.6 5.7 24.4 15 15 z "+
+                         "M 133.5 243.9 "+
+                         "C 158.6 193.6 222.7 112 320 112 "+
+                         "s 161.4 81.6 186.5 131.9 "+
+                         "c 3.8 7.6 3.8 16.5 0 24.2 "+
+                         "C 481.4 318.4 417.3 400 320 400 "+
+                         "s -161.4 -81.6 -186.5 -131.9 "+
+                         "c -3.8 -7.6 -3.8 -16.5 0 -24.2 z "+
+                         "M 320 320 "+
+                         "a 64 64 0 1 0 0 -128 64 64 0 1 0 0 128 z "+
+                         "M 591 15 "+
+                         "c 9.4 -9.4 24.6 -9.4 33.9 0 "+
+                         "s 9.4 24.6 0 33.9 "+
+                         "l -63 63 "+
+                         "H 600 "+
+                         "c 13.3 0 24 10.7 24 24 "+
+                         "s -10.7 24 -24 24 "+
+                         "H 504 "+
+                         "c -13.3 0 -24 -10.7 -24 -24 "+
+                         "V 40 "+
+                         "c0 -13.3 10.7 -24 24 -24 "+
+                         "s 24 10.7 24 24 "+
+                         "V 78.1 "+
+                         "l 63 -63 z "+
+                         "M 15 497 "+
+                         "c -9.4 -9.4 -9.4 -24.6 0 -33.9 "+
+                         "l 63 -63 "+
+                         "H 40 "+
+                         "c -13.3 0 -24 -10.7 -24 -24 "+
+                         "s 10.7 -24 24 -24 "+
+                         "h 96 "+
+                         "c 13.3 0 24 10.7 24 24 "+
+                         "v 96 "+
+                         "c 0 13.3 -10.7 24 -24 24 "+
+                         "s -24 -10.7 -24 -24 "+
+                         "V 433.9 "+
+                         "L 49 497 "+
+                         "c -9.4 9.4 -24.6 9.4 -33.9 0 z "+
+                         "m 576 0 "+
+                         "l -63 -63 "+
+                         "V 472 "+
+                         "c 0 13.3 -10.7 24 -24 24 "+
+                         "s -24 -10.7 -24 -24 "+
+                         "V 376 "+
+                         "c 0 -13.3 10.7 -24 24 -24 "+
+                         "h 96 "+
+                         "c 13.3 0 24 10.7 24 24 "+
+                         "s -10.7 24 -24 24 "+
+                         "H 561.9 "+
+                         "l 63 63 "+
+                         "c 9.4 9.4 9.4 24.6 0 33.9 "+
+                         "s -24.6 9.4 -33.9 0 z")
+  Object.assign(path.style, {
+    'fill': path_fill_color_0,
+    'stroke': path_stroke_color_0,
+    'stroke-width': 0,
+  })
+  icon.appendChild(path)
+
+  icon.addEventListener('mouseover', (e) => {
+    e.target.style.cursor = 'pointer'
+    var parent = e.target.parentElement
+    var path_list = parent.getElementsByTagName('path')
+    for (var i = 0; i < path_list.length; i++) {
+      path_list[i].style.fill = path_fill_color_1
+      path_list[i].style.stroke = path_stroke_color_1
+    }
+  })
+  icon.addEventListener('mouseout', (e) => {
+    e.target.style.cursor = 'pointer'
+    var parent = e.target.parentElement
+    var path_list = parent.getElementsByTagName('path')
+    for (var i = 0; i < path_list.length; i++) {
+      path_list[i].style.fill = path_fill_color_0
+      path_list[i].style.stroke = path_stroke_color_0
+    }
+  })
+  return icon
+}
+
+function creatExportIcon(width) {
+  const svgns = "http://www.w3.org/2000/svg";
+  const path_fill_color_0 = 'RoyalBlue'
+  const path_fill_color_1 = 'DarkBlue'
+  const path_stroke_color_0 = 'RoyalBlue'
+  const path_stroke_color_1 = 'DarkBlue'
+
+  var icon = document.createElementNS(svgns, "svg")
+  icon.setAttribute('height', width)
+  icon.setAttribute('viewBox', "0 0 512 512")
+  var title = document.createElementNS(svgns, "title")
+  title.innerHTML = "Export a PNG image and download"
+  icon.appendChild(title)
+
+  var path = document.createElementNS(svgns, "path")
+  path.setAttribute("d", "M 149.1 64.8 "+
+                         "L 138.7 96 "+
+                         "H 64 "+
+                         "C 28.7 96 0 124.7 0 160 "+
+                         "V 416 "+
+                         "c 0 35.3 28.7 64 64 64 "+
+                         "H 448 "+
+                         "c 35.3 0 64 -28.7 64 -64 "+
+                         "V 160 "+
+                         "c 0 -35.3 -28.7 -64 -64 -64 "+
+                         "H 373.3 "+
+                         "L 362.9 64.8 "+
+                         "C 356.4 45.2 338.1 32 317.4 32 "+
+                         "H 194.6 "+
+                         "c -20.7 0 -39 13.2 -45.5 32.8 z "+
+                         "M 256 192 "+
+                         "a 96 96 0 1 1 0 192 96 96 0 1 1 0 -192 z")
+  Object.assign(path.style, {
+    'fill': path_fill_color_0,
+    'stroke': path_stroke_color_0,
+    'stroke-width': 0,
+  })
+  icon.appendChild(path)
+
+  icon.addEventListener('mouseover', (e) => {
+    e.target.style.cursor = 'pointer'
+    var parent = e.target.parentElement
+    var path_list = parent.getElementsByTagName('path')
+    for (var i = 0; i < path_list.length; i++) {
+      path_list[i].style.fill = path_fill_color_1
+      path_list[i].style.stroke = path_stroke_color_1
+    }
+  })
+  icon.addEventListener('mouseout', (e) => {
+    e.target.style.cursor = 'pointer'
+    var parent = e.target.parentElement
+    var path_list = parent.getElementsByTagName('path')
+    for (var i = 0; i < path_list.length; i++) {
+      path_list[i].style.fill = path_fill_color_0
+      path_list[i].style.stroke = path_stroke_color_0
+    }
+  })
+  return icon
+}
+
+function creatDownloadIcon(width) {
+  const svgns = "http://www.w3.org/2000/svg";
+  const path_fill_color_0 = 'RoyalBlue'
+  const path_fill_color_1 = 'DarkBlue'
+  const path_stroke_color_0 = 'RoyalBlue'
+  const path_stroke_color_1 = 'DarkBlue'
+
+  var icon = document.createElementNS(svgns, "svg")
+  icon.setAttribute('height', width)
+  icon.setAttribute('viewBox', "0 0 512 512")
+  var title = document.createElementNS(svgns, "title")
+  title.innerHTML = "Download the PDB file of the misfolded structure"
+  icon.appendChild(title)
+
+  var path = document.createElementNS(svgns, "path")
+  path.setAttribute("d", "M 288 32 "+
+                         "c 0 -17.7 -14.3 -32 -32 -32 "+
+                         "s -32 14.3 -32 32 "+
+                         "V 274.7 "+
+                         "l -73.4 -73.4 "+
+                         "c -12.5 -12.5 -32.8 -12.5 -45.3 0 "+
+                         "s -12.5 32.8 0 45.3 "+
+                         "l 128 128 "+
+                         "c 12.5 12.5 32.8 12.5 45.3 0 "+
+                         "l 128 -128 "+
+                         "c 12.5 -12.5 12.5 -32.8 0 -45.3 "+
+                         "s -32.8 -12.5 -45.3 0 "+
+                         "L 288 274.7 "+
+                         "V 32 z "+
+                         "M 64 352 "+
+                         "c -35.3 0 -64 28.7 -64 64 "+
+                         "v 32 "+
+                         "c 0 35.3 28.7 64 64 64 "+
+                         "H 448 "+
+                         "c 35.3 0 64 -28.7 64 -64 "+
+                         "V 416 "+
+                         "c 0 -35.3 -28.7 -64 -64 -64 "+
+                         "H 346.5 "+
+                         "l -45.3 45.3 "+
+                         "c -25 25 -65.5 25 -90.5 0 "+
+                         "L 165.5 352 "+
+                         "H 64 z "+
+                         "m 368 56 "+
+                         "a 24 24 0 1 1 0 48 24 24 0 1 1 0 -48 z")
+  Object.assign(path.style, {
+    'fill': path_fill_color_0,
+    'stroke': path_stroke_color_0,
+    'stroke-width': 0,
+  })
+  icon.appendChild(path)
+
+  icon.addEventListener('mouseover', (e) => {
+    e.target.style.cursor = 'pointer'
+    var parent = e.target.parentElement
+    var path_list = parent.getElementsByTagName('path')
+    for (var i = 0; i < path_list.length; i++) {
+      path_list[i].style.fill = path_fill_color_1
+      path_list[i].style.stroke = path_stroke_color_1
+    }
+  })
+  icon.addEventListener('mouseout', (e) => {
+    e.target.style.cursor = 'pointer'
+    var parent = e.target.parentElement
+    var path_list = parent.getElementsByTagName('path')
+    for (var i = 0; i < path_list.length; i++) {
+      path_list[i].style.fill = path_fill_color_0
+      path_list[i].style.stroke = path_stroke_color_0
+    }
+  })
   return icon
 }
 
@@ -253,20 +518,8 @@ function _loadStructure(json_obj) {
   }, { "margin-top": "2%",
        "margin-bottom": "2%",})
   checkbox_div.appendChild(proteinCheckField)
-  var help_icon = creatHelpIcon("1.4vmin", "RoyalBlue", "white")
+  var help_icon = creatHelpIcon("1.4vmin")
   Object.assign(help_icon.style, {'vertical-align': 'middle'})
-  help_icon.addEventListener('mouseover', (e) => {
-    e.target.style.cursor = 'pointer'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.fill = 'white'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.stroke = 'black'
-    e.target.parentElement.getElementsByTagName('text')[0].style.fill = 'black'
-  })
-  help_icon.addEventListener('mouseout', (e) => {
-    e.target.style.cursor = 'pointer'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.fill = 'RoyalBlue'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.stroke = 'none'
-    e.target.parentElement.getElementsByTagName('text')[0].style.fill = 'white'
-  })
   help_icon.addEventListener('click', (e) => {
     var help_div = document.getElementById('proteinCheckHelp_div')
     help_div.style.top = e.target.getBoundingClientRect().top+document.documentElement.scrollTop+e.target.getBoundingClientRect().height+'px'
@@ -322,20 +575,8 @@ function _loadStructure(json_obj) {
   }, { "margin-top": "2%",
        "margin-bottom": "2%",})
   checkbox_div.appendChild(entCheckField)
-  var help_icon = creatHelpIcon("1.4vmin", "RoyalBlue", "white")
+  var help_icon = creatHelpIcon("1.4vmin")
   Object.assign(help_icon.style, {'vertical-align': 'middle'})
-  help_icon.addEventListener('mouseover', (e) => {
-    e.target.style.cursor = 'pointer'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.fill = 'white'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.stroke = 'black'
-    e.target.parentElement.getElementsByTagName('text')[0].style.fill = 'black'
-  })
-  help_icon.addEventListener('mouseout', (e) => {
-    e.target.style.cursor = 'pointer'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.fill = 'RoyalBlue'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.stroke = 'none'
-    e.target.parentElement.getElementsByTagName('text')[0].style.fill = 'white'
-  })
   help_icon.addEventListener('click', (e) => {
     var help_div = document.getElementById('entCheckHelp_div')
     help_div.style.top = e.target.getBoundingClientRect().top+document.documentElement.scrollTop+e.target.getBoundingClientRect().height+'px'
@@ -400,20 +641,8 @@ function _loadStructure(json_obj) {
   }, { "margin-top": "2%",
        "margin-bottom": "2%",})
   checkbox_div.appendChild(lipmsCheckField)
-  var help_icon = creatHelpIcon("1.4vmin", "RoyalBlue", "white")
+  var help_icon = creatHelpIcon("1.4vmin")
   Object.assign(help_icon.style, {'vertical-align': 'middle'})
-  help_icon.addEventListener('mouseover', (e) => {
-    e.target.style.cursor = 'pointer'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.fill = 'white'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.stroke = 'black'
-    e.target.parentElement.getElementsByTagName('text')[0].style.fill = 'black'
-  })
-  help_icon.addEventListener('mouseout', (e) => {
-    e.target.style.cursor = 'pointer'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.fill = 'RoyalBlue'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.stroke = 'none'
-    e.target.parentElement.getElementsByTagName('text')[0].style.fill = 'white'
-  })
   help_icon.addEventListener('click', (e) => {
     var help_div = document.getElementById('lipmsCheckHelp_div')
     help_div.style.top = e.target.getBoundingClientRect().top+document.documentElement.scrollTop+e.target.getBoundingClientRect().height+'px'
@@ -477,20 +706,8 @@ function _loadStructure(json_obj) {
   }, { "margin-top": "2%",
        "margin-bottom": "2%",})
   checkbox_div.appendChild(xlmsCheckField)
-  var help_icon = creatHelpIcon("1.4vmin", "RoyalBlue", "white")
+  var help_icon = creatHelpIcon("1.4vmin")
   Object.assign(help_icon.style, {'vertical-align': 'middle'})
-  help_icon.addEventListener('mouseover', (e) => {
-    e.target.style.cursor = 'pointer'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.fill = 'white'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.stroke = 'black'
-    e.target.parentElement.getElementsByTagName('text')[0].style.fill = 'black'
-  })
-  help_icon.addEventListener('mouseout', (e) => {
-    e.target.style.cursor = 'pointer'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.fill = 'RoyalBlue'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.stroke = 'none'
-    e.target.parentElement.getElementsByTagName('text')[0].style.fill = 'white'
-  })
   help_icon.addEventListener('click', (e) => {
     var help_div = document.getElementById('xlmsCheckHelp_div')
     help_div.style.top = e.target.getBoundingClientRect().top+document.documentElement.scrollTop+e.target.getBoundingClientRect().height+'px'
@@ -970,20 +1187,8 @@ function update_info_panel(native_M) {
        'background-color': 'none'})
   document.getElementById('infoDiv_cell_1_0').appendChild(ent_info_div)
   ent_info_div.innerHTML = "<span><b>Entanglement information table</b></span> "
-  var help_icon = creatHelpIcon("1.4vmin", "RoyalBlue", "white")
+  var help_icon = creatHelpIcon("1.4vmin")
   Object.assign(help_icon.style, {'vertical-align': 'middle'})
-  help_icon.addEventListener('mouseover', (e) => {
-    e.target.style.cursor = 'pointer'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.fill = 'white'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.stroke = 'black'
-    e.target.parentElement.getElementsByTagName('text')[0].style.fill = 'black'
-  })
-  help_icon.addEventListener('mouseout', (e) => {
-    e.target.style.cursor = 'pointer'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.fill = 'RoyalBlue'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.stroke = 'none'
-    e.target.parentElement.getElementsByTagName('text')[0].style.fill = 'white'
-  })
   help_icon.addEventListener('click', (e) => {
     var help_div = document.getElementById('entInfoTableHelp_div')
     help_div.style.top = e.target.getBoundingClientRect().top+document.documentElement.scrollTop+e.target.getBoundingClientRect().height+'px'
@@ -1101,20 +1306,8 @@ function update_info_panel(native_M) {
        'background-color': 'none'})
   document.getElementById('infoDiv_cell_1_1').appendChild(lipms_info_div)
   lipms_info_div.innerHTML = "<span><b>LiP-MS signal table</b></span> "
-  var help_icon = creatHelpIcon("1.4vmin", "RoyalBlue", "white")
+  var help_icon = creatHelpIcon("1.4vmin")
   Object.assign(help_icon.style, {'vertical-align': 'middle'})
-  help_icon.addEventListener('mouseover', (e) => {
-    e.target.style.cursor = 'pointer'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.fill = 'white'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.stroke = 'black'
-    e.target.parentElement.getElementsByTagName('text')[0].style.fill = 'black'
-  })
-  help_icon.addEventListener('mouseout', (e) => {
-    e.target.style.cursor = 'pointer'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.fill = 'RoyalBlue'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.stroke = 'none'
-    e.target.parentElement.getElementsByTagName('text')[0].style.fill = 'white'
-  })
   help_icon.addEventListener('click', (e) => {
     var help_div = document.getElementById('lipmsInfoTableHelp_div')
     help_div.style.top = e.target.getBoundingClientRect().top+document.documentElement.scrollTop+e.target.getBoundingClientRect().height+'px'
@@ -1227,20 +1420,8 @@ function update_info_panel(native_M) {
        'background-color': 'none'})
   document.getElementById('infoDiv_cell_1_2').appendChild(xlms_info_div)
   xlms_info_div.innerHTML = "<span><b>XL-MS signal table</b></span> "
-  var help_icon = creatHelpIcon("1.4vmin", "RoyalBlue", "white")
+  var help_icon = creatHelpIcon("1.4vmin")
   Object.assign(help_icon.style, {'vertical-align': 'middle'})
-  help_icon.addEventListener('mouseover', (e) => {
-    e.target.style.cursor = 'pointer'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.fill = 'white'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.stroke = 'black'
-    e.target.parentElement.getElementsByTagName('text')[0].style.fill = 'black'
-  })
-  help_icon.addEventListener('mouseout', (e) => {
-    e.target.style.cursor = 'pointer'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.fill = 'RoyalBlue'
-    e.target.parentElement.getElementsByTagName('circle')[0].style.stroke = 'none'
-    e.target.parentElement.getElementsByTagName('text')[0].style.fill = 'white'
-  })
   help_icon.addEventListener('click', (e) => {
     var help_div = document.getElementById('xlmsInfoTableHelp_div')
     help_div.style.top = e.target.getBoundingClientRect().top+document.documentElement.scrollTop+e.target.getBoundingClientRect().height+'px'
@@ -1288,19 +1469,27 @@ function update_info_panel(native_M) {
 }
 
 function export_image() {
-  // Render the molecular structure
-  stage.makeImage({
-      trim: false,
-      factor: 5, // Increase factor for better quality (optional)
-      antialias: true, // Enable antialiasing (optional)
-      transparent: false,
-  }).then(function(blob) {
-      // Create a temporary link to download the image
-      const link = document.createElement('a');
-      link.href = URL.createObjectURL(blob);
-      link.download = 'structure.png';
-      link.click();
-  });
+  if (stage.compList.length > 0) {
+    // Render the molecular structure
+    stage.makeImage({
+        trim: false,
+        factor: 5, // Increase factor for better quality (optional)
+        antialias: true, // Enable antialiasing (optional)
+        transparent: false,
+    }).then(function(blob) {
+        // Create a temporary link to download the image
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'structure.png';
+        link.click();
+    });
+  }
+}
+
+function download_pdb() {
+  if (stage.compList.length > 0) {
+    window.open(stage.getComponentsByName('state_1.pdb').list[0].structure.path)
+  }
 }
 
 function update_checkbox_div_height() {
@@ -1476,11 +1665,11 @@ function gen_major_contents(selectbox_json) {
     .catch(error => console.error('Error fetching data:', error));
 
 
-  var buttonTable = createTable('buttonTable', 1, 3, false)
+  var buttonTable = createTable('buttonTable', 1, 4, false)
   document.getElementById("cntrl_panel").appendChild(buttonTable)
   Object.assign(buttonTable.style, { 
     width: "100%",
-    "text-align": "center",
+    "text-align": "left",
     "font-family": "Arial",
     "font-size": "1.4vmin",
     "margin-top": "3%",
@@ -1525,7 +1714,7 @@ function gen_major_contents(selectbox_json) {
     },
   }, { "vertical-align": "middle",
        "font-family": "Arial", 
-       "font-size": "1.4vmin"})
+       "font-size": "1.2vmin"})
   var alignSelect_div = createElement('div', {
     title: "Align structures on the selected region",
     innerHTML: "<span>Align on </span>",
@@ -1533,35 +1722,62 @@ function gen_major_contents(selectbox_json) {
   alignSelect_div.appendChild(alignSelect)
   document.getElementById("buttonTable_cell_0_0").appendChild(alignSelect_div)
 
-  var centerButton = createElement("input", {
-    type: "button",
-    value: "Center",
-    title: "Center this molecule in the scene",
-    onclick: function () {
-      reset_view()
-    },
-    onmouseover: function () {
-      this.style.cursor = 'pointer'
-    }
-  }, { "vertical-align": "middle",
-       "font-family": "Arial", 
-       "font-size": "1.4vmin" })
-  document.getElementById("buttonTable_cell_0_1").appendChild(centerButton)
+  // var centerButton = createElement("input", {
+  //   type: "button",
+  //   value: "Center",
+  //   title: "Center this molecule in the scene",
+  //   onclick: function () {
+  //     reset_view()
+  //   },
+  //   onmouseover: function () {
+  //     this.style.cursor = 'pointer'
+  //   }
+  // }, { "vertical-align": "middle",
+  //      "font-family": "Arial", 
+  //      "font-size": "1.4vmin" })
+  var centerButtonIcon = creatCenterIcon('2.0vmin')
+  centerButtonIcon.addEventListener('click', (e) => {
+    reset_view();
+  })
+  document.getElementById("buttonTable_cell_0_1").appendChild(centerButtonIcon)
 
-  var exportButton = createElement("input", {
-    type: "button",
-    value: "Export",
-    title: "Export a PNG image",
-    onclick: function () {
-      export_image()
-    },
-    onmouseover: function () {
-      this.style.cursor = 'pointer'
-    }
-  }, { "vertical-align": "middle",
-       "font-family": "Arial", 
-       "font-size": "1.4vmin" })
-  document.getElementById("buttonTable_cell_0_2").appendChild(exportButton)
+  // var exportButton = createElement("input", {
+  //   type: "button",
+  //   value: "Export",
+  //   title: "Export a PNG image",
+  //   onclick: function () {
+  //     export_image()
+  //   },
+  //   onmouseover: function () {
+  //     this.style.cursor = 'pointer'
+  //   }
+  // }, { "vertical-align": "middle",
+  //      "font-family": "Arial", 
+  //      "font-size": "1.4vmin" })
+  var exportButtonIcon = creatExportIcon('2.0vmin')
+  exportButtonIcon.addEventListener('click', (e) => {
+    export_image();
+  })
+  document.getElementById("buttonTable_cell_0_2").appendChild(exportButtonIcon)
+
+  // var downloadButton = createElement("input", {
+  //   type: "button",
+  //   value: "Download",
+  //   title: "Download the PDB file of the misfolded structure",
+  //   onclick: function () {
+  //     download_pdb()
+  //   },
+  //   onmouseover: function () {
+  //     this.style.cursor = 'pointer'
+  //   }
+  // }, { "vertical-align": "middle",
+  //      "font-family": "Arial", 
+  //      "font-size": "1.4vmin" })
+  var downloadButtonIcon = creatDownloadIcon('2.0vmin')
+  downloadButtonIcon.addEventListener('click', (e) => {
+    download_pdb()
+  })
+  document.getElementById("buttonTable_cell_0_3").appendChild(downloadButtonIcon)
 
   document.getElementById("cntrl_panel").appendChild(createElement("div", {
     innerHTML: "<b><i>Check/uncheck the following options to show/hide:</i></b>",
@@ -1717,20 +1933,8 @@ cell.appendChild(createElement("span", {
 }, { "vertical-align": "middle",
      "font-family": "Arial", 
      "font-size": "1.4vmin"}))
-var help_icon = creatHelpIcon("1.4vmin", "RoyalBlue", "white")
+var help_icon = creatHelpIcon("1.4vmin")
 Object.assign(help_icon.style, {'vertical-align': 'middle'})
-help_icon.addEventListener('mouseover', (e) => {
-  e.target.style.cursor = 'pointer'
-  e.target.parentElement.getElementsByTagName('circle')[0].style.fill = 'white'
-  e.target.parentElement.getElementsByTagName('circle')[0].style.stroke = 'black'
-  e.target.parentElement.getElementsByTagName('text')[0].style.fill = 'black'
-})
-help_icon.addEventListener('mouseout', (e) => {
-  e.target.style.cursor = 'pointer'
-  e.target.parentElement.getElementsByTagName('circle')[0].style.fill = 'RoyalBlue'
-  e.target.parentElement.getElementsByTagName('circle')[0].style.stroke = 'none'
-  e.target.parentElement.getElementsByTagName('text')[0].style.fill = 'white'
-})
 help_icon.addEventListener('click', (e) => {
   var help_div = document.getElementById('datasetTableHelp_div')
   help_div.style.top = e.target.getBoundingClientRect().top+document.documentElement.scrollTop+e.target.getBoundingClientRect().height+'px'

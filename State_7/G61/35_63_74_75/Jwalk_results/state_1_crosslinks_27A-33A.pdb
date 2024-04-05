@@ -1,15 +1,18 @@
-# MODEL 1 LYS27A-SER33A
-ATOM      1  AX  AAX A   1       0.634 -12.772   8.260  1.00  0.00           X  
-ATOM      2  AX  AAX A   2       1.634 -12.772  11.260  1.00  0.00           X  
-ATOM      3  AX  AAX A   3       1.634 -12.772  12.260  1.00  0.00           X  
-ATOM      4  AX  AAX A   4       1.634 -12.772  13.260  1.00  0.00           X  
-ATOM      5  AX  AAX A   5       0.634 -12.772  14.260  1.00  0.00           X  
-ATOM      6  AX  AAX A   6      -0.366 -11.772  15.260  1.00  0.00           X  
-ATOM      7  AX  AAX A   7      -1.366 -10.772  15.260  1.00  0.00           X  
-ATOM      8  AX  AAX A   8      -2.366  -9.772  15.260  1.00  0.00           X  
-ATOM      9  AX  AAX A   9      -3.366  -8.772  15.260  1.00  0.00           X  
-ATOM     10  AX  AAX A  10      -4.366  -8.772  15.260  1.00  0.00           X  
-ATOM     11  AX  AAX A  11      -6.366  -6.772  13.260  1.00  0.00           X  
+# MODEL 2 LYS27A-SER33A
+ATOM      1  BX  ABX A   1      -0.292 -15.075   7.226  1.00  0.00           X  
+ATOM      2  BX  ABX A   2      -0.292 -13.075  10.226  1.00  0.00           X  
+ATOM      3  BX  ABX A   3      -0.292 -13.075  11.226  1.00  0.00           X  
+ATOM      4  BX  ABX A   4       0.708 -13.075  12.226  1.00  0.00           X  
+ATOM      5  BX  ABX A   5      -0.292 -12.075  13.226  1.00  0.00           X  
+ATOM      6  BX  ABX A   6      -1.292 -12.075  14.226  1.00  0.00           X  
+ATOM      7  BX  ABX A   7      -2.292 -12.075  14.226  1.00  0.00           X  
+ATOM      8  BX  ABX A   8      -3.292 -12.075  14.226  1.00  0.00           X  
+ATOM      9  BX  ABX A   9      -4.292 -12.075  14.226  1.00  0.00           X  
+ATOM     10  BX  ABX A  10      -5.292 -12.075  14.226  1.00  0.00           X  
+ATOM     11  BX  ABX A  11      -6.292 -11.075  14.226  1.00  0.00           X  
+ATOM     12  BX  ABX A  12      -7.292 -10.075  14.226  1.00  0.00           X  
+ATOM     13  BX  ABX A  13      -8.292 -10.075  13.226  1.00  0.00           X  
+ATOM     14  BX  ABX A  14     -11.292 -11.075  12.226  1.00  0.00           X  
 CONECT    1    2
 CONECT    2    3
 CONECT    3    4
@@ -20,4 +23,7 @@ CONECT    7    8
 CONECT    8    9
 CONECT    9   10
 CONECT   10   11
+CONECT   11   12
+CONECT   12   13
+CONECT   13   14
 END

@@ -1,13 +1,16 @@
-# MODEL 2 LYS27A-SER33A
-ATOM      1  BX  ABX A   1      11.773 -23.590  15.526  1.00  0.00           X  
-ATOM      2  BX  ABX A   2      10.773 -20.590  17.526  1.00  0.00           X  
-ATOM      3  BX  ABX A   3      10.773 -19.590  18.526  1.00  0.00           X  
-ATOM      4  BX  ABX A   4      10.773 -18.590  19.526  1.00  0.00           X  
-ATOM      5  BX  ABX A   5      10.773 -17.590  19.526  1.00  0.00           X  
-ATOM      6  BX  ABX A   6      10.773 -16.590  19.526  1.00  0.00           X  
-ATOM      7  BX  ABX A   7      10.773 -15.590  19.526  1.00  0.00           X  
-ATOM      8  BX  ABX A   8       9.773 -14.590  18.526  1.00  0.00           X  
-ATOM      9  BX  ABX A   9       6.773 -12.590  17.526  1.00  0.00           X  
+# MODEL 1 LYS27A-SER33A
+ATOM      1  AX  AAX A   1       9.525  -1.222  22.080  1.00  0.00           X  
+ATOM      2  AX  AAX A   2       8.525  -3.222  25.080  1.00  0.00           X  
+ATOM      3  AX  AAX A   3       8.525  -4.222  25.080  1.00  0.00           X  
+ATOM      4  AX  AAX A   4       8.525  -5.222  25.080  1.00  0.00           X  
+ATOM      5  AX  AAX A   5       7.525  -6.222  25.080  1.00  0.00           X  
+ATOM      6  AX  AAX A   6       6.525  -7.222  25.080  1.00  0.00           X  
+ATOM      7  AX  AAX A   7       5.525  -8.222  24.080  1.00  0.00           X  
+ATOM      8  AX  AAX A   8       4.525  -9.222  23.080  1.00  0.00           X  
+ATOM      9  AX  AAX A   9       3.525  -9.222  22.080  1.00  0.00           X  
+ATOM     10  AX  AAX A  10       2.525  -9.222  21.080  1.00  0.00           X  
+ATOM     11  AX  AAX A  11       1.525  -9.222  20.080  1.00  0.00           X  
+ATOM     12  AX  AAX A  12       0.525  -7.222  17.080  1.00  0.00           X  
 CONECT    1    2
 CONECT    2    3
 CONECT    3    4
@@ -16,4 +19,7 @@ CONECT    5    6
 CONECT    6    7
 CONECT    7    8
 CONECT    8    9
+CONECT    9   10
+CONECT   10   11
+CONECT   11   12
 END

@@ -85,7 +85,7 @@
 <body class="cont5" style="overflow: hidden; touch-action: none;">
 <div id="title_div" style="width:100%; height:8%; background-color: rgba(34,110,147,1); font-size: 2.0vw; font-family: Arial; color: white; display: table;">
   <div style="vertical-align: middle; display: table-cell; padding-left: 2%;">
-    Misfolded structural ensemble of ecPGK consistent with LiP-MS and XL-MS experiments
+    Predicted Misfolded Structural Ensemble of ecPGK Consistent with LiP-MS and XL-MS Experiments
   </div>
 </div>
 
@@ -218,8 +218,8 @@
     <p>&bull; <b>code</b> &#10145; Types of changes on the N- and C-termini in parentheses, separated by a comma.</p>
     <p>&bull; <b>protein</b> &#10145; Protein chains. "N" refers to the native (crystal) structure, and "M" refers to the misfolded structure.</p>
     <p>&bull; <b>linking number</b> &#10145; Linking numbers of the N- and C-termini against the closed loop, respectively, with the chirality sign (+ or -). A linking number of 0 has no defined chirality.</p>
-    <p>&bull; <b>native contact</b> &#10145; Native contact residues forming the closed loop.</p>
-    <p>&bull; <b>crossings</b> &#10145; Crossing residues on N- and C-termini, with the chirality sign (+ or -). A non-entangled terminus has no crossing residues and is represented by an empty list.</p>
+    <p>&bull; <b>native contact</b> &#10145; Native contact residues (residue number) forming the closed loop.</p>
+    <p>&bull; <b>crossings</b> &#10145; Crossing residues (residue number) on N- and C-termini, with the chirality sign (+ or -). A non-entangled terminus has no crossing residues and is represented by an empty list.</p>
   </div>
   <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
 </div>
@@ -242,16 +242,16 @@
     <p>Explanation of each column header:</p>
     <p>&bull; <b>site</b> &#10145; XL-MS crosslinking residue pairs, shown as the amino acid name and the residue number of each residue saperated by a dash.</p>
     <p>&bull; <b>native XL propensity</b> &#10145; The crosslink propensity of the residue pair in the native (crystal) structure.</p>
-    <p>&bull; <b>native jwalk (&#8491;)</b> &#10145; The Jwalk distance in &#8491; (solvant accessible surface distance) between the residue pair in the native (crystal) structure. A Jwalk distance of -1 indicates at least one of the residues is buried.</p>
+    <p>&bull; <b>native jwalk (&#8491;)</b> &#10145; The <a href="https://doi.org/10.1074/mcp.M116.058560" target="_blank">Jwalk distance</a> in &#8491; (solvant accessible surface distance) between the residue pair in the native (crystal) structure. A Jwalk distance of -1 indicates at least one of the residues is buried.</p>
     <p>&bull; <b>XL propensity</b> &#10145; The crosslink propensity of the residue pair in the misfolded structure.</p>
-    <p>&bull; <b>jwalk (&#8491;)</b> &#10145; The Jwalk distance in &#8491; (solvant accessible surface distance) between the residue pair in the misfolded structure. A Jwalk distance of -1 indicates at least one of the residues is buried.</p>
+    <p>&bull; <b>jwalk (&#8491;)</b> &#10145; The <a href="https://doi.org/10.1074/mcp.M116.058560" target="_blank">Jwalk distance</a> in &#8491; (solvant accessible surface distance) between the residue pair in the misfolded structure. A Jwalk distance of -1 indicates at least one of the residues is buried.</p>
     <p>&bull; <b>native ensemble XL propensity (95% CI)</b> &#10145; The average crosslink propensity with its 95% confidence interval between the residue pair in the simulated native structure ensemble.</p>
   </div>
   <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
 </div>
 
 <!-- Run the javascript to construct the page and setup NGL application -->
-<script src="./index.js?v=2.5"></script>
+<script src="./index.js?v=2.6"></script>
 
 </body>
 </html>
