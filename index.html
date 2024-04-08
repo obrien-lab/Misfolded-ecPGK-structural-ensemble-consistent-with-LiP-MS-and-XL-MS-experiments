@@ -162,12 +162,81 @@
     </div>
 </div>
 
+<div id="sceneSetting_div" style="width: 15%; height: 20%; background-color: WhiteSmoke; border: 1px solid black; border-radius: 5%; position: absolute; text-align: center; font-size: 1.4vmin; font-family: Arial; display: none;">
+  <div class="help_div" style="text-align: left; overflow: auto; height: 80%; margin: 2%;">
+    <table style="font-size: 1.4vmin; text-align: left; font-family: Arial;">
+      <tr>
+        <td>
+          <span>Background color: </span>
+        </td>
+        <td>
+          <select id="backgroundColorSelect" onchange="stage.setParameters({'backgroundColor': this.value})" style="font-size: 1.3vmin;">
+            <option value="white">White</option>
+            <option value="black">Black</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>Camera type: </span>
+        </td>
+        <td>
+          <select id="cameraTypeSelect" onchange="stage.setParameters({'cameraType': this.value})" style="font-size: 1.3vmin;">
+            <option value="perspective">Perspective</option>
+            <option value="orthographic">Orthographic</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>Fog near: </span>
+        </td>
+        <td>
+          <input id="fogNearRange" type="range" value=50 min=0 max=100 step=1 onmouseover="this.style.cursor = 'pointer'" oninput="document.getElementById('fogNearValue_div').innerHTML = this.value; stage.setParameters({'fogNear': this.value});" style="width: 95%;">
+        </td>
+        <td>
+          <div id="fogNearValue_div">
+            50
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>Fog far: </span>
+        </td>
+        <td>
+          <input id="fogFarRange" type="range" value=100 min=0 max=100 step=1 onmouseover="this.style.cursor = 'pointer'" oninput="document.getElementById('fogFarValue_div').innerHTML = this.value; stage.setParameters({'fogFar': this.value});" style="width: 95%;">
+        </td>
+        <td>
+          <div id="fogFarValue_div">
+            100
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>Surface opacity: </span>
+        </td>
+        <td>
+          <input id="surfaceOpacityRange" type="range" value=20 min=0 max=100 step=1 onmouseover="this.style.cursor = 'pointer'" oninput="change_surfaceOpacity(this)" style="width: 95%;">
+        </td>
+        <td>
+          <div id="surface_opacity_value_div">
+            0.20
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this setting panel" onclick="close_help_div(this)" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
+</div>
+
 <div id="datasetTableHelp_div" style="width: 15%; height: 15%; background-color: lightyellow; border: 1px solid black; border-radius: 5%; position: absolute; text-align: center; font-size: 1.2vmin; font-family: Arial; display: none;">
   <div class="help_div" style="text-align: left; overflow: auto; height: 75%; margin: 2%;">
     <p>&bull; <b>Repr. structures</b> &#10145; Representative structure for each metastable state with the highest number of consistent experimental signals.</p>
     <p>&bull; <b>Repr. ensemble</b> &#10145; Representative structural ensemble for each metastable state containing structures consistent with experimental signals.</p>
   </div>
-  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
+  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" onclick="close_help_div(this)" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
 </div>
 
 <div id="proteinCheckHelp_div" style="width: 15%; height: 10%; background-color: lightyellow; border: 1px solid black; border-radius: 5%; position: absolute; text-align: center; font-size: 1.2vmin; font-family: Arial; display: none;">
@@ -175,7 +244,7 @@
     <p>&bull; <b>Native</b> &#10145; Native (crystal) structure</p>
     <p>&bull; <b>Misfolded</b> &#10145; Misfolded structure</p>
   </div>
-  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
+  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" onclick="close_help_div(this)" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
 </div>
 
 <div id="entCheckHelp_div" style="width: 15%; height: 20%; background-color: lightyellow; border: 1px solid black; border-radius: 5%; position: absolute; text-align: center; font-size: 1.2vmin; font-family: Arial; display: none;">
@@ -191,7 +260,7 @@
     <p>For example, a change with a code "<b>L+C~</b>" refers to a "<b>Gain of entanglement with a switched chirality</b>".</p>
     <p>The option "<b>N</b>" refers to the changes in entanglements in the native (crystal) structure, while "<b>M</b>" refers to the changes in entanglements in the misfolded structure.</p>
   </div>
-  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
+  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" onclick="close_help_div(this)" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
 </div>
 
 <div id="lipmsCheckHelp_div" style="width: 15%; height: 20%; background-color: lightyellow; border: 1px solid black; border-radius: 5%; position: absolute; text-align: center; font-size: 1.2vmin; font-family: Arial; display: none;">
@@ -199,7 +268,7 @@
     <p>Each item refers to a significant LiP-MS cut-site, shown as the amino acid name and the residue number. "Significant" indicates that the solvent-accessible surface area of the cut-site region (+/- 5 residues around the cut-site) in this misfolded structure exceeds the 95% confidence interval of that in the native structure ensemble.</p>
     <p>The option "<b>N</b>" refers to the changes in entanglements in the native (crystal) structure, while "<b>M</b>" refers to the changes in entanglements in the misfolded structure.</p>
   </div>
-  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
+  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" onclick="close_help_div(this)" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
 </div>
 
 <div id="xlmsCheckHelp_div" style="width: 15%; height: 20%; background-color: lightyellow; border: 1px solid black; border-radius: 5%; position: absolute; text-align: center; font-size: 1.2vmin; font-family: Arial; display: none;">
@@ -207,7 +276,7 @@
     <p>Each item refers to a significant XL-MS residue pair, shown as the amino acid name and the residue number of each residue saperated by a dash. "Significant" indicates that the crosslink propensity of the residue pair in this misfolded structure exceeds the 95% confidence interval of that in the native structure ensemble.</p>
     <p>The option "<b>N</b>" refers to the changes in entanglements in the native (crystal) structure, while "<b>M</b>" refers to the changes in entanglements in the misfolded structure.</p>
   </div>
-  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
+  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" onclick="close_help_div(this)" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
 </div>
 
 <div id="entInfoTableHelp_div" style="width: 15%; height: 20%; background-color: lightyellow; border: 1px solid black; border-radius: 5%; position: absolute; text-align: center; font-size: 1.2vmin; font-family: Arial; display: none;">
@@ -221,7 +290,7 @@
     <p>&bull; <b>native contact</b> &#10145; Native contact residues (residue number) forming the closed loop.</p>
     <p>&bull; <b>crossings</b> &#10145; Crossing residues (residue number) on N- and C-termini, with the chirality sign (+ or -). A non-entangled terminus has no crossing residues and is represented by an empty list.</p>
   </div>
-  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
+  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" onclick="close_help_div(this)" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
 </div>
 
 <div id="lipmsInfoTableHelp_div" style="width: 15%; height: 20%; background-color: lightyellow; border: 1px solid black; border-radius: 5%; position: absolute; text-align: center; font-size: 1.2vmin; font-family: Arial; display: none;">
@@ -233,7 +302,7 @@
     <p>&bull; <b>SASA (&#8491;<sup>2</sup>)</b> &#10145; The solvent-accessible surface area (SASA) in &#8491;<sup>2</sup> of the cut-site region (+/- 5 residues around the cut-site) in the misfolded structure.</p>
     <p>&bull; <b>native ensemble SASA (95% CI) (&#8491;<sup>2</sup>)</b> &#10145; The average solvent-accessible surface area with its 95% confidence interval in &#8491;<sup>2</sup> of the cut-site region (+/- 5 residues around the cut-site) in the simulated native structure ensemble.</p>
   </div>
-  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
+  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" onclick="close_help_div(this)" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
 </div>
 
 <div id="xlmsInfoTableHelp_div" style="width: 15%; height: 20%; background-color: lightyellow; border: 1px solid black; border-radius: 5%; position: absolute; text-align: center; font-size: 1.2vmin; font-family: Arial; display: none;">
@@ -247,11 +316,11 @@
     <p>&bull; <b>jwalk (&#8491;)</b> &#10145; The <a href="https://doi.org/10.1074/mcp.M116.058560" target="_blank">Jwalk distance</a> in &#8491; (solvant accessible surface distance) between the residue pair in the misfolded structure. A Jwalk distance of -1 indicates at least one of the residues is buried.</p>
     <p>&bull; <b>native ensemble XL propensity (95% CI)</b> &#10145; The average crosslink propensity with its 95% confidence interval between the residue pair in the simulated native structure ensemble.</p>
   </div>
-  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
+  <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" onclick="close_help_div(this)" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
 </div>
 
 <!-- Run the javascript to construct the page and setup NGL application -->
-<script src="./index.js?v=2.6"></script>
+<script src="./index.js?v=2.8"></script>
 
 </body>
 </html>

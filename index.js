@@ -31,6 +31,8 @@ stage.setParameters({
   cameraType: 'perspective',
   lightIntensity: 1.0,
   ambientIntensity: 0.2,
+  fogNear: 50,
+  fogFar: 100,
 })
 
 function addElement (container, el) {
@@ -151,6 +153,100 @@ function creatHelpIcon(width) {
     e.target.parentElement.getElementsByTagName('circle')[0].style.fill = backgroundColor_0
     e.target.parentElement.getElementsByTagName('circle')[0].style.stroke = stroke_color_0
     e.target.parentElement.getElementsByTagName('text')[0].style.fill = fontColor_0
+  })
+  return icon
+}
+
+function creatSettingIcon(width) {
+  const svgns = "http://www.w3.org/2000/svg";
+  const path_fill_color_0 = 'RoyalBlue'
+  const path_fill_color_1 = 'DarkBlue'
+  const path_stroke_color_0 = 'RoyalBlue'
+  const path_stroke_color_1 = 'DarkBlue'
+
+  var icon = document.createElementNS(svgns, "svg")
+  icon.setAttribute('height', width)
+  icon.setAttribute('viewBox', "0 0 512 512")
+  var title = document.createElementNS(svgns, "title")
+  title.innerHTML = "Scene preference settings"
+  icon.appendChild(title)
+
+  var path = document.createElementNS(svgns, "path")
+  path.setAttribute("d", "M 495.9 166.6 "+
+                         "c 3.2 8.7 .5 18.4 -6.4 24.6 "+
+                         "l -43.3 39.4 "+
+                         "c 1.1 8.3 1.7 16.8 1.7 25.4 "+
+                         "s -.6 17.1 -1.7 25.4 "+
+                         "l 43.3 39.4 "+
+                         "c 6.9 6.2 9.6 15.9 6.4 24.6 "+
+                         "c -4.4 11.9 -9.7 23.3 -15.8 34.3 "+
+                         "l -4.7 8.1 "+
+                         "c -6.6 11 -14 21.4 -22.1 31.2 "+
+                         "c -5.9 7.2 -15.7 9.6 -24.5 6.8 "+
+                         "l -55.7 -17.7 "+
+                         "c -13.4 10.3 -28.2 18.9 -44 25.4 "+
+                         "l -12.5 57.1 "+
+                         "c -2 9.1 -9 16.3 -18.2 17.8 "+
+                         "c -13.8 2.3 -28 3.5 -42.5 3.5 "+
+                         "s -28.7 -1.2 -42.5 -3.5 "+
+                         "c -9.2 -1.5 -16.2 -8.7 -18.2 -17.8 "+
+                         "l -12.5 -57.1 "+
+                         "c -15.8 -6.5 -30.6 -15.1 -44 -25.4 "+
+                         "L 83.1 425.9 "+
+                         "c -8.8 2.8 -18.6 .3 -24.5 -6.8 "+
+                         "c -8.1 -9.8 -15.5 -20.2 -22.1 -31.2 "+
+                         "l -4.7 -8.1 "+
+                         "c -6.1 -11 -11.4 -22.4 -15.8 -34.3 "+
+                         "c -3.2 -8.7 -.5 -18.4 6.4 -24.6 "+
+                         "l 43.3 -39.4 "+
+                         "C 64.6 273.1 64 264.6 64 256 "+
+                         "s .6 -17.1 1.7 -25.4 "+
+                         "L 22.4 191.2 "+
+                         "c -6.9 -6.2 -9.6 -15.9 -6.4 -24.6 "+
+                         "c 4.4 -11.9 9.7 -23.3 15.8 -34.3 "+
+                         "l 4.7 -8.1 "+
+                         "c 6.6 -11 14 -21.4 22.1 -31.2 "+
+                         "c 5.9 -7.2 15.7 -9.6 24.5 -6.8 "+
+                         "l 55.7 17.7 "+
+                         "c 13.4 -10.3 28.2 -18.9 44 -25.4 "+
+                         "l 12.5 -57.1 "+
+                         "c 2 -9.1 9 -16.3 18.2 -17.8 "+
+                         "C 227.3 1.2 241.5 0 256 0 "+
+                         "s 28.7 1.2 42.5 3.5 "+
+                         "c 9.2 1.5 16.2 8.7 18.2 17.8 "+
+                         "l 12.5 57.1 "+
+                         "c 15.8 6.5 30.6 15.1 44 25.4 "+
+                         "l 55.7 -17.7 "+
+                         "c 8.8 -2.8 18.6 -.3 24.5 6.8 "+
+                         "c 8.1 9.8 15.5 20.2 22.1 31.2 "+
+                         "l 4.7 8.1 "+
+                         "c 6.1 11 11.4 22.4 15.8 34.3 z "+
+                         "M 256 336 "+
+                         "a 80 80 0 1 0 0 -160 80 80 0 1 0 0 160 z")
+  Object.assign(path.style, {
+    'fill': path_fill_color_0,
+    'stroke': path_stroke_color_0,
+    'stroke-width': 0,
+  })
+  icon.appendChild(path)
+
+  icon.addEventListener('mouseover', (e) => {
+    e.target.style.cursor = 'pointer'
+    var parent = e.target.parentElement
+    var path_list = parent.getElementsByTagName('path')
+    for (var i = 0; i < path_list.length; i++) {
+      path_list[i].style.fill = path_fill_color_1
+      path_list[i].style.stroke = path_stroke_color_1
+    }
+  })
+  icon.addEventListener('mouseout', (e) => {
+    e.target.style.cursor = 'pointer'
+    var parent = e.target.parentElement
+    var path_list = parent.getElementsByTagName('path')
+    for (var i = 0; i < path_list.length; i++) {
+      path_list[i].style.fill = path_fill_color_0
+      path_list[i].style.stroke = path_stroke_color_0
+    }
   })
   return icon
 }
@@ -417,7 +513,7 @@ function reset_view() {
       var repr = struct[i].reprList[j]
       if (! repr.parameters.name.includes(' surface')) {
         if (repr.parameters.visible) {
-          sele = sele.concat(repr.parameters.sele.substr(1).split(','))
+          sele = sele.concat(repr.repr.selection.string.substr(1).split(','))
         }
       }
     }
@@ -526,12 +622,6 @@ function _loadStructure(json_obj) {
     help_div.style.left = e.target.getBoundingClientRect().left+document.documentElement.scrollLeft+e.target.getBoundingClientRect().width+'px'
     help_div.style.display = 'block'
   })
-  var help_div = document.getElementById('proteinCheckHelp_div')
-  help_div.getElementsByTagName('input')[0].addEventListener('click', (e) => {
-    var help_div = document.getElementById('proteinCheckHelp_div')
-    help_div.getElementsByTagName('div')[0].scrollTop = 0
-    help_div.style.display = 'none'
-  })
   var legend = createElement("legend", {
     innerHTML: "<b>Proteins:</b> ",
   }, { "text-align": "left",
@@ -582,12 +672,6 @@ function _loadStructure(json_obj) {
     help_div.style.top = e.target.getBoundingClientRect().top+document.documentElement.scrollTop+e.target.getBoundingClientRect().height+'px'
     help_div.style.left = e.target.getBoundingClientRect().left+document.documentElement.scrollLeft+e.target.getBoundingClientRect().width+'px'
     help_div.style.display = 'block'
-  })
-  var help_div = document.getElementById('entCheckHelp_div')
-  help_div.getElementsByTagName('input')[0].addEventListener('click', (e) => {
-    var help_div = document.getElementById('entCheckHelp_div')
-    help_div.getElementsByTagName('div')[0].scrollTop = 0
-    help_div.style.display = 'none'
   })
   var legend = createElement("legend", {
     innerHTML: "<b>Changes in Entanglements:</b> "
@@ -649,12 +733,6 @@ function _loadStructure(json_obj) {
     help_div.style.left = e.target.getBoundingClientRect().left+document.documentElement.scrollLeft+e.target.getBoundingClientRect().width+'px'
     help_div.style.display = 'block'
   })
-  var help_div = document.getElementById('lipmsCheckHelp_div')
-  help_div.getElementsByTagName('input')[0].addEventListener('click', (e) => {
-    var help_div = document.getElementById('lipmsCheckHelp_div')
-    help_div.getElementsByTagName('div')[0].scrollTop = 0
-    help_div.style.display = 'none'
-  })
   var legend = createElement("legend", {
     innerHTML: "<b>LiP-MS cut-sites:</b> ",
   }, { "text-align": "left",
@@ -714,12 +792,6 @@ function _loadStructure(json_obj) {
     help_div.style.left = e.target.getBoundingClientRect().left+document.documentElement.scrollLeft+e.target.getBoundingClientRect().width+'px'
     help_div.style.display = 'block'
   })
-  var help_div = document.getElementById('xlmsCheckHelp_div')
-  help_div.getElementsByTagName('input')[0].addEventListener('click', (e) => {
-    var help_div = document.getElementById('xlmsCheckHelp_div')
-    help_div.getElementsByTagName('div')[0].scrollTop = 0
-    help_div.style.display = 'none'
-  })
   var legend = createElement("legend", {
     innerHTML: "<b>XL-MS pairs:</b> ",
   }, { "text-align": "left",
@@ -772,12 +844,21 @@ function _loadStructure(json_obj) {
       struct_key = Object.keys(selection_dict)[struct_id]
       o.autoView()
       var if_vis = false
+      var colorScheme_list = [[protein_color, "*"]]
       if (struct_key == 'misfolded') {
         if_vis = true
+        var sel_ent_dict = selection_dict[struct_key]['chg_ent'][chg_ent_struct_state[0]]
+        colorScheme_list = [[loop_color, sel_ent_dict['loop']],
+                            [thread_color, sel_ent_dict['thread']]].concat(colorScheme_list)
       }
+      var schemeId = NGL.ColormakerRegistry.addSelectionScheme(colorScheme_list, struct_key+"_colorScheme");
       r = o.addRepresentation('cartoon', {
         sele: selection_dict[struct_key]['sel'],
-        color: protein_color,
+        color: schemeId,
+        smoothSheet: true,
+        aspectRatio: 3.5,
+        radiusScale: 1.5,
+        quality: 'high',
         name: struct_key+" protein"
       })
       r.setVisibility(if_vis)
@@ -788,18 +869,6 @@ function _loadStructure(json_obj) {
           if_vis = true
         }
         var sel_ent_dict = selection_dict[struct_key]['chg_ent'][chg_ent_struct_state[i]]
-        r = o.addRepresentation('cartoon', {
-          sele: sel_ent_dict['loop'],
-          color: loop_color,
-          name: struct_key+" loop #"+(i+1)
-        })
-        r.setVisibility(if_vis)
-        r = o.addRepresentation('cartoon', {
-          sele: sel_ent_dict['thread'],
-          color: thread_color,
-          name: struct_key+" thread #"+(i+1)
-        })
-        r.setVisibility(if_vis)
         if (sel_ent_dict['cross'] != '') {
           r = o.addRepresentation('spacefill', {
             sele: sel_ent_dict['cross'],
@@ -965,10 +1034,7 @@ function addFunToCheckbox(struct_info_dict) {
       proteinCheckbox.checked = true
     }
     proteinCheckbox.addEventListener('change', (e) => {
-      var name_prefix = e.target.id.split('Check')[0]
-      stage.getRepresentationsByName(name_prefix+" protein")
-        .setVisibility(e.target.checked)
-      // reset_view()
+      protEntCheckBox_change_function(e)
     })
   }
 
@@ -982,21 +1048,7 @@ function addFunToCheckbox(struct_info_dict) {
       var entanglementCheckbox = document.getElementById(name_prefix+"EntCheckbox #"+(i+1))
       entanglementCheckbox.checked = if_checked
       entanglementCheckbox.addEventListener('change', (e) => {
-        // Update representations
-        var elid = e.target.id.split('#').slice(-1)[0]
-        var prefix = e.target.id.split('Ent')[0]
-        stage.getRepresentationsByName(prefix+" loop #"+elid)
-          .setVisibility(e.target.checked)
-        stage.getRepresentationsByName(prefix+" thread #"+elid)
-          .setVisibility(e.target.checked)
-        stage.getRepresentationsByName(prefix+" crossing atoms #"+elid)
-          .setVisibility(e.target.checked)
-        stage.getRepresentationsByName(prefix+" NC atoms #"+elid)
-          .setVisibility(e.target.checked)
-        stage.getRepresentationsByName(prefix+" native contact #"+elid)
-          .setVisibility(e.target.checked)
-        // reset_view()
-
+        protEntCheckBox_change_function(e)
         update_info_panel(native_M)
       })
     }
@@ -1009,6 +1061,67 @@ function addFunToCheckbox(struct_info_dict) {
         expCheckBox_change_function(e)
         update_info_panel(native_M)
       })
+    }
+  }
+}
+
+function protEntCheckBox_change_function(e) {
+  var exp_signal_list = struct_info_dict.exp_signal_list
+  var chg_ent_struct_state = struct_info_dict.chg_ent_struct_state
+  var exp_signal_M_dict = struct_info_dict.exp_signal_M_dict
+  var chg_ent_dict = struct_info_dict.chg_ent_dict
+  var selection_dict = struct_info_dict.selection_dict
+
+  for (struct_id in Object.keys(selection_dict)) {
+    var sk = Object.keys(selection_dict)[struct_id]
+    var s = struct[struct_id]
+    var loop_sele = []
+    var thread_sele = []
+    for (i = 0; i < chg_ent_struct_state.length; i++) {
+      var entanglementCheckbox = document.getElementById(sk+'EntCheckbox #'+(i+1))
+      var sele = selection_dict[sk]['chg_ent'][chg_ent_struct_state[i]]
+      if (entanglementCheckbox.checked) {
+        loop_sele = loop_sele.concat(sele['loop'].substr(1).split(','))
+        thread_sele = thread_sele.concat(sele['thread'].substr(1).split(','))
+      }
+      stage.getRepresentationsByName(sk+" crossing atoms #"+(i+1))
+        .setVisibility(entanglementCheckbox.checked)
+      stage.getRepresentationsByName(sk+" NC atoms #"+(i+1))
+        .setVisibility(entanglementCheckbox.checked)
+      stage.getRepresentationsByName(sk+" native contact #"+(i+1))
+        .setVisibility(entanglementCheckbox.checked)
+    }
+    var proteinCheckbox = document.getElementById(sk+"Checkbox")
+    if (proteinCheckbox.checked & loop_sele.length > 0) {
+      var protein_sele = selection_dict[sk]['sel']
+      var colorScheme_list = [[loop_color, '@'+([...new Set(loop_sele)].join(','))],
+                              [thread_color, '@'+([...new Set(thread_sele)].join(','))],
+                              [protein_color, '*']]
+      var schemeId = NGL.ColormakerRegistry.addSelectionScheme(colorScheme_list, sk+"_colorScheme");
+      stage.getRepresentationsByName(sk+" protein").setSelection(protein_sele)
+      stage.getRepresentationsByName(sk+" protein").setColor(schemeId)
+      stage.getRepresentationsByName(sk+" protein").setVisibility(true)
+    }
+    else if (!proteinCheckbox.checked & loop_sele.length > 0) {
+      var protein_sele = '@'+([...new Set(loop_sele.concat(thread_sele))].join(','))
+      var colorScheme_list = [[loop_color, '@'+([...new Set(loop_sele)].join(','))],
+                              [thread_color, '@'+([...new Set(thread_sele)].join(','))],
+                              [protein_color, '*']]
+      var schemeId = NGL.ColormakerRegistry.addSelectionScheme(colorScheme_list, sk+"_colorScheme");
+      stage.getRepresentationsByName(sk+" protein").setSelection(protein_sele)
+      stage.getRepresentationsByName(sk+" protein").setColor(schemeId)
+      stage.getRepresentationsByName(sk+" protein").setVisibility(true)
+    }
+    else if (proteinCheckbox.checked & loop_sele.length == 0) {
+      var protein_sele = selection_dict[sk]['sel']
+      var colorScheme_list = [[protein_color, '*']]
+      var schemeId = NGL.ColormakerRegistry.addSelectionScheme(colorScheme_list, sk+"_colorScheme");
+      stage.getRepresentationsByName(sk+" protein").setSelection(protein_sele)
+      stage.getRepresentationsByName(sk+" protein").setColor(schemeId)
+      stage.getRepresentationsByName(sk+" protein").setVisibility(true)
+    }
+    else {
+      stage.getRepresentationsByName(sk+" protein").setVisibility(false)
     }
   }
 }
@@ -1089,7 +1202,7 @@ function expCheckBox_change_function(e) {
         opaqueBack: true,
         metalness: 0,
         roughness: 1,
-        useWorker: false,
+        quality: "high",
         name: sk+" LiP-MS cut-site surface"
       })
       r.setVisibility(true)
@@ -1108,7 +1221,7 @@ function expCheckBox_change_function(e) {
         opaqueBack: true,
         metalness: 0,
         roughness: 1,
-        useWorker: false,
+        quality: "high",
         name: sk+" XL-MS site surface"
       })
       r.setVisibility(true)
@@ -1136,7 +1249,7 @@ function expCheckBox_change_function(e) {
         opaqueBack: true,
         metalness: 0,
         roughness: 1,
-        useWorker: false,
+        quality: "high",
         name: sk+" rest surface"
       })
       r.setVisibility(true)
@@ -1194,12 +1307,6 @@ function update_info_panel(native_M) {
     help_div.style.top = e.target.getBoundingClientRect().top+document.documentElement.scrollTop+e.target.getBoundingClientRect().height+'px'
     help_div.style.left = e.target.getBoundingClientRect().left+document.documentElement.scrollLeft+e.target.getBoundingClientRect().width+'px'
     help_div.style.display = 'block'
-  })
-  var help_div = document.getElementById('entInfoTableHelp_div')
-  help_div.getElementsByTagName('input')[0].addEventListener('click', (e) => {
-    var help_div = document.getElementById('entInfoTableHelp_div')
-    help_div.getElementsByTagName('div')[0].scrollTop = 0
-    help_div.style.display = 'none'
   })
   ent_info_div.appendChild(help_icon)
   // add a table of entanglements
@@ -1314,12 +1421,6 @@ function update_info_panel(native_M) {
     help_div.style.left = e.target.getBoundingClientRect().left+document.documentElement.scrollLeft+e.target.getBoundingClientRect().width+'px'
     help_div.style.display = 'block'
   })
-  var help_div = document.getElementById('lipmsInfoTableHelp_div')
-  help_div.getElementsByTagName('input')[0].addEventListener('click', (e) => {
-    var help_div = document.getElementById('lipmsInfoTableHelp_div')
-    help_div.getElementsByTagName('div')[0].scrollTop = 0
-    help_div.style.display = 'none'
-  })
   lipms_info_div.appendChild(help_icon)
   var head_lipms = ['site', 'native SASA (&#8491;<sup>2</sup>)', 'SASA (&#8491;<sup>2</sup>)', 'native ensemble SASA (95% CI) (&#8491;<sup>2</sup>)']
   var head_xlms = ['site', 'native XL propensity', 'native jwalk (&#8491;)', 'XL propensity', 'jwalk (&#8491;)', 'native ensemble XL propensity (95% CI)']
@@ -1428,12 +1529,6 @@ function update_info_panel(native_M) {
     help_div.style.left = e.target.getBoundingClientRect().left+document.documentElement.scrollLeft+e.target.getBoundingClientRect().width+'px'
     help_div.style.display = 'block'
   })
-  var help_div = document.getElementById('xlmsInfoTableHelp_div')
-  help_div.getElementsByTagName('input')[0].addEventListener('click', (e) => {
-    var help_div = document.getElementById('xlmsInfoTableHelp_div')
-    help_div.getElementsByTagName('div')[0].scrollTop = 0
-    help_div.style.display = 'none'
-  })
   xlms_info_div.appendChild(help_icon)
   // add a table of XLMS experimental signals
   var table = document.createElement('table');
@@ -1505,6 +1600,20 @@ function update_checkbox_div_height() {
   }
   var checkbox_div = document.getElementById('checkbox_div')
   checkbox_div.style.height = h+'px'
+}
+
+function close_help_div(elem) {
+  var help_div = elem.parentElement
+  help_div.getElementsByTagName('div')[0].scrollTop = 0
+  help_div.style.display = 'none'
+}
+
+function change_surfaceOpacity(elem) {
+  document.getElementById('surface_opacity_value_div').innerHTML = (parseFloat(elem.value) / 100).toFixed(2);
+  var surface_rep_list = stage.getRepresentationsByName(/ surface/).list; 
+  for (i in surface_rep_list) {
+    surface_rep_list[i].setParameters({opacity: parseFloat(elem.value) / 100})
+  }
 }
 
 //////////////////////// Generate page contents //////////////////////////////
@@ -1665,7 +1774,7 @@ function gen_major_contents(selectbox_json) {
     .catch(error => console.error('Error fetching data:', error));
 
 
-  var buttonTable = createTable('buttonTable', 1, 4, false)
+  var buttonTable = createTable('buttonTable', 1, 5, false)
   document.getElementById("cntrl_panel").appendChild(buttonTable)
   Object.assign(buttonTable.style, { 
     width: "100%",
@@ -1722,62 +1831,33 @@ function gen_major_contents(selectbox_json) {
   alignSelect_div.appendChild(alignSelect)
   document.getElementById("buttonTable_cell_0_0").appendChild(alignSelect_div)
 
-  // var centerButton = createElement("input", {
-  //   type: "button",
-  //   value: "Center",
-  //   title: "Center this molecule in the scene",
-  //   onclick: function () {
-  //     reset_view()
-  //   },
-  //   onmouseover: function () {
-  //     this.style.cursor = 'pointer'
-  //   }
-  // }, { "vertical-align": "middle",
-  //      "font-family": "Arial", 
-  //      "font-size": "1.4vmin" })
+  var settingButtonIcon = creatSettingIcon('2.0vmin')
+  settingButtonIcon.addEventListener('click', (e) => {
+    var setting_div = document.getElementById('sceneSetting_div')
+    setting_div.style.top = e.target.getBoundingClientRect().top+document.documentElement.scrollTop+e.target.getBoundingClientRect().height+'px'
+    setting_div.style.left = e.target.getBoundingClientRect().left+document.documentElement.scrollLeft+e.target.getBoundingClientRect().width+'px'
+    setting_div.style.display = 'block'
+  })
+
+  document.getElementById("buttonTable_cell_0_1").appendChild(settingButtonIcon)
+
   var centerButtonIcon = creatCenterIcon('2.0vmin')
   centerButtonIcon.addEventListener('click', (e) => {
     reset_view();
   })
-  document.getElementById("buttonTable_cell_0_1").appendChild(centerButtonIcon)
+  document.getElementById("buttonTable_cell_0_2").appendChild(centerButtonIcon)
 
-  // var exportButton = createElement("input", {
-  //   type: "button",
-  //   value: "Export",
-  //   title: "Export a PNG image",
-  //   onclick: function () {
-  //     export_image()
-  //   },
-  //   onmouseover: function () {
-  //     this.style.cursor = 'pointer'
-  //   }
-  // }, { "vertical-align": "middle",
-  //      "font-family": "Arial", 
-  //      "font-size": "1.4vmin" })
   var exportButtonIcon = creatExportIcon('2.0vmin')
   exportButtonIcon.addEventListener('click', (e) => {
     export_image();
   })
-  document.getElementById("buttonTable_cell_0_2").appendChild(exportButtonIcon)
+  document.getElementById("buttonTable_cell_0_3").appendChild(exportButtonIcon)
 
-  // var downloadButton = createElement("input", {
-  //   type: "button",
-  //   value: "Download",
-  //   title: "Download the PDB file of the misfolded structure",
-  //   onclick: function () {
-  //     download_pdb()
-  //   },
-  //   onmouseover: function () {
-  //     this.style.cursor = 'pointer'
-  //   }
-  // }, { "vertical-align": "middle",
-  //      "font-family": "Arial", 
-  //      "font-size": "1.4vmin" })
   var downloadButtonIcon = creatDownloadIcon('2.0vmin')
   downloadButtonIcon.addEventListener('click', (e) => {
     download_pdb()
   })
-  document.getElementById("buttonTable_cell_0_3").appendChild(downloadButtonIcon)
+  document.getElementById("buttonTable_cell_0_4").appendChild(downloadButtonIcon)
 
   document.getElementById("cntrl_panel").appendChild(createElement("div", {
     innerHTML: "<b><i>Check/uncheck the following options to show/hide:</i></b>",
@@ -1796,122 +1876,6 @@ function gen_major_contents(selectbox_json) {
        overflow: "auto",
        backgroundColor: "#F0FFF0",})
   document.getElementById("cntrl_panel").appendChild(checkbox_div)
-
-  // Range Bar for suface opacity
-  var rangeTable = createTable('rangeTable', 1, 3, false)
-  document.getElementById("cntrl_panel").appendChild(rangeTable)
-  Object.assign(rangeTable.style, { 
-    margin: "0px",
-    "margin-top": "2%",
-    width: "100%",
-    "text-align": "left",
-  })
-
-  document.getElementById("rangeTable_cell_0_0").appendChild(createElement("span", {
-    innerHTML: "Surface opacity:"
-  }, { "vertical-align": "middle",
-       "font-family": "Arial", 
-       "font-size": "1.4vmin"}))
-  var surfaceOpacityRange = createElement("input", {
-    id: "surfaceOpacityRange",
-    type: "range", 
-    value: 20, 
-    min: 0, 
-    max: 100, 
-    step: 1,
-    onmouseover: function () {
-      this.style.cursor = 'pointer'
-    }
-  }, { width: "6vw",
-       "vertical-align": "middle", })
-  surfaceOpacityRange.oninput = function (e) {
-    surface_opacity_value_div.innerHTML = (parseFloat(e.target.value) / 100).toFixed(2);
-    var surface_rep_list = stage.getRepresentationsByName(/ surface/).list
-    for (i in surface_rep_list) {
-      surface_rep_list[i].setParameters({
-      opacity: parseFloat(e.target.value) / 100
-      })
-    }
-  }
-  document.getElementById("rangeTable_cell_0_1").appendChild(surfaceOpacityRange)
-  var surface_opacity_value_div = createElement("div", {
-    innerHTML: "0.20",
-    id: "surface_opacity_value_div",
-  }, { top: "93%", 
-       left: "88%",
-       margin: "2px",
-       "font-family": "Arial", 
-       "font-size": "1.4vmin"})
-  document.getElementById("rangeTable_cell_0_2").appendChild(surface_opacity_value_div)
-
-  // Switch between persepective or orthographic
-  var switchTable = createTable('switchTable', 1, 2, false)
-  document.getElementById("cntrl_panel").appendChild(switchTable)
-  Object.assign(switchTable.style, { 
-    margin: "0px",
-    width: "100%",
-    "text-align": "left",
-  })
-
-  var persOptionRadio = createElement("input", {
-    type: "radio", 
-    name: "cameraOption",
-    id: "persOptionRadio",
-    value: "perspective",
-    onmouseover: function () {
-      this.style.cursor = 'pointer'
-    }
-  }, { width: "1.4vmin",
-       height: "1.4vmin",
-       margin: "0px",
-       "vertical-align": "middle",})
-  persOptionRadio.checked = true
-  persOptionRadio.addEventListener('change', (e) => {
-    if (e.target.checked) {
-      stage.setParameters({'cameraType': e.target.value})
-    }
-  })
-  document.getElementById("switchTable_cell_0_0").appendChild(persOptionRadio)
-  var label = createElement("label", {
-    innerText: "Perspective",
-    onmouseover: function () {
-      this.style.cursor = 'pointer'
-    }
-  }, { "margin-left": "0.5vmin",
-       "vertical-align": "middle",
-       "font-family": "Arial", 
-       "font-size": "1.4vmin" })
-  label.setAttribute("for", "persOptionRadio")
-  document.getElementById("switchTable_cell_0_0").appendChild(label)
-  var orthOptionRadio = createElement("input", {
-    type: "radio", 
-    name: "cameraOption",
-    id: "orthOptionRadio",
-    value: "orthographic",
-    onmouseover: function () {
-      this.style.cursor = 'pointer'
-    }
-  }, { width: "1.4vmin",
-       height: "1.4vmin",
-       margin: "0px",
-       "vertical-align": "middle",})
-  orthOptionRadio.addEventListener('change', (e) => {
-    if (e.target.checked) {
-      stage.setParameters({'cameraType': e.target.value})
-    }
-  })
-  document.getElementById("switchTable_cell_0_1").appendChild(orthOptionRadio)
-  var label = createElement("label", {
-    innerText: "Orthographic",
-    onmouseover: function () {
-      this.style.cursor = 'pointer'
-    }
-  }, { "margin-left": "0.5vmin",
-       "vertical-align": "middle",
-       "font-family": "Arial", 
-       "font-size": "1.4vmin" })
-  label.setAttribute("for", "orthOptionRadio")
-  document.getElementById("switchTable_cell_0_1").appendChild(label)
 
   update_checkbox_div_height();
 
@@ -1940,12 +1904,6 @@ help_icon.addEventListener('click', (e) => {
   help_div.style.top = e.target.getBoundingClientRect().top+document.documentElement.scrollTop+e.target.getBoundingClientRect().height+'px'
   help_div.style.left = e.target.getBoundingClientRect().left+document.documentElement.scrollLeft+e.target.getBoundingClientRect().width+'px'
   help_div.style.display = 'block'
-})
-var help_div = document.getElementById('datasetTableHelp_div')
-help_div.getElementsByTagName('input')[0].addEventListener('click', (e) => {
-  var help_div = document.getElementById('datasetTableHelp_div')
-  help_div.getElementsByTagName('div')[0].scrollTop = 0
-  help_div.style.display = 'none'
 })
 cell.appendChild(help_icon)
 var repStructRadio = createElement("input", {
