@@ -1,53 +1,53 @@
 State #8
-Q: 0.868100
-G: 0.056285
+Q: 0.876000
+G: 0.066604
 Consistent experiment signals: ['G61', 'K116-K120']
 Changes in entanglement cluster IDs: [9, 48, 60, 84, 85]
-Trajectory number: 213
-Frame number: 36
+Trajectory number: 994
+Frame number: 300
 ----------------------------------------------------------------
-G61: M: 325.0077
-K116-K120: M: 0.0139 Jwalk: 8.6542 Euclidean: 8.2804 Density: 0.0231
+G61: M: 318.8523
+K116-K120: M: 0.0121 Jwalk: 8.1623 Euclidean: 8.6598
 ----------------------------------------------------------------
 9:
     code: ['L#C#', 'L+C#']
-    GLN: [0.014210416783261345, -0.9061478051100718]
-    ref_GLN: [0.01334088555589493, 0.09610078643996774]
+    GLN: [0.006442671486051839, -0.7376945654951033]
+    ref_GLN: [0.012124144027163766, 0.2511535435223162]
     linking_number: [0, -1]
     ref_linking_number: [0, 0]
-    native_contact: [17, 43]
-    ref_native_contact: [17, 43]
+    native_contact: [15, 46]
+    ref_native_contact: [15, 46]
     crossing_resid: [[], [58]]
     ref_crossing_resid: [[], []]
     crossing_pattern: ['', '-']
     ref_crossing_pattern: ['', '']
 48:
     code: ['L+C#', 'L#C#']
-    GLN: [-0.9307266827435503, 0.11914942309018502]
-    ref_GLN: [0.038029892739572385, 0.19006263950240734]
+    GLN: [-0.838028000139762, 0.0811813521373244]
+    ref_GLN: [-0.016367225393206154, 0.07400476809908094]
     linking_number: [-1, 0]
     ref_linking_number: [0, 0]
-    native_contact: [55, 105]
-    ref_native_contact: [55, 105]
-    crossing_resid: [[20], []]
+    native_contact: [57, 73]
+    ref_native_contact: [57, 73]
+    crossing_resid: [[21], []]
     ref_crossing_resid: [[], []]
     crossing_pattern: ['-', '']
     ref_crossing_pattern: ['', '']
 60:
     code: ['L+C#', 'L#C#']
-    GLN: [-0.898572805606049, 0.6077821528758632]
-    ref_GLN: [0.11491391949616735, 0.6414889745565661]
+    GLN: [-0.8175789442070941, 0.6417675179511408]
+    ref_GLN: [0.1914805020924778, 0.6903653259335704]
     linking_number: [-1, 1]
     ref_linking_number: [0, 1]
-    native_contact: [54, 100]
-    ref_native_contact: [54, 100]
-    crossing_resid: [[20], [106]]
+    native_contact: [53, 100]
+    ref_native_contact: [53, 100]
+    crossing_resid: [[21], [106]]
     ref_crossing_resid: [[], [107]]
     crossing_pattern: ['-', '+']
     ref_crossing_pattern: ['', '+']
 84:
     code: ['L-C#', 'L#C#']
-    GLN: [-0.23860169676861867, -0.030466941829700948]
+    GLN: [-0.21412864646438684, -0.018424113764776193]
     ref_GLN: [0.7858007875131604, -0.023613095771521552]
     linking_number: [0, 0]
     ref_linking_number: [1, 0]
@@ -59,12 +59,12 @@ K116-K120: M: 0.0139 Jwalk: 8.6542 Euclidean: 8.2804 Density: 0.0231
     ref_crossing_pattern: ['+', '']
 85:
     code: ['L-C#', 'L#C#']
-    GLN: [-0.13417964045377978, 0.2694704351416273]
-    ref_GLN: [-0.8009789317735168, 0.32873020864833874]
+    GLN: [-0.1231509212332779, 0.28106384076860313]
+    ref_GLN: [-0.9014257368862012, 0.38308987051941806]
     linking_number: [0, 0]
     ref_linking_number: [-1, 0]
-    native_contact: [268, 317]
-    ref_native_contact: [268, 317]
+    native_contact: [266, 316]
+    ref_native_contact: [266, 316]
     crossing_resid: [[], []]
     ref_crossing_resid: [[257], []]
     crossing_pattern: ['', '']

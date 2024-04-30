@@ -1,29 +1,29 @@
 State #9
-Q: 0.905000
-G: 0.020638
+Q: 0.899700
+G: 0.027205
 Consistent experiment signals: ['G29', 'K27-T32']
 Changes in entanglement cluster IDs: [19, 44, 56]
-Trajectory number: 840
-Frame number: 49
+Trajectory number: 596
+Frame number: 327
 ----------------------------------------------------------------
-G29: M: 1146.0196
-K27-T32: M: 0.0781 Jwalk: 15.6397 Euclidean: 12.9812 Density: 0.0333
+G29: M: 1042.7620
+K27-T32: M: 0.0782 Jwalk: 15.8969 Euclidean: 9.7884
 ----------------------------------------------------------------
 19:
     code: ['L#C#', 'L+C#']
-    GLN: [0.15203231391934333, -0.6989420444682651]
-    ref_GLN: [0.17501930492105575, 0.27905506171609884]
+    GLN: [0.22961943083579536, -0.6459554105621522]
+    ref_GLN: [0.25128605605897436, 0.303536797234036]
     linking_number: [0, -1]
     ref_linking_number: [0, 0]
-    native_contact: [36, 76]
-    ref_native_contact: [36, 76]
+    native_contact: [47, 86]
+    ref_native_contact: [47, 86]
     crossing_resid: [[], [109]]
     ref_crossing_resid: [[], []]
     crossing_pattern: ['', '-']
     ref_crossing_pattern: ['', '']
 44:
     code: ['L#C#', 'L-C#']
-    GLN: [0.18309707409996737, -0.2942145231548635]
+    GLN: [0.16267860807936205, -0.2966810727528987]
     ref_GLN: [0.1914805020924778, 0.6903653259335704]
     linking_number: [0, 0]
     ref_linking_number: [0, 1]
@@ -35,12 +35,12 @@ K27-T32: M: 0.0781 Jwalk: 15.6397 Euclidean: 12.9812 Density: 0.0333
     ref_crossing_pattern: ['', '+']
 56:
     code: ['L+C#', 'L#C#']
-    GLN: [-0.6673698972480927, 0.18700675240145984]
-    ref_GLN: [0.3424969833302509, 0.19207608495330683]
+    GLN: [-0.6364730950799724, 0.16979440202898347]
+    ref_GLN: [0.3452022485620799, 0.18114253337236808]
     linking_number: [-1, 0]
     ref_linking_number: [0, 0]
-    native_contact: [96, 127]
-    ref_native_contact: [96, 127]
+    native_contact: [95, 127]
+    ref_native_contact: [95, 127]
     crossing_resid: [[58], []]
     ref_crossing_resid: [[], []]
     crossing_pattern: ['-', '']

@@ -1,29 +1,29 @@
 State #9
-Q: 0.915600
-G: 0.030019
+Q: 0.899700
+G: 0.022514
 Consistent experiment signals: ['K27-T32', 'K119-K127']
 Changes in entanglement cluster IDs: [19, 44, 56]
-Trajectory number: 159
-Frame number: 21
+Trajectory number: 116
+Frame number: 285
 ----------------------------------------------------------------
-K27-T32: M: 0.0782 Jwalk: 16.0438 Euclidean: 8.7359 Density: 0.0335
-K119-K127: M: 0.0000 Jwalk: 36.6889 Euclidean: 14.7940 Density: 0.0585
+K27-T32: M: 0.0782 Jwalk: 15.8614 Euclidean: 7.1264
+K119-K127: M: 0.0000 Jwalk: -1.0000 Euclidean: 8.4462
 ----------------------------------------------------------------
 19:
     code: ['L#C#', 'L+C#']
-    GLN: [0.14339397189241498, -0.7266759331194086]
+    GLN: [0.1341648854966289, -0.7316481651512342]
     ref_GLN: [0.17501930492105575, 0.27905506171609884]
     linking_number: [0, -1]
     ref_linking_number: [0, 0]
     native_contact: [36, 76]
     ref_native_contact: [36, 76]
-    crossing_resid: [[], [110]]
+    crossing_resid: [[], [109]]
     ref_crossing_resid: [[], []]
     crossing_pattern: ['', '-']
     ref_crossing_pattern: ['', '']
 44:
     code: ['L#C#', 'L-C#']
-    GLN: [0.17638949656193917, -0.33732937294899185]
+    GLN: [0.15455708530067394, -0.2916697580563579]
     ref_GLN: [0.1914805020924778, 0.6903653259335704]
     linking_number: [0, 0]
     ref_linking_number: [0, 1]
@@ -35,13 +35,13 @@ K119-K127: M: 0.0000 Jwalk: 36.6889 Euclidean: 14.7940 Density: 0.0585
     ref_crossing_pattern: ['', '+']
 56:
     code: ['L+C#', 'L#C#']
-    GLN: [-0.6585484504390843, 0.1889789794046394]
-    ref_GLN: [0.3424969833302509, 0.19207608495330683]
+    GLN: [-0.6214190603716568, 0.1395469243447861]
+    ref_GLN: [0.36549091810231604, 0.16989909925626137]
     linking_number: [-1, 0]
     ref_linking_number: [0, 0]
-    native_contact: [96, 127]
-    ref_native_contact: [96, 127]
-    crossing_resid: [[58], []]
+    native_contact: [95, 124]
+    ref_native_contact: [95, 124]
+    crossing_resid: [[57], []]
     ref_crossing_resid: [[], []]
     crossing_pattern: ['-', '']
     ref_crossing_pattern: ['', '']
