@@ -95,6 +95,7 @@
 </div>
 
 <script src="https://nglviewer.org/ngl/js/ngl.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <div id="main_div" style="width:80%; height:60%; margin-left: 10%;">
   <div id="left_panel" style="float: left; width:20%; height:100%; background-color: #F0F8FF">
@@ -296,6 +297,7 @@
 <div id="lipmsInfoTableHelp_div" style="width: 15%; height: 20%; background-color: lightyellow; border: 1px solid black; border-radius: 5%; position: absolute; text-align: center; font-size: 1.2vmin; font-family: Arial; display: none;">
   <div class="help_div" style="text-align: left; overflow: auto; height: 80%; margin: 2%;">
     <p>This is a summary table of all significant LiP-MS cut-sites. "Significant" indicates that the solvent-accessible surface area of the cut-site region (+/- 5 residues around the cut-site) in this misfolded structure exceeds the 95% confidence interval of that in the native structure ensemble. The rows corresponding to the cut-sites currently presented in the 3D viewer are marked gray.</p>
+    <p>Click the <b>Show chart</b> button to toggle to a chart representation of the data.</p>
     <p>Explanation of each column header:</p>
     <p>&bull; <b>site</b> &#10145; LiP-MS proteinase K cut-sites, shown as the amino acid name and the residue number.</p>
     <p>&bull; <b>native SASA (&#8491;<sup>2</sup>)</b> &#10145; The solvent-accessible surface area (SASA) in &#8491;<sup>2</sup> of the cut-site region (+/- 5 residues around the cut-site) in the native (crystal) structure.</p>
@@ -308,6 +310,7 @@
 <div id="xlmsInfoTableHelp_div" style="width: 15%; height: 20%; background-color: lightyellow; border: 1px solid black; border-radius: 5%; position: absolute; text-align: center; font-size: 1.2vmin; font-family: Arial; display: none;">
   <div class="help_div" style="text-align: left; overflow: auto; height: 80%; margin: 2%;">
     <p>This is a summary table of all significant XL-MS residue pairs. "Significant" indicates that the crosslink propensity of the residue pair in this misfolded structure exceeds the 95% confidence interval of that in the native structure ensemble. The rows corresponding to the residue pairs currently presented in the 3D viewer are marked gray.</p>
+    <p>Click the <b>Show chart</b> button to toggle to a chart representation of the data.</p>
     <p>Explanation of each column header:</p>
     <p>&bull; <b>site</b> &#10145; XL-MS crosslinking residue pairs, shown as the amino acid name and the residue number of each residue saperated by a dash.</p>
     <p>&bull; <b>native XL propensity</b> &#10145; The crosslink propensity of the residue pair in the native (crystal) structure.</p>
@@ -320,7 +323,7 @@
 </div>
 
 <!-- Run the javascript to construct the page and setup NGL application -->
-<script src="./index.js?v=2.8"></script>
+<script src="./index.js?v=2.9"></script>
 
 </body>
 </html>

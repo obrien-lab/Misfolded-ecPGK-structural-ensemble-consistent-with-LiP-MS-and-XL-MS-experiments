@@ -1271,7 +1271,9 @@ function update_info_panel(native_M) {
 
   var info_div_table = createTable('infoDiv', 2, 3, false)
   info_div.appendChild(info_div_table)
-  Object.assign(info_div_table.style, {height: "100%",})
+  Object.assign(info_div_table.style, {height: "100%", 
+                                       'width': '100%',
+                                       'table-layout': 'fixed',})
   Object.assign(document.getElementById('infoDiv_row_0').style, {height: "15%",})
   Object.assign(document.getElementById('infoDiv_row_1').style, {height: "85%",})
   document.getElementById('infoDiv_cell_0_1').remove()
@@ -1292,12 +1294,17 @@ function update_info_panel(native_M) {
   var ent_info_div = createElement("div", {
     id: "ent_info_div",
   }, { height: "90%",
-       margin: "5%",
+       "margin-left": "5%",
+       "margin-right": "5%",
        overflow: "auto",
        "font-family": "Arial", 
        "font-size": "1.3vmin",
        "text-align": "center",
        'background-color': 'none'})
+  Object.assign(document.getElementById('infoDiv_cell_1_0').style, 
+                  {width: "33%",
+                   'text-align': 'center',
+                   'vertical-align': 'middle',})
   document.getElementById('infoDiv_cell_1_0').appendChild(ent_info_div)
   ent_info_div.innerHTML = "<span><b>Entanglement information table</b></span> "
   var help_icon = creatHelpIcon("1.4vmin")
@@ -1400,28 +1407,7 @@ function update_info_panel(native_M) {
   }
   ent_info_div.appendChild(table);
 
-  var lipms_info_div = createElement("div", {
-    id: "lipms_info_div",
-  }, { height: "90%",
-       margin: "5%",
-       "margin-right": "2%",
-       "margin-left": "2%",
-       overflow: "auto",
-       "font-family": "Arial", 
-       "font-size": "1.3vmin",
-       "text-align": "center",
-       'background-color': 'none'})
-  document.getElementById('infoDiv_cell_1_1').appendChild(lipms_info_div)
-  lipms_info_div.innerHTML = "<span><b>LiP-MS signal table</b></span> "
-  var help_icon = creatHelpIcon("1.4vmin")
-  Object.assign(help_icon.style, {'vertical-align': 'middle'})
-  help_icon.addEventListener('click', (e) => {
-    var help_div = document.getElementById('lipmsInfoTableHelp_div')
-    help_div.style.top = e.target.getBoundingClientRect().top+document.documentElement.scrollTop+e.target.getBoundingClientRect().height+'px'
-    help_div.style.left = e.target.getBoundingClientRect().left+document.documentElement.scrollLeft+e.target.getBoundingClientRect().width+'px'
-    help_div.style.display = 'block'
-  })
-  lipms_info_div.appendChild(help_icon)
+  // Get LiP-MS and XL-MS data
   var head_lipms = ['site', 'native SASA (&#8491;<sup>2</sup>)', 'SASA (&#8491;<sup>2</sup>)', 'native ensemble SASA (95% CI) (&#8491;<sup>2</sup>)']
   var head_xlms = ['site', 'native XL propensity', 'native jwalk (&#8491;)', 'XL propensity', 'jwalk (&#8491;)', 'native ensemble XL propensity (95% CI)']
   var data_lipms = []
@@ -1476,6 +1462,229 @@ function update_info_panel(native_M) {
       data_xlms.push(data)
     }
   }
+
+  Object.assign(document.getElementById('infoDiv_cell_1_1').style, 
+                  {width: "33%",
+                   'text-align': 'center',
+                   'vertical-align': 'middle',})
+  var lipms_chart_table_button = createElement("input", {
+    id: "lipms_chart_table_button",
+    type: "button",
+    value: "Show chart",
+    onclick: function (e) {
+      if (e.target.value == "Show table") {
+        e.target.value = "Show chart"
+        document.getElementById('lipms_chart_div').style.display = 'none'
+        document.getElementById('lipms_info_div').style.display = 'block'
+      }
+      else {
+        e.target.value = "Show table"
+        document.getElementById('lipms_info_div').style.display = 'none'
+        document.getElementById('lipms_chart_div').style.display = 'block'
+      }
+    }
+  }, { height: "10%",
+       "font-family": "Arial", 
+       "font-size": "1.3vmin",
+       "text-align": "center",})
+  document.getElementById('infoDiv_cell_1_1').appendChild(lipms_chart_table_button)
+
+  var lipms_chart_div = createElement("div", {
+    id: "lipms_chart_div",
+  }, { height: "80%",
+       "margin-top": "1%",
+       "margin-right": "5%",
+       "margin-left": "5%",
+       "font-family": "Arial", 
+       "font-size": "1.3vmin",
+       "text-align": "center",
+       display: 'none',
+       'background-color': 'white'})
+  document.getElementById('infoDiv_cell_1_1').appendChild(lipms_chart_div)
+  var canvas = createElement("canvas", {
+    id: "lipms_chart_canvas",
+  }, { })
+  lipms_chart_div.appendChild(canvas)
+  var labels = []
+  var data_M_native = []
+  var data_M_misfold = []
+  var data_native_ensemble = []
+  for (var i = 0; i < data_lipms.length; i++) {
+    labels.push(data_lipms[i][0])
+    data_M_native.push(data_lipms[i][1])
+    data_M_misfold.push(data_lipms[i][2])
+    var str = data_lipms[i][3].split(' ')[1]
+    data_native_ensemble.push(str.substr(1,str.length-2).split(','))
+  }
+  const lipms_chart = new Chart(canvas, {
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          type: 'bar',
+          label: '95% CI of native ensemble SASA',
+          data: data_native_ensemble,
+          borderColor: 'black',
+          backgroundColor: 'rgba(128,128,128,0.5)',
+          borderWidth: 0,
+        },
+        {
+          type: 'scatter',
+          label: 'Native structure SASA',
+          data: data_M_native,
+          radius: (pt) => {
+            if (pt.dataset.data.length > 0) {
+              return 12 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+            }
+            else {
+              return 0
+            }
+          },
+          hoverRadius: (pt) => {
+            if (pt.dataset.data.length > 0) {
+              return 12 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+            }
+            else {
+              return 0
+            }
+          },
+          borderColor: 'black',
+          backgroundColor: 'green',
+          borderWidth: (pt) => {
+            if (checked_lipms.some(a => {
+              const [x, y] = a
+              return x === pt.index && y === 1
+             })) {
+              if (pt.dataset.data.length > 0) {
+                return 6 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+              }
+              else {
+                return 0
+              }
+            }
+            else {
+              return 0
+            }
+          },
+        },
+        {
+          type: 'scatter',
+          label: 'Misfolded structure SASA',
+          data: data_M_misfold,
+          radius: (pt) => {
+            if (pt.dataset.data.length > 0) {
+              return 12 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+            }
+            else {
+              return 0
+            }
+          },
+          hoverRadius: (pt) => {
+            if (pt.dataset.data.length > 0) {
+              return 12 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+            }
+            else {
+              return 0
+            }
+          },
+          borderColor: 'black',
+          backgroundColor: 'magenta',
+          borderWidth: (pt) => {
+            if (checked_lipms.some(a => {
+              const [x, y] = a
+              return x === pt.index && y === 2
+             })) {
+              if (pt.dataset.data.length > 0) {
+                return 6 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+              }
+              else {
+                return 0
+              }
+            }
+            else {
+              return 0
+            }
+          },
+        },
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      indexAxis: 'y',
+      animation: {
+        duration: 0
+      },
+      plugins: {
+        title: {
+          display: true,
+          text: 'LiP-MS signal chart',
+        },
+        legend: {
+          display: false,
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              let label = context.dataset.label || '';
+              if (label) {
+                label += ': ';
+              }
+              if (context.parsed._custom != null) {
+                label += '[' + context.parsed._custom.barStart + ', ' + context.parsed._custom.barEnd + '] Å²'
+              }
+              else if (context.parsed.x != null) {
+                label += context.parsed.x + ' Å²'
+              }
+              return label;
+            },
+          }
+        },
+      },
+      scales: {
+        x: {
+          display: true,
+          beginAtZero: false,
+          title: {
+            display: true,
+            text: 'SASA (Å²)'
+          }
+        },
+        y: {
+          ticks: {
+            autoSkip: false
+          }
+        }
+      },
+    }
+  });
+
+  lipms_chart.config.options.animation.duration = 1000
+
+  var lipms_info_div = createElement("div", {
+    id: "lipms_info_div",
+  }, { height: "80%",
+       "margin-top": "1%",
+       "margin-right": "5%",
+       "margin-left": "5%",
+       overflow: "auto",
+       "font-family": "Arial", 
+       "font-size": "1.3vmin",
+       "text-align": "center",
+       'background-color': 'none',
+       display: 'block',})
+  document.getElementById('infoDiv_cell_1_1').appendChild(lipms_info_div)
+  lipms_info_div.innerHTML = "<span><b>LiP-MS signal table</b></span> "
+  var help_icon = creatHelpIcon("1.4vmin")
+  Object.assign(help_icon.style, {'vertical-align': 'middle'})
+  help_icon.addEventListener('click', (e) => {
+    var help_div = document.getElementById('lipmsInfoTableHelp_div')
+    help_div.style.top = e.target.getBoundingClientRect().top+document.documentElement.scrollTop+e.target.getBoundingClientRect().height+'px'
+    help_div.style.left = e.target.getBoundingClientRect().left+document.documentElement.scrollLeft+e.target.getBoundingClientRect().width+'px'
+    help_div.style.display = 'block'
+  })
+  lipms_info_div.appendChild(help_icon)
+  
   // add a table of LiPMS experimental signals
   var table = document.createElement('table');
   table.setAttribute('border', '1');
@@ -1507,18 +1716,217 @@ function update_info_panel(native_M) {
     tbody.appendChild(row);
   }
   lipms_info_div.appendChild(table)
+  
+  Object.assign(document.getElementById('infoDiv_cell_1_2').style, 
+                  {width: "33%",
+                   'text-align': 'center',
+                   'vertical-align': 'middle',})
+  var xlms_chart_table_button = createElement("input", {
+    id: "xlms_chart_table_button",
+    type: "button",
+    value: "Show chart",
+    onclick: function (e) {
+      if (e.target.value == "Show table") {
+        e.target.value = "Show chart"
+        document.getElementById('xlms_chart_div').style.display = 'none'
+        document.getElementById('xlms_info_div').style.display = 'block'
+      }
+      else {
+        e.target.value = "Show table"
+        document.getElementById('xlms_info_div').style.display = 'none'
+        document.getElementById('xlms_chart_div').style.display = 'block'
+      }
+    }
+  }, { height: "10%",
+       "font-family": "Arial", 
+       "font-size": "1.3vmin",
+       "text-align": "center",})
+  document.getElementById('infoDiv_cell_1_2').appendChild(xlms_chart_table_button)
+
+  var xlms_chart_div = createElement("div", {
+    id: "xlms_chart_div",
+  }, { height: "80%",
+       "margin-top": "1%",
+       "margin-right": "5%",
+       "margin-left": "5%",
+       "font-family": "Arial", 
+       "font-size": "1.3vmin",
+       "text-align": "center",
+       display: 'none',
+       'background-color': 'white'})
+  document.getElementById('infoDiv_cell_1_2').appendChild(xlms_chart_div)
+  var canvas = createElement("canvas", {
+    id: "xlms_chart_canvas",
+  }, { })
+  xlms_chart_div.appendChild(canvas)
+  var labels = []
+  var data_M_native = []
+  var data_M_misfold = []
+  var data_native_ensemble = []
+  for (var i = 0; i < data_xlms.length; i++) {
+    labels.push(data_xlms[i][0])
+    data_M_native.push(data_xlms[i][1])
+    data_M_misfold.push(data_xlms[i][3])
+    var str = data_xlms[i][5].split(' ')[1]
+    data_native_ensemble.push(str.substr(1,str.length-2).split(','))
+  }
+  const xlms_chart = new Chart(canvas, {
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          type: 'bar',
+          label: '95% CI of native ensemble XL',
+          data: data_native_ensemble,
+          borderColor: 'black',
+          backgroundColor: 'rgba(128,128,128,0.5)',
+          borderWidth: 0,
+        },
+        {
+          type: 'scatter',
+          label: 'Native structure XL',
+          data: data_M_native,
+          radius: (pt) => {
+            if (pt.dataset.data.length > 0) {
+              return 12 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+            }
+            else {
+              return 0
+            }
+          },
+          hoverRadius: (pt) => {
+            if (pt.dataset.data.length > 0) {
+              return 12 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+            }
+            else {
+              return 0
+            }
+          },
+          borderColor: 'black',
+          backgroundColor: 'green',
+          borderWidth: (pt) => {
+            if (checked_xlms.some(a => {
+              const [x, y] = a
+              return x === pt.index && y === 1
+             })) {
+              if (pt.dataset.data.length > 0) {
+                return 6 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+              }
+              else {
+                return 0
+              }
+            }
+            else {
+              return 0
+            }
+          },
+        },
+        {
+          type: 'scatter',
+          label: 'Misfolded structure XL',
+          data: data_M_misfold,
+          radius: (pt) => {
+            if (pt.dataset.data.length > 0) {
+              return 12 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+            }
+            else {
+              return 0
+            }
+          },
+          hoverRadius: (pt) => {
+            if (pt.dataset.data.length > 0) {
+              return 12 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+            }
+            else {
+              return 0
+            }
+          },
+          borderColor: 'black',
+          backgroundColor: 'magenta',
+          borderWidth: (pt) => {
+            if (checked_xlms.some(a => {
+              const [x, y] = a
+              return x === pt.index && y === 3
+             })) {
+              if (pt.dataset.data.length > 0) {
+                return 6 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+              }
+              else {
+                return 0
+              }
+            }
+            else {
+              return 0
+            }
+          },
+        },
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      indexAxis: 'y',
+      animation: {
+        duration: 0
+      },
+      plugins: {
+        title: {
+          display: true,
+          text: 'XL-MS signal chart',
+        },
+        legend: {
+          display: false,
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              let label = context.dataset.label || '';
+              if (label) {
+                label += ': ';
+              }
+              if (context.parsed._custom != null) {
+                label += '[' + context.parsed._custom.barStart + ', ' + context.parsed._custom.barEnd + ']'
+              }
+              else if (context.parsed.x != null) {
+                label += context.parsed.x
+              }
+              return label;
+            },
+          }
+        },
+      },
+      scales: {
+        x: {
+          display: true,
+          beginAtZero: false,
+          title: {
+            display: true,
+            text: 'XL'
+          }
+        },
+        y: {
+          ticks: {
+            autoSkip: false
+          }
+        }
+      },
+    }
+  });
+
+  xlms_chart.config.options.animation.duration = 1000
 
   var xlms_info_div = createElement("div", {
-    id: "lipms_info_div",
-  }, { height: "90%",
-       margin: "5%",
-       "margin-right": "2%",
-       "margin-left": "2%",
+    id: "xlms_info_div",
+  }, { height: "80%",
+       "margin-top": "1%",
+       "margin-right": "5%",
+       "margin-left": "5%",
        overflow: "auto",
        "font-family": "Arial", 
        "font-size": "1.3vmin",
        "text-align": "center",
-       'background-color': 'none'})
+       'background-color': 'none',
+       'display': 'block'})
   document.getElementById('infoDiv_cell_1_2').appendChild(xlms_info_div)
   xlms_info_div.innerHTML = "<span><b>XL-MS signal table</b></span> "
   var help_icon = creatHelpIcon("1.4vmin")
