@@ -1,0 +1,61 @@
+State #9
+Q: 0.804700
+G: 0.027205
+Consistent experiment signals: ['K49', 'L132', 'F136', 'D139']
+Changes in entanglement cluster IDs: [50, 61, 84, 85]
+Trajectory number: 141
+Frame number: 294
+----------------------------------------------------------------
+K49: M: 660.1061
+L132: M: 582.4767
+F136: M: 372.7095
+D139: M: 333.9799
+----------------------------------------------------------------
+50:
+    code: ['L+C#', 'L#C#']
+    GLN: [-0.8189898474882116, 0.2636734540137753]
+    ref_GLN: [0.10664740412561903, 0.22547179534266804]
+    linking_number: [-1, 0]
+    ref_linking_number: [0, 0]
+    native_contact: [125, 148]
+    ref_native_contact: [125, 148]
+    crossing_resid: [[15], []]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['-', '']
+    ref_crossing_pattern: ['', '']
+61:
+    code: ['L+C#', 'L#C#']
+    GLN: [-0.8064482590799156, 0.4765453492765337]
+    ref_GLN: [0.16870250850615595, 0.4755636663670292]
+    linking_number: [-1, 1]
+    ref_linking_number: [0, 1]
+    native_contact: [119, 146]
+    ref_native_contact: [119, 146]
+    crossing_resid: [[15], [150]]
+    ref_crossing_resid: [[], [150]]
+    crossing_pattern: ['-', '+']
+    ref_crossing_pattern: ['', '+']
+84:
+    code: ['L-C#', 'L#C#']
+    GLN: [-0.21280378602599923, -0.0763877821050083]
+    ref_GLN: [0.7858007875131604, -0.023613095771521552]
+    linking_number: [0, 0]
+    ref_linking_number: [1, 0]
+    native_contact: [42, 163]
+    ref_native_contact: [42, 163]
+    crossing_resid: [[], []]
+    ref_crossing_resid: [[16], []]
+    crossing_pattern: ['', '']
+    ref_crossing_pattern: ['+', '']
+85:
+    code: ['L-C#', 'L#C#']
+    GLN: [0.2868498435999483, 0.2730076948773392]
+    ref_GLN: [-0.8579013027992095, 0.28704018500314954]
+    linking_number: [0, 0]
+    ref_linking_number: [-1, 0]
+    native_contact: [264, 314]
+    ref_native_contact: [264, 314]
+    crossing_resid: [[], []]
+    ref_crossing_resid: [[256], []]
+    crossing_pattern: ['', '']
+    ref_crossing_pattern: ['-', '']

@@ -1,0 +1,61 @@
+State #9
+Q: 0.894500
+G: 0.024390
+Consistent experiment signals: ['E70', 'V78', 'K82', 'K30-K84']
+Changes in entanglement cluster IDs: [19, 44, 56, 79]
+Trajectory number: 159
+Frame number: 283
+----------------------------------------------------------------
+E70: M: 959.4082
+V78: M: 657.4865
+K82: M: 849.5444
+K30-K84: M: 0.0000 Jwalk: 46.9453 Euclidean: 23.3583
+----------------------------------------------------------------
+19:
+    code: ['L#C#', 'L+C#']
+    GLN: [0.1394400855308738, -0.7587152060427513]
+    ref_GLN: [0.11285461862973542, 0.2520285141227274]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [21, 76]
+    ref_native_contact: [21, 76]
+    crossing_resid: [[], [110]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+44:
+    code: ['L#C#', 'L-C#']
+    GLN: [0.15395846957016396, -0.2976735348564822]
+    ref_GLN: [0.1914805020924778, 0.6903653259335704]
+    linking_number: [0, 0]
+    ref_linking_number: [0, 1]
+    native_contact: [53, 100]
+    ref_native_contact: [53, 100]
+    crossing_resid: [[], []]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['', '']
+    ref_crossing_pattern: ['', '+']
+56:
+    code: ['L+C#', 'L#C#']
+    GLN: [-0.602487183117738, 0.17789972088294334]
+    ref_GLN: [0.3424969833302509, 0.19207608495330683]
+    linking_number: [-1, 0]
+    ref_linking_number: [0, 0]
+    native_contact: [96, 127]
+    ref_native_contact: [96, 127]
+    crossing_resid: [[59], []]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['-', '']
+    ref_crossing_pattern: ['', '']
+79:
+    code: ['L+C#', 'L+C#']
+    GLN: [0.7177378792701805, -0.650833686344764]
+    ref_GLN: [0.24919648943188244, 0.3343063159673308]
+    linking_number: [1, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [28, 70]
+    ref_native_contact: [28, 70]
+    crossing_resid: [[20], [110]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['+', '-']
+    ref_crossing_pattern: ['', '']

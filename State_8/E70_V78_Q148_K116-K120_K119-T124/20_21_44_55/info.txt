@@ -1,0 +1,62 @@
+State #8
+Q: 0.865400
+G: 0.075985
+Consistent experiment signals: ['E70', 'V78', 'Q148', 'K116-K120', 'K119-T124']
+Changes in entanglement cluster IDs: [20, 21, 44, 55]
+Trajectory number: 782
+Frame number: 317
+----------------------------------------------------------------
+E70: M: 936.2480
+V78: M: 620.7221
+Q148: M: 709.1390
+K116-K120: M: 0.0608 Jwalk: 18.1213 Euclidean: 10.5478
+K119-T124: M: 0.0103 Jwalk: 26.1647 Euclidean: 14.0493
+----------------------------------------------------------------
+20:
+    code: ['L#C#', 'L+C#']
+    GLN: [-0.09499722723591426, -0.9287195779204501]
+    ref_GLN: [-0.08682700567986204, 0.05339902575130137]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [91, 106]
+    ref_native_contact: [91, 106]
+    crossing_resid: [[], [117]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+21:
+    code: ['L#C#', 'L+C#']
+    GLN: [0.16163853966406883, -0.5531763141830159]
+    ref_GLN: [0.1813980949812109, 0.06470732437611454]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [67, 113]
+    ref_native_contact: [67, 113]
+    crossing_resid: [[], [117]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+44:
+    code: ['L#C#', 'L-C#']
+    GLN: [0.18220076319365558, -0.3727374351265409]
+    ref_GLN: [0.1914805020924778, 0.6903653259335704]
+    linking_number: [0, 0]
+    ref_linking_number: [0, 1]
+    native_contact: [53, 100]
+    ref_native_contact: [53, 100]
+    crossing_resid: [[], [107, 117]]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['', '+-']
+    ref_crossing_pattern: ['', '+']
+55:
+    code: ['L+C#', 'L#C#']
+    GLN: [-0.8268278020370187, -0.08228699553521687]
+    ref_GLN: [0.027313385888646367, 0.009583867624365623]
+    linking_number: [-1, 0]
+    ref_linking_number: [0, 0]
+    native_contact: [116, 121]
+    ref_native_contact: [116, 121]
+    crossing_resid: [[94], []]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['-', '']
+    ref_crossing_pattern: ['', '']

@@ -1,0 +1,62 @@
+State #8
+Q: 0.865400
+G: 0.074109
+Consistent experiment signals: ['S33', 'D34', 'A35', 'V78', 'D139']
+Changes in entanglement cluster IDs: [9, 48, 60, 84]
+Trajectory number: 274
+Frame number: 272
+----------------------------------------------------------------
+S33: M: 436.0206
+D34: M: 415.0575
+A35: M: 412.4100
+V78: M: 637.7296
+D139: M: 108.6164
+----------------------------------------------------------------
+9:
+    code: ['L#C#', 'L+C#']
+    GLN: [-0.006519346447974621, -1.0266696450282307]
+    ref_GLN: [0.006614038327806575, -0.044884632296836285]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [20, 35]
+    ref_native_contact: [20, 35]
+    crossing_resid: [[], [59]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+48:
+    code: ['L+C#', 'L#C#']
+    GLN: [-0.7441916496826532, -0.019736350719606777]
+    ref_GLN: [-0.03873823739637655, 0.06966843547701779]
+    linking_number: [-1, 0]
+    ref_linking_number: [0, 0]
+    native_contact: [59, 72]
+    ref_native_contact: [59, 72]
+    crossing_resid: [[30], []]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['-', '']
+    ref_crossing_pattern: ['', '']
+60:
+    code: ['L+C#', 'L#C#']
+    GLN: [-0.8324672484639992, 0.6490789457259079]
+    ref_GLN: [0.1914805020924778, 0.6903653259335704]
+    linking_number: [-1, 1]
+    ref_linking_number: [0, 1]
+    native_contact: [53, 100]
+    ref_native_contact: [53, 100]
+    crossing_resid: [[30], [107]]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['-', '+']
+    ref_crossing_pattern: ['', '+']
+84:
+    code: ['L-C#', 'L#C#']
+    GLN: [-0.1789870419088383, 0.31225304475102605]
+    ref_GLN: [0.7806171120062056, 0.3053511402089999]
+    linking_number: [0, 0]
+    ref_linking_number: [1, 0]
+    native_contact: [39, 138]
+    ref_native_contact: [39, 138]
+    crossing_resid: [[17, 30], []]
+    ref_crossing_resid: [[17], []]
+    crossing_pattern: ['+-', '']
+    ref_crossing_pattern: ['+', '']

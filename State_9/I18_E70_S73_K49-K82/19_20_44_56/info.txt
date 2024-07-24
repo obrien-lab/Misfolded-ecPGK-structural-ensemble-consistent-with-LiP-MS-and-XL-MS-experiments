@@ -1,0 +1,61 @@
+State #9
+Q: 0.889200
+G: 0.037523
+Consistent experiment signals: ['I18', 'E70', 'S73', 'K49-K82']
+Changes in entanglement cluster IDs: [19, 20, 44, 56]
+Trajectory number: 20
+Frame number: 291
+----------------------------------------------------------------
+I18: M: 393.0303
+E70: M: 1004.8888
+S73: M: 822.4920
+K49-K82: M: 0.0609 Jwalk: 21.2050 Euclidean: 15.7630
+----------------------------------------------------------------
+19:
+    code: ['L#C#', 'L+C#']
+    GLN: [0.08855283603930185, -0.7784834715084559]
+    ref_GLN: [0.14031869862477409, 0.28118031456951303]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [30, 75]
+    ref_native_contact: [30, 75]
+    crossing_resid: [[], [110]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+20:
+    code: ['L#C#', 'L+C#']
+    GLN: [0.029420561313153848, -0.6296957468425495]
+    ref_GLN: [0.06713837814512236, 0.2536668115313877]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [54, 105]
+    ref_native_contact: [54, 105]
+    crossing_resid: [[], [110]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+44:
+    code: ['L#C#', 'L-C#']
+    GLN: [0.0814275673662544, -0.4149582754074085]
+    ref_GLN: [0.11491391949616735, 0.6414889745565661]
+    linking_number: [0, 0]
+    ref_linking_number: [0, 1]
+    native_contact: [54, 100]
+    ref_native_contact: [54, 100]
+    crossing_resid: [[], []]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['', '']
+    ref_crossing_pattern: ['', '+']
+56:
+    code: ['L+C#', 'L#C#']
+    GLN: [-0.7110694644329912, 0.17953571946475644]
+    ref_GLN: [0.3424969833302509, 0.19207608495330683]
+    linking_number: [-1, 0]
+    ref_linking_number: [0, 0]
+    native_contact: [96, 127]
+    ref_native_contact: [96, 127]
+    crossing_resid: [[57], []]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['-', '']
+    ref_crossing_pattern: ['', '']

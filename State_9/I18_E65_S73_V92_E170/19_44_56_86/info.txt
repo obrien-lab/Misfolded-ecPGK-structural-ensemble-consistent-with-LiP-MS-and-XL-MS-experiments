@@ -1,0 +1,62 @@
+State #9
+Q: 0.876000
+G: 0.030019
+Consistent experiment signals: ['I18', 'E65', 'S73', 'V92', 'E170']
+Changes in entanglement cluster IDs: [19, 44, 56, 86]
+Trajectory number: 863
+Frame number: 321
+----------------------------------------------------------------
+I18: M: 399.5312
+E65: M: 737.9336
+S73: M: 780.6694
+V92: M: 593.2585
+E170: M: 442.8533
+----------------------------------------------------------------
+19:
+    code: ['L#C#', 'L+C#']
+    GLN: [0.09495601219657744, -0.7189597807727006]
+    ref_GLN: [0.14031869862477409, 0.28118031456951303]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [30, 75]
+    ref_native_contact: [30, 75]
+    crossing_resid: [[], [109]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+44:
+    code: ['L#C#', 'L-C#']
+    GLN: [0.11284173639621659, -0.36414479119188975]
+    ref_GLN: [0.11491391949616735, 0.6414889745565661]
+    linking_number: [0, 0]
+    ref_linking_number: [0, 1]
+    native_contact: [54, 100]
+    ref_native_contact: [54, 100]
+    crossing_resid: [[], []]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['', '']
+    ref_crossing_pattern: ['', '+']
+56:
+    code: ['L+C#', 'L#C#']
+    GLN: [-0.6528804111938298, 0.09119998407409592]
+    ref_GLN: [0.3424969833302509, 0.19207608495330683]
+    linking_number: [-1, 0]
+    ref_linking_number: [0, 0]
+    native_contact: [96, 127]
+    ref_native_contact: [96, 127]
+    crossing_resid: [[57], []]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['-', '']
+    ref_crossing_pattern: ['', '']
+86:
+    code: ['L-C#', 'L#C#']
+    GLN: [0.40654424646301995, -0.17019693775227143]
+    ref_GLN: [0.778600018026324, -0.21197808393275958]
+    linking_number: [0, 0]
+    ref_linking_number: [1, 0]
+    native_contact: [228, 278]
+    ref_native_contact: [228, 278]
+    crossing_resid: [[], []]
+    ref_crossing_resid: [[220], []]
+    crossing_pattern: ['', '']
+    ref_crossing_pattern: ['+', '']

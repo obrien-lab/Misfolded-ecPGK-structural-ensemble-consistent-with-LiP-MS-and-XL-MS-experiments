@@ -1,0 +1,52 @@
+State #9
+Q: 0.870700
+G: 0.020638
+Consistent experiment signals: ['I18', 'S33', 'E70', 'L106', 'L132', 'C133', 'E170']
+Changes in entanglement cluster IDs: [19, 44, 56]
+Trajectory number: 953
+Frame number: 328
+----------------------------------------------------------------
+I18: M: 396.1989
+S33: M: 1065.8678
+E70: M: 954.2559
+L106: M: 411.8004
+L132: M: 272.2080
+C133: M: 220.7445
+E170: M: 460.7207
+----------------------------------------------------------------
+19:
+    code: ['L#C#', 'L+C#']
+    GLN: [0.13684835054807337, -0.7562168456064144]
+    ref_GLN: [0.11285461862973542, 0.2520285141227274]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [21, 76]
+    ref_native_contact: [21, 76]
+    crossing_resid: [[], [109]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+44:
+    code: ['L#C#', 'L-C#']
+    GLN: [0.0772977347191163, -0.33271680672594867]
+    ref_GLN: [0.11491391949616735, 0.6414889745565661]
+    linking_number: [0, 0]
+    ref_linking_number: [0, 1]
+    native_contact: [54, 100]
+    ref_native_contact: [54, 100]
+    crossing_resid: [[], []]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['', '']
+    ref_crossing_pattern: ['', '+']
+56:
+    code: ['L+C#', 'L#C#']
+    GLN: [-0.6028117376559384, 0.17399632368552026]
+    ref_GLN: [0.3424969833302509, 0.19207608495330683]
+    linking_number: [-1, 0]
+    ref_linking_number: [0, 0]
+    native_contact: [96, 127]
+    ref_native_contact: [96, 127]
+    crossing_resid: [[59], []]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['-', '']
+    ref_crossing_pattern: ['', '']

@@ -1,0 +1,59 @@
+State #7
+Q: 0.738800
+G: 0.100375
+Consistent experiment signals: ['D8', 'L132', 'C133', 'F136', 'D139', 'Q148', 'A149', 'E170', 'F366', 'P376', 'S2-K179', 'S2-K387', 'K5-K387', 'K119-K127']
+Changes in entanglement cluster IDs: [14, 24, 44]
+Trajectory number: 308
+Frame number: 272
+----------------------------------------------------------------
+D8: M: 941.4033
+L132: M: 612.8368
+C133: M: 492.1892
+F136: M: 520.2535
+D139: M: 640.5996
+Q148: M: 1012.6033
+A149: M: 989.9547
+E170: M: 843.2019
+F366: M: 510.5091
+P376: M: 1001.1743
+S2-K179: M: 0.0000 Jwalk: 83.4858 Euclidean: 54.3596
+S2-K387: M: 0.0000 Jwalk: 71.2132 Euclidean: 54.5783
+K5-K387: M: 0.0000 Jwalk: 75.6368 Euclidean: 50.8947
+K119-K127: M: 0.0626 Jwalk: 19.8786 Euclidean: 15.0901
+----------------------------------------------------------------
+14:
+    code: ['L#C#', 'L+C#']
+    GLN: [-0.112200083569504, -0.7068683837109156]
+    ref_GLN: [-0.08682700567986204, 0.05339902575130137]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [91, 106]
+    ref_native_contact: [91, 106]
+    crossing_resid: [[], [159]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+24:
+    code: ['L#C#', 'L+C#']
+    GLN: [-0.07018164447684921, -1.8419961155937898]
+    ref_GLN: [-0.09929724985113007, -0.06621681997433496]
+    linking_number: [0, -2]
+    ref_linking_number: [0, 0]
+    native_contact: [16, 132]
+    ref_native_contact: [16, 132]
+    crossing_resid: [[], [155, 158]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '--']
+    ref_crossing_pattern: ['', '']
+44:
+    code: ['L#C#', 'L-C#']
+    GLN: [0.11522106993444654, -0.230715336976986]
+    ref_GLN: [0.11491391949616735, 0.6414889745565661]
+    linking_number: [0, 0]
+    ref_linking_number: [0, 1]
+    native_contact: [54, 100]
+    ref_native_contact: [54, 100]
+    crossing_resid: [[], [107, 159]]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['', '+-']
+    ref_crossing_pattern: ['', '+']

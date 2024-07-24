@@ -1,0 +1,59 @@
+State #8
+Q: 0.802100
+G: 0.058161
+Consistent experiment signals: ['D8', 'I18', 'E70', 'V92', 'E103', 'E105', 'C133', 'Q148', 'A149', 'P376', 'S2-K179', 'K116-T124', 'K119-T124', 'K119-K127']
+Changes in entanglement cluster IDs: [3, 20, 44]
+Trajectory number: 160
+Frame number: 292
+----------------------------------------------------------------
+D8: M: 868.5515
+I18: M: 396.0237
+E70: M: 987.8044
+V92: M: 922.6336
+E103: M: 237.6004
+E105: M: 244.8284
+C133: M: 544.2235
+Q148: M: 871.7366
+A149: M: 934.3805
+P376: M: 693.0167
+S2-K179: M: 0.0207 Jwalk: 24.2146 Euclidean: 21.1127
+K116-T124: M: 0.0030 Jwalk: 28.9359 Euclidean: 20.1713
+K119-T124: M: 0.0000 Jwalk: 35.9858 Euclidean: 13.3186
+K119-K127: M: 0.0000 Jwalk: 34.3885 Euclidean: 13.2782
+----------------------------------------------------------------
+3:
+    code: ['L#C#', 'L#C~']
+    GLN: [0.11164286718061026, -0.48603140198911654]
+    ref_GLN: [0.11082193503550165, 0.5508270424000505]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 1]
+    native_contact: [50, 103]
+    ref_native_contact: [50, 103]
+    crossing_resid: [[], [119]]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '+']
+20:
+    code: ['L#C#', 'L+C#']
+    GLN: [0.09365597912982024, -0.6750186913827642]
+    ref_GLN: [0.0447843290989239, 0.08294017467658853]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [94, 108]
+    ref_native_contact: [94, 108]
+    crossing_resid: [[], [119]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+44:
+    code: ['L#C#', 'L-C#']
+    GLN: [0.20088816795145412, -0.30356232049053233]
+    ref_GLN: [0.1914805020924778, 0.6903653259335704]
+    linking_number: [0, 0]
+    ref_linking_number: [0, 1]
+    native_contact: [53, 100]
+    ref_native_contact: [53, 100]
+    crossing_resid: [[], [107, 119]]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['', '+-']
+    ref_crossing_pattern: ['', '+']

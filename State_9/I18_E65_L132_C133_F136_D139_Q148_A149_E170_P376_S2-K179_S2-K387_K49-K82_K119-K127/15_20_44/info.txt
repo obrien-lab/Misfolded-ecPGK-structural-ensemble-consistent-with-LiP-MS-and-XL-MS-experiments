@@ -1,0 +1,59 @@
+State #9
+Q: 0.841700
+G: 0.044090
+Consistent experiment signals: ['I18', 'E65', 'L132', 'C133', 'F136', 'D139', 'Q148', 'A149', 'E170', 'P376', 'S2-K179', 'S2-K387', 'K49-K82', 'K119-K127']
+Changes in entanglement cluster IDs: [15, 20, 44]
+Trajectory number: 420
+Frame number: 310
+----------------------------------------------------------------
+I18: M: 541.9206
+E65: M: 1042.9547
+L132: M: 838.3507
+C133: M: 736.5710
+F136: M: 415.6571
+D139: M: 331.7788
+Q148: M: 713.6202
+A149: M: 827.9891
+E170: M: 126.7435
+P376: M: 727.0437
+S2-K179: M: 0.0060 Jwalk: 27.4573 Euclidean: 20.6701
+S2-K387: M: 0.0000 Jwalk: 38.8099 Euclidean: 28.8919
+K49-K82: M: 0.0606 Jwalk: 21.3465 Euclidean: 13.9605
+K119-K127: M: 0.0613 Jwalk: 18.3610 Euclidean: 13.5743
+----------------------------------------------------------------
+15:
+    code: ['L#C#', 'L+C#']
+    GLN: [0.2378699723337745, -0.5159255046332953]
+    ref_GLN: [0.06529976037601973, -0.04970704446995552]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [135, 159]
+    ref_native_contact: [135, 159]
+    crossing_resid: [[], [165]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+20:
+    code: ['L#C#', 'L+C#']
+    GLN: [-0.025770763505952823, -0.837977583075276]
+    ref_GLN: [-0.03169949856050187, 0.1419277107463536]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [88, 104]
+    ref_native_contact: [88, 104]
+    crossing_resid: [[], [110]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+44:
+    code: ['L#C#', 'L-C#']
+    GLN: [0.15512593378213219, -0.2706790380142574]
+    ref_GLN: [0.1914805020924778, 0.6903653259335704]
+    linking_number: [0, 0]
+    ref_linking_number: [0, 1]
+    native_contact: [53, 100]
+    ref_native_contact: [53, 100]
+    crossing_resid: [[], []]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['', '']
+    ref_crossing_pattern: ['', '+']

@@ -2,6 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
     <style type="text/css">
        .loading{
             width: 30vmin;
@@ -79,6 +80,39 @@
           margin-top: 0.5vmin;
           margin-bottom: 0.5vmin;
         }
+
+        .choices {
+          width: 98%;
+        }
+        .choices__inner {
+          padding: 0px;
+          width: 99%;
+          min-height: 3vmin;
+          max-height: 3vmin;
+          overflow-y: scroll;
+          border-color: black;
+        }
+        .choices__list--dropdown, .choices__list[aria-expanded] {
+          width: 99%;
+        }
+        .choices__inner,
+        .choices__input,
+        .choices__placeholder,
+        .choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {
+            font-size: 1.2vmin;
+            font-family: Arial;
+            vertical-align: middle;
+        }
+        .choices__list--single {
+          padding: 1px 0px 0px 2px;
+        }
+        .choices[data-type*=select-one] .choices__inner {
+          padding: 0px;
+        }
+        .choices[data-type*=select-one]::after {
+          right: 2%;
+        }
+
     </style>
 </head>
 
@@ -96,6 +130,9 @@
 
 <script src="https://nglviewer.org/ngl/js/ngl.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
 <div id="main_div" style="width:80%; height:60%; margin-left: 10%;">
   <div id="left_panel" style="float: left; width:20%; height:100%; background-color: #F0F8FF">
@@ -232,10 +269,11 @@
   <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this setting panel" onclick="close_help_div(this)" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
 </div>
 
-<div id="datasetTableHelp_div" style="width: 15%; height: 15%; background-color: lightyellow; border: 1px solid black; border-radius: 5%; position: absolute; text-align: center; font-size: 1.2vmin; font-family: Arial; display: none;">
-  <div class="help_div" style="text-align: left; overflow: auto; height: 75%; margin: 2%;">
+<div id="datasetTableHelp_div" style="width: 15%; height: 20%; background-color: lightyellow; border: 1px solid black; border-radius: 5%; position: absolute; text-align: center; font-size: 1.2vmin; font-family: Arial; display: none;">
+  <div class="help_div" style="text-align: left; overflow: auto; height: 80%; margin: 2%;">
     <p>&bull; <b>Repr. structures</b> &#10145; Representative structure for each metastable state with the highest number of consistent experimental signals.</p>
     <p>&bull; <b>Repr. ensemble</b> &#10145; Representative structural ensemble for each metastable state containing structures consistent with experimental signals.</p>
+    <p>&bull; When visualizing the structural ensemble, we recommend downloading the summary file of the dataset by clicking the download button on the right. This will help you identify the structure of interest. You can then use the search function in the selection boxes below to select the desired structure.</p>
   </div>
   <input type="button" onmouseover="this.style.cursor = 'hand'" value="Close" title="close this help information" onclick="close_help_div(this)" style="text-align: center; font-size: 1.4vmin; cursor: pointer;">
 </div>
@@ -323,7 +361,7 @@
 </div>
 
 <!-- Run the javascript to construct the page and setup NGL application -->
-<script src="./index.js?v=2.9"></script>
+<script src="./index.js?v=3.2"></script>
 
 </body>
 </html>

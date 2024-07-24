@@ -1534,7 +1534,7 @@ function update_info_panel(native_M) {
           data: data_M_native,
           radius: (pt) => {
             if (pt.dataset.data.length > 0) {
-              return 12 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+              return 0.3 * pt.chart.scales.y._length / (pt.chart.scales.y.max - pt.chart.scales.y.min + 1)
             }
             else {
               return 0
@@ -1542,7 +1542,7 @@ function update_info_panel(native_M) {
           },
           hoverRadius: (pt) => {
             if (pt.dataset.data.length > 0) {
-              return 12 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+              return 0.3 * pt.chart.scales.y._length / (pt.chart.scales.y.max - pt.chart.scales.y.min + 1)
             }
             else {
               return 0
@@ -1556,7 +1556,7 @@ function update_info_panel(native_M) {
               return x === pt.index && y === 1
              })) {
               if (pt.dataset.data.length > 0) {
-                return 6 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+                return 0.1 * pt.chart.scales.y._length / (pt.chart.scales.y.max - pt.chart.scales.y.min + 1)
               }
               else {
                 return 0
@@ -1573,7 +1573,7 @@ function update_info_panel(native_M) {
           data: data_M_misfold,
           radius: (pt) => {
             if (pt.dataset.data.length > 0) {
-              return 12 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+              return 0.3 * pt.chart.scales.y._length / (pt.chart.scales.y.max - pt.chart.scales.y.min + 1)
             }
             else {
               return 0
@@ -1581,7 +1581,7 @@ function update_info_panel(native_M) {
           },
           hoverRadius: (pt) => {
             if (pt.dataset.data.length > 0) {
-              return 12 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+              return 0.3 * pt.chart.scales.y._length / (pt.chart.scales.y.max - pt.chart.scales.y.min + 1)
             }
             else {
               return 0
@@ -1595,7 +1595,7 @@ function update_info_panel(native_M) {
               return x === pt.index && y === 2
              })) {
               if (pt.dataset.data.length > 0) {
-                return 6 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+                return 0.1 * pt.chart.scales.y._length / (pt.chart.scales.y.max - pt.chart.scales.y.min + 1)
               }
               else {
                 return 0
@@ -1640,6 +1640,21 @@ function update_info_panel(native_M) {
             },
           }
         },
+        zoom: {
+          pan: {
+            enabled: true,
+            mode: 'y',
+          },
+          zoom: {
+            wheel: {
+              enabled: true,
+            },
+            pinch: {
+              enabled: true,
+            },
+            mode: 'y',
+          }
+        }
       },
       scales: {
         x: {
@@ -1788,7 +1803,7 @@ function update_info_panel(native_M) {
           data: data_M_native,
           radius: (pt) => {
             if (pt.dataset.data.length > 0) {
-              return 12 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+              return 0.3 * pt.chart.scales.y._length / (pt.chart.scales.y.max - pt.chart.scales.y.min + 1)
             }
             else {
               return 0
@@ -1796,7 +1811,7 @@ function update_info_panel(native_M) {
           },
           hoverRadius: (pt) => {
             if (pt.dataset.data.length > 0) {
-              return 12 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+              return 0.3 * pt.chart.scales.y._length / (pt.chart.scales.y.max - pt.chart.scales.y.min + 1)
             }
             else {
               return 0
@@ -1810,7 +1825,7 @@ function update_info_panel(native_M) {
               return x === pt.index && y === 1
              })) {
               if (pt.dataset.data.length > 0) {
-                return 6 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+                return 0.1 * pt.chart.scales.y._length / (pt.chart.scales.y.max - pt.chart.scales.y.min + 1)
               }
               else {
                 return 0
@@ -1827,7 +1842,7 @@ function update_info_panel(native_M) {
           data: data_M_misfold,
           radius: (pt) => {
             if (pt.dataset.data.length > 0) {
-              return 12 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+              return 0.3 * pt.chart.scales.y._length / (pt.chart.scales.y.max - pt.chart.scales.y.min + 1)
             }
             else {
               return 0
@@ -1835,7 +1850,7 @@ function update_info_panel(native_M) {
           },
           hoverRadius: (pt) => {
             if (pt.dataset.data.length > 0) {
-              return 12 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+              return 0.3 * pt.chart.scales.y._length / (pt.chart.scales.y.max - pt.chart.scales.y.min + 1)
             }
             else {
               return 0
@@ -1849,7 +1864,7 @@ function update_info_panel(native_M) {
               return x === pt.index && y === 3
              })) {
               if (pt.dataset.data.length > 0) {
-                return 6 / 947 * window.innerHeight / Object.getPrototypeOf(pt).dataset.data.length
+                return 0.1 * pt.chart.scales.y._length / (pt.chart.scales.y.max - pt.chart.scales.y.min + 1)
               }
               else {
                 return 0
@@ -1894,6 +1909,21 @@ function update_info_panel(native_M) {
             },
           }
         },
+        zoom: {
+          pan: {
+            enabled: true,
+            mode: 'y',
+          },
+          zoom: {
+            wheel: {
+              enabled: true,
+            },
+            pinch: {
+              enabled: true,
+            },
+            mode: 'y',
+          }
+        }
       },
       scales: {
         x: {
@@ -2056,52 +2086,73 @@ function gen_major_contents(selectbox_json) {
 
   var MetaStateSelect = createSelect([["", "--Please choose an option--"]], {
     onchange: function (e) {
-      this.title = this.options[this.selectedIndex].text;
+      //Remove structural visualization
+      document.getElementById("checkbox_div").innerHTML = "";
+      document.getElementById("info").innerHTML = "";
+      stage.removeAllComponents();
+
+      var ExpSig_option_array = null;
+      var Struct_option_array = null;
       if (e.target.value == "") {
-        //Remove all options in ExpSigSelect
-        ExpSigSelect.innerHTML = '';
-        var option = document.createElement('option');
-        option.value = "";
-        option.textContent = "--Wait for above option--";
-        ExpSigSelect.appendChild(option);
-        ExpSigSelect.title = "--Wait for above option--";
+        //Remove all options in ExpSigChoice
+        ExpSig_option_array = [{ value: "", 
+                                 label: "--Wait for above option--", 
+                                 selected: true }]
+
         //Remove all options in StructSelect
-        StructSelect.innerHTML = '';
-        option = document.createElement('option');
-        option.value = "";
-        option.textContent = "--Wait for above option--";
-        StructSelect.appendChild(option);
-        StructSelect.title = "--Wait for above option--";
+        Struct_option_array = [{ value: "", 
+                                 label: "--Wait for above option--", 
+                                 selected: true }]
       }
       else {
-        ExpSigSelect.innerHTML = '';
-        var option = document.createElement('option');
-        option.value = "";
-        option.textContent = "--Please choose an option--";
-        ExpSigSelect.appendChild(option);
-        ExpSigSelect.title = "--Please choose an option--";
+        //Remove all options in ExpSigChoice and add new options
+        ExpSig_option_array = [{ value: "", 
+                                 label: "--Please choose an option--", 
+                                 selected: true }]
         var data_1 = JSON.parse(e.target.value)
         data_1.forEach(item => {
-          var option = document.createElement('option');
-          option.value = JSON.stringify(item.value); // Set the value attribute
-          option.textContent = item.text; // Set the text content
-          ExpSigSelect.appendChild(option); // Append the option to the select box
+          ExpSig_option_array.push({ value: JSON.stringify(item.value), 
+                                     label: item.text })
         });
+
         //Remove all options in StructSelect
-        StructSelect.innerHTML = '';
-        option = document.createElement('option');
-        option.value = "";
-        option.textContent = "--Wait for above option--";
-        StructSelect.appendChild(option);
-        StructSelect.title = "--Wait for above option--";
+        Struct_option_array = [{ value: "", 
+                                 label: "--Wait for above option--", 
+                                 selected: true }]
       }
+
+      ExpSigChoice.setChoices(
+        ExpSig_option_array,
+        'value',
+        'label',
+        true,
+      );
+      StructChoice.setChoices(
+        Struct_option_array,
+        'value',
+        'label',
+        true,
+      );
     },
-    title: "--Please choose an option--",
   }, { width: "98%",
        "vertical-align": "middle",
        "font-family": "Arial", 
        "font-size": "1.2vmin"})
   document.getElementById("selectTable_cell_1_0").appendChild(MetaStateSelect)
+
+  var MetaStateChoice = new Choices(MetaStateSelect, {
+    searchEnabled: true,
+    allowHTML: true,
+    shouldSort: false,
+    paste: true,
+    searchFields: ['label'],
+    searchResultLimit: 100,
+    searchPlaceholderValue: "Search a State ID",
+    fuseOptions: {
+      includeScore: true,
+      threshold: 0,
+    }
+  });
 
   document.getElementById("selectTable_cell_2_0").appendChild(createElement("span", {
     innerHTML: "<b>3. Select a combinition of experimental signals below:</b>"
@@ -2111,38 +2162,54 @@ function gen_major_contents(selectbox_json) {
 
   var ExpSigSelect = createSelect([["", "--Wait for above option--"]], {
     onchange: function (e) {
-      this.title = this.options[this.selectedIndex].text;
+      //Remove structural visualization
+      document.getElementById("checkbox_div").innerHTML = "";
+      document.getElementById("info").innerHTML = "";
+      stage.removeAllComponents();
+
+      var Struct_option_array = null;
       if (e.target.value == "") {
-        //Remove all options in StructSelect
-        StructSelect.innerHTML = '';
-        var option = document.createElement('option');
-        option.value = "";
-        option.textContent = "--Wait for above option--";
-        StructSelect.appendChild(option);
-        StructSelect.title = "--Wait for above option--";
+        //Remove all options in StructChoice
+        Struct_option_array = [{ value: "", 
+                                 label: "--Wait for above option--", 
+                                 selected: true }]
       }
       else {
-        StructSelect.innerHTML = '';
-        var option = document.createElement('option');
-        option.value = "";
-        option.textContent = "--Please choose an option--";
-        StructSelect.appendChild(option);
-        StructSelect.title = "--Please choose an option--";
+        Struct_option_array = [{ value: "", 
+                                 label: "--Please choose an option--", 
+                                 selected: true }]
         var data_1 = JSON.parse(e.target.value)
         data_1.forEach(item => {
-          var option = document.createElement('option');
-          option.value = JSON.stringify(item.value); // Set the value attribute
-          option.textContent = item.text; // Set the text content
-          StructSelect.appendChild(option); // Append the option to the select box
+          Struct_option_array.push({ value: JSON.stringify(item.value), 
+                                     label: item.text })
         });
       }
-    },
-    title: "--Wait for above option--",
+      StructChoice.setChoices(
+        Struct_option_array,
+        'value',
+        'label',
+        true,
+      );
+    }
   }, { width: "98%",
        "vertical-align": "middle",
        "font-family": "Arial", 
        "font-size": "1.2vmin"})
   document.getElementById("selectTable_cell_3_0").appendChild(ExpSigSelect)
+
+  var ExpSigChoice = new Choices(ExpSigSelect, {
+    searchEnabled: true,
+    allowHTML: true,
+    shouldSort: false,
+    paste: true,
+    searchFields: ['label'],
+    searchResultLimit: 100,
+    searchPlaceholderValue: "Search a set of experimental signals",
+    fuseOptions: {
+      includeScore: true,
+      threshold: 0,
+    }
+  });
 
   document.getElementById("selectTable_cell_4_0").appendChild(createElement("span", {
     innerHTML: "<b>4. Select a combinition of changes in entanglements below:</b>"
@@ -2152,32 +2219,55 @@ function gen_major_contents(selectbox_json) {
 
   var StructSelect = createSelect([["", "--Wait for above option--"]], {
     onchange: function (e) {
-      this.title = this.options[this.selectedIndex].text;
       if (e.target.value != "") {
         var info_path = "./"+MetaStateSelect.options[MetaStateSelect.selectedIndex].text.replace(/ /g, "_");
         info_path += "/"+ExpSigSelect.options[ExpSigSelect.selectedIndex].text.replace(/, /g, "_");
         info_path += "/"+e.target.value.substr(1,e.target.value.length-2);
         loadStructure(info_path)
       }
+      else {
+        //Remove structural visualization
+        document.getElementById("checkbox_div").innerHTML = "";
+        document.getElementById("info").innerHTML = "";
+        stage.removeAllComponents();
+      }
     },
-    title: "--Wait for above option--",
   }, { width: "98%",
        "vertical-align": "middle",
        "font-family": "Arial", 
        "font-size": "1.2vmin"})
   document.getElementById("selectTable_cell_5_0").appendChild(StructSelect)
 
+  var StructChoice = new Choices(StructSelect, {
+    searchEnabled: true,
+    allowHTML: true,
+    shouldSort: false,
+    paste: true,
+    searchFields: ['label'],
+    searchResultLimit: 100,
+    searchPlaceholderValue: "Search a set of entanglement changes",
+    fuseOptions: {
+      includeScore: true,
+      threshold: 0,
+    }
+  });
+
   // Fetch JSON data and add options to MetaStateSelect
   fetch(selectbox_json, {cache: "no-cache"})
     .then(response => response.json())
     .then(data => {
+      var option_array = []
       // Loop through the data and create options for the select box
       data.forEach(item => {
-        var option = document.createElement('option');
-        option.value = JSON.stringify(item.value); // Set the value attribute
-        option.textContent = item.text; // Set the text content
-        MetaStateSelect.appendChild(option); // Append the option to the select box
+        option_array.push({ value: JSON.stringify(item.value), 
+                            label: item.text })
       });
+      MetaStateChoice.setChoices(
+        option_array,
+        'value',
+        'label',
+        false,
+      );
     })
     .catch(error => console.error('Error fetching data:', error));
 
@@ -2286,8 +2376,6 @@ function gen_major_contents(selectbox_json) {
   document.getElementById("cntrl_panel").appendChild(checkbox_div)
 
   update_checkbox_div_height();
-
-  //loadStructure("./State_7/G61_D172_S264_K355_K49-K84_K116-K120_K119-K127/2_14_16_24_44")
 }
 
 // Generate the selections for datasets
@@ -2314,6 +2402,14 @@ help_icon.addEventListener('click', (e) => {
   help_div.style.display = 'block'
 })
 cell.appendChild(help_icon)
+var downloadDatasetIcon = creatDownloadIcon('1.4vmin')
+downloadDatasetIcon.children[0].innerHTML = 'Download the summary file of the dataset'
+Object.assign(downloadDatasetIcon.style, {'vertical-align': 'middle',
+                                          'padding-left': '4%',})
+downloadDatasetIcon.addEventListener('click', (e) => {
+  window.open('./Dataset_summary.xlsx')
+})
+cell.appendChild(downloadDatasetIcon)
 var repStructRadio = createElement("input", {
   type: "radio", 
   name: "datasetOption",

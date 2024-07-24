@@ -1,0 +1,61 @@
+State #9
+Q: 0.931400
+G: 0.030957
+Consistent experiment signals: ['I18', 'E70', 'S73', 'K119-K127']
+Changes in entanglement cluster IDs: [19, 44, 56, 79]
+Trajectory number: 637
+Frame number: 323
+----------------------------------------------------------------
+I18: M: 428.2766
+E70: M: 1016.7817
+S73: M: 798.7487
+K119-K127: M: 0.0089 Jwalk: 32.2857 Euclidean: 15.7563
+----------------------------------------------------------------
+19:
+    code: ['L#C#', 'L+C#']
+    GLN: [0.25909493909971504, -0.7290876983491354]
+    ref_GLN: [0.17501930492105575, 0.27905506171609884]
+    linking_number: [0, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [36, 76]
+    ref_native_contact: [36, 76]
+    crossing_resid: [[], [109]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['', '-']
+    ref_crossing_pattern: ['', '']
+44:
+    code: ['L#C#', 'L-C#']
+    GLN: [0.17069808625844513, -0.24271373796541243]
+    ref_GLN: [0.18330885658976015, 0.7886806431698924]
+    linking_number: [0, 0]
+    ref_linking_number: [0, 1]
+    native_contact: [52, 100]
+    ref_native_contact: [52, 100]
+    crossing_resid: [[], []]
+    ref_crossing_resid: [[], [107]]
+    crossing_pattern: ['', '']
+    ref_crossing_pattern: ['', '+']
+56:
+    code: ['L+C#', 'L#C#']
+    GLN: [-0.6734158465796223, 0.18551895629888704]
+    ref_GLN: [0.3424969833302509, 0.19207608495330683]
+    linking_number: [-1, 0]
+    ref_linking_number: [0, 0]
+    native_contact: [96, 127]
+    ref_native_contact: [96, 127]
+    crossing_resid: [[58], []]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['-', '']
+    ref_crossing_pattern: ['', '']
+79:
+    code: ['L+C#', 'L+C#']
+    GLN: [0.64585859445015, -0.7323856412782407]
+    ref_GLN: [0.14031869862477409, 0.28118031456951303]
+    linking_number: [1, -1]
+    ref_linking_number: [0, 0]
+    native_contact: [30, 75]
+    ref_native_contact: [30, 75]
+    crossing_resid: [[24], [109]]
+    ref_crossing_resid: [[], []]
+    crossing_pattern: ['+', '-']
+    ref_crossing_pattern: ['', '']
