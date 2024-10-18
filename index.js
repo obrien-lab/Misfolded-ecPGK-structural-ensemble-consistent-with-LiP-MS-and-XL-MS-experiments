@@ -2021,7 +2021,7 @@ function export_image() {
 
 function download_pdb() {
   if (stage.compList.length > 0) {
-    window.open(stage.getComponentsByName('state_1.pdb').list[0].structure.path)
+    window.open(stage.getComponentsByName('struct.pdb').list[0].structure.path)
   }
 }
 
@@ -2120,13 +2120,15 @@ function gen_major_contents(selectbox_json) {
                                  label: "--Wait for above option--", 
                                  selected: true }]
       }
-
+      
+      ExpSigChoice.clearStore();
       ExpSigChoice.setChoices(
         ExpSig_option_array,
         'value',
         'label',
         true,
       );
+      StructChoice.clearStore();
       StructChoice.setChoices(
         Struct_option_array,
         'value',
@@ -2184,6 +2186,7 @@ function gen_major_contents(selectbox_json) {
                                      label: item.text })
         });
       }
+      StructChoice.clearStore();
       StructChoice.setChoices(
         Struct_option_array,
         'value',
