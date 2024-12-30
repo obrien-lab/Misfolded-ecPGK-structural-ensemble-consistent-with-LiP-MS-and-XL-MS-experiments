@@ -11,4 +11,4 @@ tar -xvf input_data.tar
 ```
 
 Please reference our paper for more details:
-Yang Jiang et al., A novel class of protein misfolding provides a structural explanation for the origins of stretched-exponential refolding kinetics. (Submitted)
+Yang Jiang, et al., Protein misfolding involving entanglements provides a structural explanation for the origin of stretched-exponential refolding kinetics. Science Advances, 2025.
